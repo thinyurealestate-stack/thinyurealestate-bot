@@ -1,4 +1,4 @@
-rom flask import Flask, request
+from flask import Flask, request 
 import os
 
 app = Flask(_name_)
