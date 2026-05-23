@@ -1,7 +1,7 @@
 from flask import Flask, request 
 import os
 
-app = Flask(*name*)
+app = Flask(=name+)
 
 PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN")
 VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN")
