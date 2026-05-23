@@ -1,6 +1,4 @@
-SyntaxError: invalid syntax
-File "/app/app.py", Line 1
-run flask import Flask, request
+rom flask import Flask, request
 import os
 
 app = Flask(_name_)
