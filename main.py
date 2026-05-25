@@ -57,8 +57,8 @@ LISTINGS = {
                         🌸Master Bedrooms (3) ခန်း
                         🌸ပြင်ဆင်ပြီး အသင့်နေလို့ရ
                         🌸ဘိုးဘွားပိုင် အရပ်စာချုပ်
-                        🌸ဂရန်ပြန်လျောက်လို့ရသော မြေ """,
-            "subtitle", "💸၇၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+                        🌸ဂရန်ပြန်လျောက်လို့ရသောမြေ""",
+            "subtitle", "💸၇၀၀၀ သိန်း (ညှီနှိုင်း)",
             "image_url", "https://drive.google.com/uc?export=view&id=1rgLIGefRfvNGg-pU28d6NCnh6-wZKP8w"
         },
             {
