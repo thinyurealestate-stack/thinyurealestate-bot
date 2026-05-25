@@ -269,16 +269,16 @@ def send_listings_carousel(recipient_id, price_key):
         return
 
     elements = []
-for item in listings:
-    elements.append({
-        "title": item["title"],
-        "subtitle": item["subtitle"],
-        "image_url": item["image_url"],
-        "buttons": [
-            {
-                "type": "web_url",
-                "url": item["facebook_url"],
-                "title": "ပြည်စုံကြည့်ရန်လင့်"
+    for item in listings:  # ← indent 4 spaces to match
+        elements.append({
+            "title": item["title"],
+            "subtitle": item["subtitle"],
+            "image_url": item["image_url"],
+            "buttons": [
+                {
+                    "type": "web_url",
+                    "url": item["facebook_url"],
+                    "title": "ပြည်စုံကြည့်ရန်လင့်"
                 }
             ]
         })
