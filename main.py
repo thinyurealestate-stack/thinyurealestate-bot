@@ -299,7 +299,7 @@ def send_listings_carousel(recipient_id, price_key):
     }
     requests.post(url, json=payload)
 
-    send_message(recipient_id, "👉 နောက်ထပ် စျေးနှုန်းတွေကိုလည်း ဒီမှာ နှိပ်ကြည့်နိုင်ပါတယ်:")
+    send_message(recipient_id, "👉 နောက်ထပ် စျေးနှုန်းတွေကိုလည်း အောက်မှာဆွဲ၍ နှိပ်ကြည့်နိုင်ပါတယ်:")
     send_price_quick_replies(recipient_id)
 
 
