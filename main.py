@@ -103,16 +103,13 @@ LISTINGS = {
             "subtitle": "🌺ခြံအကျယ် ၂၅ × ၆၀ေပ , 💸၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
             "image_url": "https://i.postimg.cc/JntCLRK6/Image-25-05-2026-at-5-14-PM-(1).png",
             "facebook_url": "https://www.facebook.com/share/p/1duXavUZYd/" 
-
-        },
-            {
-                "title": "ဂရံအမည်ပေါက် အိမ်နှင့်ခြံအရောင်း🌸သာကေတမြို့နယ် အောင်သပြေ အနောက်( -)လမ်း၇ရပ်ကွက် -ပျဉ်ထောင်အိမ်ပေကျယ် ၄၀”၆၀ အိမ် ၃၅ ပတ်လည်ဆောက်ထား🚕ကား၂စီးရှောင်လမ်း🏡မြေအမျိုးစား🏡ဂရံအမည်ပေါက်ရေ-မီးစုံပါ",
-                "subtitle": "💸၄၀x၆၀ပေကျယ်
-                            💸သိန်း ၈၅၀၀ (ညှိ့နိူင်းစျေး)",
-                "image_url": "https://i.postimg.cc/q7z1BgVM/IMG-5193.jpg",
-                "face_url": "https://www.facebook.com/share/p/1E1Uj9bsaT/"
-            }
-            
+}, 
+{
+    "title": "ဂရံအမည်ပေါက် အိမ်နှင့်ခြံအရောင်း🌸...",
+    "subtitle": "💸၄၀x၆၀ပေကျယ် 💸သိန်း ၈၅၀ (ညှိ့နိူင်းစျေး)",
+    "image_url": "https://i.postimg.cc/q7z1BgVM/IMG-5193.jpg",
+    "facebook_url": "https://www.facebook.com/share/p/1E1Uj9bsaT/"
+}
             ],
     "PRICE_2": [
     {    "title": """၉မိုင် ပြည်လမ်းမဒဲ့ပေါက် နေရာကောင်းလမ်းမ အနီး အိမ်နှင့်ခြံ ရောင်းမည်။
