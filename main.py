@@ -1,46 +1,21 @@
-from flask import Flask, request 
+from flask import Flask, request
 import os
+import requests
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN")
 VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN")
 
-@app.route('/', methods=['GET'])
-def verify_webhook():
-    mode = request.args.get("hub.mode")
-    token = request.args.get("hub.verify_token")
-    challenge = request.args.get("hub.challenge")
-    
-    if mode == "subscribe" and token == VERIFY_TOKEN:
-        return challenge, 200
-    return "Verification failed", 403
-
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
+    # 1. Handle GET for Meta verification
     if request.method == 'GET':
-        # Verify webhook
-        if request.args.get('hub.verify_token') == os.environ['VERIFY_TOKEN']:
-            return request.args.get('hub.challenge'), 200
-        return 'Forbidden', 403
+        if request.args.get("hub.verify_token") == VERIFY_TOKEN:
+            return request.args.get("hub.challenge"), 200
+        return "Wrong token", 403
 
-    # POST request - your existing code
-    return "ok", 200
-    # ... rest of your processing
-def webhook():
-    # 1. Reply 200 immediately so Meta stops waiting
-    return "ok", 200
-
-    # 2. Process the message AFTER sending 200
-    data = request.get_json()
-
-    if data.get("object") == "page":
-        for entry in data.get("entry", []):
-            for event in entry.get("messaging", []):
-                sender_id = event["sender"]["id"]
-                if "message" in event:
-                    message_text = event["message"].get("text", "")
-                    send_message(sender_id, f"မင်္ဂလာပါ။ သင် '{message_text}' လို့ ပြောထားတယ်")
+    # 2. Handle POST for messages - reply 200 immediately
     return "ok", 200
 
 def send_message(recipient_id, message_text):
@@ -51,5 +26,5 @@ def send_message(recipient_id, message_text):
     }
     requests.post(url, json=payload)
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
