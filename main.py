@@ -148,8 +148,13 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1Lu5qCkvfg/" 
 
             
+     },
+        { "title": "ကိုယ်တိုင်နေဖို့ ရှယ်ကိုလုပ်ထားတာမလို့။ဒါပေမယ့် ရောင်းရဖို့အကြောင်းပါလာတော့လဲရောင်းရတော့မယ်။ရွှေပြည်သာ Vip3 ရပ်ကွက်မှာပါ။ အမှတ် ၄လမ်းနဲ့တော်တော်နီးပါတယ်။ ခြံရှေ့လမ်းကျယ်ပါတယ်။",
+         "subtitle": "➡️ခြံအကျယ်60'x90',➡️အိမ်အကျယ်35'x55'➡️ရေကူးကန်-15'x30',သိန်း ၁၈,၀၀၀",
+         "image_url": "https://i.postimg.cc/3wrxk43f/Image-26-05-2026-at-1-46-AM.png",
+         "facebook_url": "https://www.facebook.com/share/p/18oWZFS9zC/"
         }
-            ],
+ ],
         
     "PRICE_3": 
     [
