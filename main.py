@@ -19,7 +19,12 @@ def webhook():
             for event in entry.get("messaging", []):
                 if "message" in event:
                     sender_id = event["sender"]["id"]
-                    send_message(sender_id, "Hey! Got your message 👋")
+                    send_message(sender_id, "👩🏻‍💼🏘️🏡🏡🏡🏡🏡🏡🏘️👩🏻‍💼
+Ma Thin Yu အိမ်ခြံမြေအကျိုးဆောင်မှာကြိုဆိုပါတယ်
+📞 Contact :09424006004 📞
+💜 Viber : 09767975004 💜
+💙 Facebook : သင်းယု အိမ်ခြံမြေအကျိုးဆောင် 💙
+🤍အိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ🤍 ")
         return "ok", 200
 
 def send_message(recipient_id, text):
