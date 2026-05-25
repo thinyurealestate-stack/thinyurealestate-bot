@@ -2,29 +2,31 @@ from flask import Flask, request
 import requests
 import os
 
-app = Flask(__name__)
+app = Flask(_name_)
 PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN")
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
     if request.method == 'GET':
-        # Verification
+        # This is for Facebook verification only
         if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
             return request.args.get("hub.challenge")
         return "Invalid token", 403
 
     if request.method == 'POST':
         data = request.get_json()
+        
+        # Loop through messages from Facebook
         for entry in data.get("entry", []):
             for event in entry.get("messaging", []):
-                if "message" in event:
+                if "message" in event and "text" in event["message"]:
                     sender_id = event["sender"]["id"]
-                    send_message(sender_id, "👩🏻‍💼🏘️🏡🏡🏡🏡🏡🏡🏘️👩🏻‍💼
-Ma Thin Yu အိမ်ခြံမြေအကျိုးဆောင်မှာကြိုဆိုပါတယ်
-📞 Contact :09424006004 📞
-💜 Viber : 09767975004 💜
-💙 Facebook : သင်းယု အိမ်ခြံမြေအကျိုးဆောင် 💙
-🤍အိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ🤍 ")
+                    
+                    # Your welcome message
+                    reply_text = "👩🏻‍💼🏘️🏡🏘️👩🏻‍💼 Ma Thin Yu အိမ်ခြံမြေအကျိုးဆောင်မှာကြိုဆိုပါတယ် 📞 Contact :09424006004 📞 💜 Viber : 09767975004 💜 💙 Facebook : သင်းယု အိမ်ခြံမြေအကျိုးဆောင် 💙 🤍အိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ🤍"
+                    
+                    send_message(sender_id, reply_text)
+        
         return "ok", 200
 
 def send_message(recipient_id, text):
