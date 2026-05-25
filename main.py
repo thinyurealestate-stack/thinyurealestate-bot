@@ -16,7 +16,17 @@ def verify_webhook():
         return challenge, 200
     return "Verification failed", 403
 
-@app.route('/webhook', methods=['POST'])
+@app.route('/webhook', methods=['GET', 'POST'])
+def webhook():
+    if request.method == 'GET':
+        # Verify webhook
+        if request.args.get('hub.verify_token') == os.environ['VERIFY_TOKEN']:
+            return request.args.get('hub.challenge'), 200
+        return 'Forbidden', 403
+
+    # POST request - your existing code
+    return "ok", 200
+    # ... rest of your processing
 def webhook():
     # 1. Reply 200 immediately so Meta stops waiting
     return "ok", 200
