@@ -2,7 +2,7 @@ from flask import Flask, request
 import os
 import requests
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN")
 VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN")
@@ -26,5 +26,5 @@ def send_message(recipient_id, message_text):
     }
     requests.post(url, json=payload)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
