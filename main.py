@@ -16,7 +16,7 @@ LISTINGS = {
                         🌸Toilet အပေါ်အောက် ရေပူရေအေးပါ
                         💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကိုလုံး၀ပေးစရာမလိုပါ """,   
             "subtitle": "🌸ခြံအကျယ် 18× 80 ပေအကျယ် 🏡2 BN နှစ်ထပ်အိမ် အသင့်သင့် , 💸ရောင်းစျေး4400(ညှိ့နိူင်း)",
-            "image_url": "https://drive.google.com/uc?export=view&id=138Y0sAC0twMImPgBvYfoaVCZLgYC9KWr",
+            "image_url": "https://i.postimg.cc/rmTRnYJK/Image-25-05-2026-at-4-44-PM-(4).png",
             "facebook_url": "https://www.facebook.com/share/p/1DaozjPCxM/" 
             
         },
@@ -38,30 +38,11 @@ LISTINGS = {
                         🌸ဘိုးဘွားပိုင် အရပ်စာချုပ်
                         🌺ဂရန်ပြန်လျောက်လို့ရသော မြေ""",
             "subtitle": " 💸၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1rgLIGefRfvNGg-pU28d6NCnh6-wZKP8w",
+            "image_url": "https://i.postimg.cc/PJgjy0Wz/Image-25-05-2026-at-5-08-PM-(5).png",
             "facebook_url": "https://www.facebook.com/share/p/1duXavUZYd/" 
 
         },
-            {
-            "title": """🏡ရပ်ကွက်သန့် လမ်းကျယ် နေရာကောင်းမှာ 1RC တိုက်လေးပါမယ် အိမ်နှင့်ခြံ အရောင်း
-                        🌸မရမ်းကုန်း မြို့နယ်  ၅ရပ်ကွက်
-                        🌸သဗ္ဗညုပုထိုးတော်ကြီး အနီး
-                        🌸စွယ်တော်မြတ် စေတီတော် အနီး
-                        🌸ကျောက်ရေတွင်း လမ်းမ အနီး
-                        🌸ရန်ကုန် လေဆိပ် အနီး
-                        🌸ကားနှစ်စီးရှောင် လမ်းကျယ်
-                        🌸ခြံအကျယ် ၄၀ × ၆၀ ပေ
-                        🌸1RC တစ်ထပ်တိုက် အိမ်ကောင်း
-                        🌸ခြံထဲ ကားနှစ်စီးခန့် ထားလို့ရ
-                        🌸Master Bedrooms (3) ခန်း
-                        🌸ပြင်ဆင်ပြီး အသင့်နေလို့ရ
-                        🌸ဘိုးဘွားပိုင် အရပ်စာချုပ်
-                        🌸ဂရန်ပြန်လျောက်လို့ရသောမြေ""",
-            "subtitle": "💸၇၀၀၀ သိန်း (ညှီနှိုင်း)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1rgLIGefRfvNGg-pU28d6NCnh6-wZKP8w",
-            "facebook_url": "https://www.facebook.com/share/p/18eub4YCnX/" 
-
-        },
+    
             {
             "title": """ရှယ်ပြင်ဆင်ပြီးအသင့်နေအိမ်ရောင်းမည်
                         🌷အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး
@@ -100,7 +81,7 @@ LISTINGS = {
                         လိုပါရှင့်🙏
                         👉စာရွက်စာတမ်းခိုင်မာပြီးအရူပ်ရှင်းကင်းသော-အိမ်ခြံမြေများကိုသာ-အရောင်းဝယ်လုပ်ပေးပါတယ်ရှင့်💁‍♂️""",
             "subtitle": "💸2.5.RC 25.60,6500(ညှိ့နိူင်း)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1IQuSP5CuuxbNBs0PIIGKKIxvadrQSWcM",
+            "image_url": "https://i.postimg.cc/fymwGwT8/Image-26-05-2026-at-1-12-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1EwVh5nBds/" 
 
         },
@@ -120,10 +101,18 @@ LISTINGS = {
                         💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကို
                         လုံး၀ပေးစရာမလိုပါ""",
             "subtitle": "🌺ခြံအကျယ် ၂၅ × ၆၀ေပ , 💸၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1yFTHdvpczHgU1xfZnqe4pHlfFyTjw26e",
+            "image_url": "https://i.postimg.cc/JntCLRK6/Image-25-05-2026-at-5-14-PM-(1).png",
             "facebook_url": "https://www.facebook.com/share/p/1duXavUZYd/" 
 
-        }
+        },
+            {
+                "title": "ဂရံအမည်ပေါက် အိမ်နှင့်ခြံအရောင်း🌸သာကေတမြို့နယ် အောင်သပြေ အနောက်( -)လမ်း၇ရပ်ကွက် -ပျဉ်ထောင်အိမ်ပေကျယ် ၄၀”၆၀ အိမ် ၃၅ ပတ်လည်ဆောက်ထား🚕ကား၂စီးရှောင်လမ်း🏡မြေအမျိုးစား🏡ဂရံအမည်ပေါက်ရေ-မီးစုံပါ},
+                "subtitle": "💸၄၀x၆၀ပေကျယ်
+                            💸သိန်း ၈၅၀၀ (ညှိ့နိူင်းစျေး)",
+                "image_url": "https://i.postimg.cc/q7z1BgVM/IMG-5193.jpg",
+                "face_url": "https://www.facebook.com/share/p/1E1Uj9bsaT/"
+            }
+            
             ],
     "PRICE_2": [
     {    "title": """၉မိုင် ပြည်လမ်းမဒဲ့ပေါက် နေရာကောင်းလမ်းမ အနီး အိမ်နှင့်ခြံ ရောင်းမည်။
@@ -139,7 +128,7 @@ LISTINGS = {
                     🌸အမည်ပေါက် လျောက်ထားဆဲ ပါ
                     🌺ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကိုလုံး၀ပေးစရာမလိုပါ""",
         "subtitle": "🌸ခြံ  အကျယ်  ၄၀ × ၈၀ ပေ,💸သိန်း ၁၁၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
-        "image_url": "https://drive.google.com/uc?export=view&id=1DT0vy8jJ23YBdfcpdiMgEvof6_K0I4X5",
+        "image_url": "https://i.postimg.cc/RZbjLkv4/Image-26-05-2026-at-1-15-AM.png",
         "facebook_url": "https://www.facebook.com/share/p/1HdcYcGFfY/" 
 
         },
@@ -158,7 +147,7 @@ LISTINGS = {
                     💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကို
                     လုံး၀ပေးစရာမလိုပါ""",
             "subtitle": "🌸ခြံအကျယ် ၃၀ × ၆၀ ပေ အကျယ်,💸ရောင်းစျေး ၁၄၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1jA2an67VfIJe_1lCJUYv2l6NcE5gWCQp",
+            "image_url": "https://i.postimg.cc/L69wK9Xj/Image-26-05-2026-at-1-16-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1Lu5qCkvfg/" 
 
             
@@ -182,7 +171,7 @@ LISTINGS = {
                 ✨ အထူးဂရန် လျှောက်ထားနိုင်သော မြေ
                 💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကို""",
         "subtitle": "✨ ခြံအကျယ် 70 × 100 ( 7000 Sqft),💵 ၂၂၀၀၀ သိန်း (ပိုင်ရှင်တိုက်ရိုက် ညှိနှိုင်း)",
-        "image_url": "https://drive.google.com/uc?export=view&id=16qZuOJExsMMd_tojtSf6A1RtDswImatS",
+        "image_url": "https://i.postimg.cc/9Q4xCrj2/Image-26-05-2026-at-1-18-AM.png",
         "facebook_url": "https://www.facebook.com/share/p/1BDGbQti5V/" 
 
         }
@@ -202,7 +191,7 @@ LISTINGS = {
                         🌸မြေပိုင်မြေအမည်ပေါက် """,
                         
             "subtitle": "🌸ခြံအကျယ် ၅၅×၁၀၀ ပေ,💵 သိန်း ၄၀၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1NNfe_UItc9RTv0wTMJ2sixZVp-_Hbwp0",
+            "image_url": "https://i.postimg.cc/FRGbj449/703503390-1602069564214217-7649272277303429298-n.jpg",
             "facebook_url": "https://www.facebook.com/share/p/18czyUKQ2V/" 
 }
      ],
