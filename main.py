@@ -261,13 +261,12 @@ def send_welcome_with_buttons(recipient_id):
     }
     requests.post(url, json=payload)
 
-def 
-send_listings_carousel(recipient_id, price_key):
+def send_listings_carousel(recipient_id, price_key):
     listings = LISTINGS.get(price_key, [])
 
     if not listings:
         send_message(recipient_id, "လောလောဆယ် ဒီစျေးနှုန်းမှာ အိမ်မရှိသေးပါဘူး။ နောက်တခု ရွေးပေးပါ။")
-        send_price_quick_replies(recipient_id)  # add this line
+        send_price_quick_replies(recipient_id)
         return
 
     elements = []
@@ -298,6 +297,45 @@ send_listings_carousel(recipient_id, price_key):
             }
         }
     }
+    requests.post(url, json=payload)
+
+    send_message(recipient_id, "👉 နောက်ထပ် စျေးနှုန်းတွေကိုလည်း ဒီမှာ နှိပ်ကြည့်နိုင်ပါတယ်:")
+    send_price_quick_replies(recipient_id)
+
+
+def send_price_quick_replies(recipient_id):
+    label_map = {
+        "PRICE_1": "1.သိန်းတစ်သောင်းအောက်",
+        "PRICE_2": "2.သိန်းတစ်သောင်းမှ သုံးသောင်းအထိ",
+        "PRICE_3": "3.သိန်းသုံးသောင်းမှ ငါးသောင်းအထိ", 
+        "PRICE_4": "4.သိန်းငါးသောင်းအထက်",
+        "PRICE_5": "5.သိန်းဆယ်သောင်းအထက်",
+        "PRICE_6": "6.သိန်းဆယ်သောင်းမှ သိန်းနှစ်ဆယ်အထိ",
+        "PRICE_7": "7.သိန်းနှစ်ဆယ်မှ သိန်းသုံးဆယ်အထိ",
+        "PRICE_8": "8.သိန်းသုံးဆယ်မှ သိန်းလေးဆယ်အထိ",
+        "PRICE_9": "9.သိန်းလေးဆယ်မှ သိန်းငါးဆယ်အထိ",
+        "PRICE_10": "10.သိန်းငါးဆယ်အထက်"
+    }
+
+    quick_replies = []
+    for key, items in LISTINGS.items():
+        if len(items) > 0:
+            quick_replies.append({
+                "content_type": "text",
+                "title": label_map.get(key, key),
+                "payload": key
+            })
+
+    if quick_replies:
+        url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+        payload = {
+            "recipient": {"id": recipient_id},
+            "message": {
+                "text": "စျေးနှုန်း ရွေးပါ:",
+                "quick_replies": quick_replies
+            }
+        }
+        requests.post(url, json=payload)
     requests.post(url, json=payload)
 
     # ADD THESE 2 LINES AT THE END:
