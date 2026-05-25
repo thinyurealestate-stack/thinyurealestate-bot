@@ -191,8 +191,7 @@ LISTINGS = {
                         🌸မြေပိုင်မြေအမည်ပေါက် """,
                         
             "subtitle": "🌸ခြံအကျယ် ၅၅×၁၀၀ ပေ,💵 သိန်း ၄၀၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
-            "image_url: "https://drive.google.com/uc?export=view&id=1NNfe_UItc9RTv0wTMJ2sixZVp-_Hbwp0"
-            }
+"image_url": "https://drive.google.com/uc?export=view&id=1NNfe_UItc9RTv0wTMJ2sixZVp-_Hbwp0"            }
      ],
     "PRICE_5": [],
     "PRICE_6": [],
