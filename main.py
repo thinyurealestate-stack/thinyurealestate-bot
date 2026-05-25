@@ -2,8 +2,25 @@ from flask import Flask, request
 import requests
 import os
 
-app = Flask(__name__)
+app = Flask(_name_)
 PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN")
+
+# EDIT YOUR LISTINGS HERE
+LISTINGS = {
+    "PRICE_1": [
+        {
+            "title": "15x30 မြေကွက် လှိုင်",
+            "subtitle": "သိန်း80 - 3BR, 2Bath",
+            "image_url": "https://via.placeholder.com/400x300.png?text=House+1"
+        }
+    ],
+    "PRICE_2": [],
+    "PRICE_3": [],
+    "PRICE_4": [],
+    "PRICE_5": [],
+    "PRICE_6": [],
+    "PRICE_7": []
+}
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
@@ -19,44 +36,13 @@ def webhook():
             for event in entry.get("messaging", []):
                 if "message" in event:
                     sender_id = event["sender"]["id"]
-                    
-                    # Get text OR payload from quick reply
-                    user_text = event.get("message", {}).get("text", "")
                     payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
-                    
-                    message_data = payload if payload else user_text
+                    text = event.get("message", {}).get("text", "")
+                    message_data = payload if payload else text
 
-                    # Handle button clicks using payload
-                    if message_data == "PRICE_1":
-                        reply_text = "🏡 သိန်း၁သောင်းအောက်အိမ်များ\n1. 🏡ဂရံအမည်ပေါက်-လမ်းကျယ် နေရာကောင်း စီးပွါးရေးလုပ်ရန် အထူးအဆင်ပြေသောနေရာ  🌷အင်းစိန်မြို့နယ်-က+ခ ရပ်ကွက်-မြို့သစ်စျေးအနီး🌷လမ်းမကြီးမှ(၈)အိမ်မြှောက်🌷ဘဏ်နီး-ကျောင်းနီ-စျေးနီး🌷2BN.20x60,8800(ညှိ့နိူင်း)🏡ကား၂စီးရှောင်လမ်း🏡မြေအမျိုးစား🏡ဂရံအမည်ပေါက်🏡အရောင်းမြေပုံကူးပေးမည်🚕ကားလိူင်းပေါင်းစုံအနီးစာရွက်စာတမ်း-ခိုင်မာပြီးအရူပ်ရှင်းကင်းသော-အိမ်-ခြံမြေ-များကိုသာအရောင်းဝယ်လုပ်ပေးပါတယ်ရှင့်\n📞 09424006004"
-                        send_message(sender_id, reply_text)
-                    
-                    elif message_data == "PRICE_2":
-                        reply_text = "🏡 သိန်း၂သောင်းအောက်အိမ်များ\n1. 20x40 အိမ် - သိန်း150\nတည်နေရာ: ရွှေပြည်သာ\n📞 09424006004"
-                        send_message(sender_id, reply_text)
-                    
-                    elif message_data == "PRICE_3":
-                        reply_text = "🏡 သိန်း၃သောင်းအောက်အိမ်များ\n1. 40x60 အိမ် - သိန်း280\nတည်နေရာ: မရမ်း�ကုန်း\n📞 09424006004"
-                        send_message(sender_id, reply_text)
-                    
-                    elif message_data == "PRICE_4":
-                        reply_text = "🏡 သိန်း၄သောင်းအောက်အိမ်များ\n1. 60x80 အိမ် - သိန်း350\nတည်နေရာ: ကမာရွတ်\n📞 09424006004"
-                        send_message(sender_id, reply_text)
-                    
-                    elif message_data == "PRICE_5":
-                        reply_text = "🏡 သိန်း၅သောင်းအောက်အိမ်များ\n1. လုံးချင်းအိမ် - သိန်း450\nတည်နေရာ: ကမာရွတ်\n📞 09424006004"
-                        send_message(sender_id, reply_text)
-                    
-                    elif message_data == "PRICE_6":
-                        reply_text = "🏡 သိန်း၆သောင်းအောက်အိမ်များ\n1. ကွန်ဒို - သိန်း550\nတည်နေရာ: စမ်းချောင်း\n📞 09424006004"
-                        send_message(sender_id, reply_text)
-                    
-                    elif message_data == "PRICE_7":
-                        reply_text = "🏡 သိန်း၇သောင်းအောက်အိမ်များ\n1. လုံးချင်းအိမ် - သိန်း650\nတည်နေရာ: ကမာရွတ်\n📞 09424006004"
-                        send_message(sender_id, reply_text)
-                    
+                    if message_data in LISTINGS:
+                        send_listings_carousel(sender_id, message_data)
                     else:
-                        # This is your original greeting, restored
                         send_welcome_with_buttons(sender_id)
         
         return "ok", 200
@@ -76,6 +62,43 @@ def send_welcome_with_buttons(recipient_id):
                 {"content_type": "text", "title": "6.သိန်း၆သောင်း", "payload": "PRICE_6"},
                 {"content_type": "text", "title": "7.သိန်း၇သောင်း", "payload": "PRICE_7"}
             ]
+        }
+    }
+    requests.post(url, json=payload)
+
+def send_listings_carousel(recipient_id, price_key):
+    listings = LISTINGS.get(price_key, [])
+    
+    if not listings:
+        send_message(recipient_id, "လောလောဆယ် ဒီစျေးနှုန်းမှာ အိမ်မရှိသေးပါဘူး။ နောက်တခု ရွေးပေးပါ။")
+        return
+
+    elements = []
+    for item in listings:
+        elements.append({
+            "title": item["title"],
+            "subtitle": item["subtitle"],
+            "image_url": item["image_url"],
+            "buttons": [
+                {
+                    "type": "phone_number",
+                    "title": "ဆက်သွယ်ရန်",
+                    "payload": "+959424006004"
+                }
+            ]
+        })
+
+    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    payload = {
+        "recipient": {"id": recipient_id},
+        "message": {
+            "attachment": {
+                "type": "template",
+                "payload": {
+                    "template_type": "generic",
+                    "elements": elements
+                }
+            }
         }
     }
     requests.post(url, json=payload)
