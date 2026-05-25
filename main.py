@@ -9,19 +9,16 @@ PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN")
 LISTINGS = {
     "PRICE_1": [
         
-        {
-            "title": """🏡ဂရံအမည်ပေါက်-လမ်းကျယ် နေရာကောင်း စီးပွါးရေးလုပ်ရန်အထူးအဆင်ပြေသောနေရာ🌷အင်းစိန်မြို့နယ်-က+ခ ရပ်ကွက်-မြို့သစ်စျေးအနီး🌷လမ်းမကြီးမှ(၈)အိမ်မြှောက်🌷ဘဏ်နီး-ကျောင်းနီ-စျေးနီး """,
-            "subtitle": "🌷2BN.20x60,8800(ညှိ့နိူင်း)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1eSvjYhgjN0nOb0Yw5phphnoHv6esYqMe"
-        },
-            {
+     {
              "title": """အမြန်ရောင်းမည် အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး-ဘုရင့်နောင်လမ်းမကြီးဒဲ့ပေါက်,လမ်း-ကား၂စီးရှောင်လမ်း-အသင့်နေရုံ-2BN အိမ်ကောင်း
                         🌸မြေအမျိုးစား🌸ဘိုးဘွားပိုင်မြေ🌸အစက်ဆက်စာချုပ်🌸မြေကွက်အမှတ်စစ်လို့ရ
                         🌸ခြံထဲ ကားထားလို့ရ 🌸Solar ၆ချက်🌸အဲကွန်း ၅လုံး🌸CCTV ၁၂ လုံး
                         🌸Toilet အပေါ်အောက် ရေပူရေအေးပါ
                         💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကိုလုံး၀ပေးစရာမလိုပါ """,   
             "subtitle": "🌸ခြံအကျယ် 18× 80 ပေအကျယ် 🏡2 BN နှစ်ထပ်အိမ် အသင့်သင့် , 💸ရောင်းစျေး4400(ညှိ့နိူင်း)",
-            "image_url": "https://drive.google.com/uc?export=view&id=138Y0sAC0twMImPgBvYfoaVCZLgYC9KWr" 
+            "image_url": "https://drive.google.com/uc?export=view&id=138Y0sAC0twMImPgBvYfoaVCZLgYC9KWr",
+            "facebook_url": "https://www.facebook.com/share/p/1DaozjPCxM/" 
+            
         },
             {
             "title": """ကျောက်ရေတွင်း လမ်းမဒဲ့ပေါက် လမ်းကျယ် မိန်လမ်းမပေါ် နေရာကောင်း အိမ်နှင်ခြံ အရောင်း
@@ -41,7 +38,9 @@ LISTINGS = {
                         🌸ဘိုးဘွားပိုင် အရပ်စာချုပ်
                         🌺ဂရန်ပြန်လျောက်လို့ရသော မြေ""",
             "subtitle": " 💸၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1rgLIGefRfvNGg-pU28d6NCnh6-wZKP8w"
+            "image_url": "https://drive.google.com/uc?export=view&id=1rgLIGefRfvNGg-pU28d6NCnh6-wZKP8w",
+            "facebook_url": "https://www.facebook.com/share/p/1duXavUZYd/" 
+
         },
             {
             "title": """🏡ရပ်ကွက်သန့် လမ်းကျယ် နေရာကောင်းမှာ 1RC တိုက်လေးပါမယ် အိမ်နှင့်ခြံ အရောင်း
@@ -59,7 +58,9 @@ LISTINGS = {
                         🌸ဘိုးဘွားပိုင် အရပ်စာချုပ်
                         🌸ဂရန်ပြန်လျောက်လို့ရသောမြေ""",
             "subtitle": "💸၇၀၀၀ သိန်း (ညှီနှိုင်း)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1rgLIGefRfvNGg-pU28d6NCnh6-wZKP8w"
+            "image_url": "https://drive.google.com/uc?export=view&id=1rgLIGefRfvNGg-pU28d6NCnh6-wZKP8w",
+            "facebook_url": "https://www.facebook.com/share/p/18eub4YCnX/" 
+
         },
             {
             "title": """ရှယ်ပြင်ဆင်ပြီးအသင့်နေအိမ်ရောင်းမည်
@@ -99,7 +100,9 @@ LISTINGS = {
                         လိုပါရှင့်🙏
                         👉စာရွက်စာတမ်းခိုင်မာပြီးအရူပ်ရှင်းကင်းသော-အိမ်ခြံမြေများကိုသာ-အရောင်းဝယ်လုပ်ပေးပါတယ်ရှင့်💁‍♂️""",
             "subtitle": "💸2.5.RC 25.60,6500(ညှိ့နိူင်း)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1IQuSP5CuuxbNBs0PIIGKKIxvadrQSWcM"
+            "image_url": "https://drive.google.com/uc?export=view&id=1IQuSP5CuuxbNBs0PIIGKKIxvadrQSWcM",
+            "facebook_url": "https://www.facebook.com/share/p/1EwVh5nBds/" 
+
         },
             {
             "title": """🏠 ကျောက်ရေတွင်း လမ်းမဒဲ့ပေါက် လမ်းကျယ်မိန်လမ်းမပေါ် နေရာကောင်း အိမ်နှင်ခြံ အရောင်း
@@ -116,8 +119,10 @@ LISTINGS = {
                         🌸ဘိုးဘွားပိုင်  အဆက်စပ် စာချုပ်
                         💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကို
                         လုံး၀ပေးစရာမလိုပါ""",
-            "subtitle": "🌺ခြံအကျယ် ၂၅ × ၆၀ေပ , 💸၅၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1yFTHdvpczHgU1xfZnqe4pHlfFyTjw26e"
+            "subtitle": "🌺ခြံအကျယ် ၂၅ × ၆၀ေပ , 💸၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://drive.google.com/uc?export=view&id=1yFTHdvpczHgU1xfZnqe4pHlfFyTjw26e",
+            "facebook_url": "https://www.facebook.com/share/p/1duXavUZYd/" 
+
         }
             ],
     "PRICE_2": [
@@ -134,7 +139,9 @@ LISTINGS = {
                     🌸အမည်ပေါက် လျောက်ထားဆဲ ပါ
                     🌺ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကိုလုံး၀ပေးစရာမလိုပါ""",
         "subtitle": "🌸ခြံ  အကျယ်  ၄၀ × ၈၀ ပေ,💸သိန်း ၁၁၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
-        "image_url": "https://drive.google.com/uc?export=view&id=1DT0vy8jJ23YBdfcpdiMgEvof6_K0I4X5"
+        "image_url": "https://drive.google.com/uc?export=view&id=1DT0vy8jJ23YBdfcpdiMgEvof6_K0I4X5",
+        "facebook_url": "https://www.facebook.com/share/p/1HdcYcGFfY/" 
+
         },
         { "title": """ ဂရန်အမည်ပေါက် နေရာကောင်း လမ်းကျယ် ပတ်ဝန်ကျင်သန့် အိမ်နင့်ခြံ အရောင်း
                     🌸အင်းစိန်မြို့နယ် မြို့သစ် ရက်ကွက်
@@ -151,7 +158,9 @@ LISTINGS = {
                     💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကို
                     လုံး၀ပေးစရာမလိုပါ""",
             "subtitle": "🌸ခြံအကျယ် ၃၀ × ၆၀ ပေ အကျယ်,💸ရောင်းစျေး ၁၄၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://drive.google.com/uc?export=view&id=1jA2an67VfIJe_1lCJUYv2l6NcE5gWCQp"
+            "image_url": "https://drive.google.com/uc?export=view&id=1jA2an67VfIJe_1lCJUYv2l6NcE5gWCQp",
+            "facebook_url": "https://www.facebook.com/share/p/1Lu5qCkvfg/" 
+
             
         }
             ],
@@ -173,7 +182,9 @@ LISTINGS = {
                 ✨ အထူးဂရန် လျှောက်ထားနိုင်သော မြေ
                 💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကို""",
         "subtitle": "✨ ခြံအကျယ် 70 × 100 ( 7000 Sqft),💵 ၂၂၀၀၀ သိန်း (ပိုင်ရှင်တိုက်ရိုက် ညှိနှိုင်း)",
-        "image_url": "https://drive.google.com/uc?export=view&id=16qZuOJExsMMd_tojtSf6A1RtDswImatS"
+        "image_url": "https://drive.google.com/uc?export=view&id=16qZuOJExsMMd_tojtSf6A1RtDswImatS",
+        "facebook_url": "https://www.facebook.com/share/p/1BDGbQti5V/" 
+
         }
             ],
             
@@ -191,7 +202,9 @@ LISTINGS = {
                         🌸မြေပိုင်မြေအမည်ပေါက် """,
                         
             "subtitle": "🌸ခြံအကျယ် ၅၅×၁၀၀ ပေ,💵 သိန်း ၄၀၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
-"image_url": "https://drive.google.com/uc?export=view&id=1NNfe_UItc9RTv0wTMJ2sixZVp-_Hbwp0"            }
+            "image_url": "https://drive.google.com/uc?export=view&id=1NNfe_UItc9RTv0wTMJ2sixZVp-_Hbwp0",
+            "facebook_url": "https://www.facebook.com/share/p/18czyUKQ2V/" 
+}
      ],
     "PRICE_5": [],
     "PRICE_6": [],
@@ -256,16 +269,16 @@ def send_listings_carousel(recipient_id, price_key):
         return
 
     elements = []
-    for item in listings:
-        elements.append({
-            "title": item["title"],
-            "subtitle": item["subtitle"],
-            "image_url": item["image_url"],
-            "buttons": [
-                {
-                    "type": "phone_number",
-                    "title": "ဆက်သွယ်ရန်",
-                    "payload": "+959424006004"
+for item in listings:
+    elements.append({
+        "title": item["title"],
+        "subtitle": item["subtitle"],
+        "image_url": item["image_url"],
+        "buttons": [
+            {
+                "type": "web_url",
+                "url": item["facebook_url"],
+                "title": "ပြည်စုံကြည့်ရန်လင့်"
                 }
             ]
         })
