@@ -269,7 +269,7 @@ def send_listings_carousel(recipient_id, price_key):
         return
 
     elements = []
-    for item in listings:  # ← indent 4 spaces to match
+    for item in listings:  
         elements.append({
             "title": item["title"],
             "subtitle": item["subtitle"],
