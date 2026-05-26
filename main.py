@@ -154,7 +154,21 @@ LISTINGS = {
          "subtitle": "➡️ခြံအကျယ်60'x90',➡️အိမ်အကျယ်35'x55'➡️ရေကူးကန်-15'x30',သိန်း ၁၈,၀၀၀",
          "image_url": "https://i.postimg.cc/3wrxk43f/Image-26-05-2026-at-1-46-AM.png",
          "facebook_url": "https://www.facebook.com/share/p/18oWZFS9zC/"
-        }
+        },
+    {
+        "tilte": " နာမည်ကြီး မင်းသမီးခြံ အနီး နေရာကောင်း စိတ်ငြိမ်ရပ်ကွက် အမည်ပေါက်  ခြံအရောင်း,မရမ်းကုန်းမြို့နယ် ၅ ရပ်ကွက်,🌸၉ မိုင် 
+        ဗိုလ်ညာဏ လမ်းသွယ် 🌸ပြည့်လမ်းမကြီး အနီး🌸Ocean Center အနီး🌸✈ ရန်ကုန် လေဆိပ် အနီး🌸ပတ်ဝန်ကျင်သန့် စိတ်ငြိမ်ရပ်ကွက်",
+        "subtitle": "🌸ခြံအကျယ် ၃၆ × ၆၂ ပေ,💸၁၅၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+        "image_url": "https://i.postimg.cc/XY92Ypz5/Image-27-05-2026-at-2-32-AM.png",
+        "facebook_url": "https://www.facebook.com/share/p/17m6ESdwqN/"
+    },
+
+    {
+        "title": " မီး အမြဲမှန်တဲ့ လေဆိပ်လမ်းထဲက နေရာကောင်လမ်းကျယ် 1RC အိမ်နဲ့ခြံ  အရောင်း🍀 အင်းစိန်မြို့နယ် ၊ စောဘွားကြီးကုန်းရပ်ကွက်,🌸လေဆိပ်ရိပ်သာ လမ်းသွယ်,🌸ပြည်လမ်းမကြီး အနီး,🌸✈️ ရန်ကုန်လေဆိပ်အနီး,🌸Ocean Center အနီး,🌸ဆယ်မိုင်ကုန်းစျေး ,🌸တောင်ဘက်အလှည်,🌸ကားနှစ်စီးရှောင် လမ်း",
+        "subtitle": "🌸ခြံအကျယ် ၆၀ × ၅၅ ,💸၁၅၀၀၀ သိန်း ( ညှိနှိုင်းစျေး)",
+        "image_url": "https://i.postimg.cc/jdcHgPmH/Image-27-05-2026-at-2-52-AM.png",
+        "facebook_url": "https://www.facebook.com/share/p/1chPdC9zSS/"
+    }
  ],
         
     "PRICE_3": 
@@ -177,7 +191,15 @@ LISTINGS = {
         "image_url": "https://i.postimg.cc/9Q4xCrj2/Image-26-05-2026-at-1-18-AM.png",
         "facebook_url": "https://www.facebook.com/share/p/1BDGbQti5V/" 
 
-        }
+        },
+
+        
+    { "title": "မိုင် ပြည်လမ်းမ အလွန်းနီး လမ်းကျယ်နေရာကောင်း မြေသီသန့် ခြံကွက်အရောင်း,🌸မရမ်းကုန်းမြို့နယ် ၅ ရပ်ကွက်,🌸၉ မိုင် ဘောဂလမ်း,🌸ရန်ကုန်လေဆိပ် အနီး,🌸Ocean center အနီး,🌸ပြည်လမ်းမကြီး ဒဲပေါက့် အလွန်နီး,🌸ကားနှစ်စီးရှောင် လမ်းကျယ်",
+           "subtitle": "🌸ခြံ အကျယ် 37 × 90  ပေ,💸ရောင်းစျေး  ၂၉၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+           "image_url": "https://i.postimg.cc/ncXFgtwS/Image-27-05-2026-at-2-57-AM.png",
+           "facebook_url": "https://www.facebook.com/share/p/1DrXZbppAw/"
+      }
+            
             ],
             
     "PRICE_4": [
