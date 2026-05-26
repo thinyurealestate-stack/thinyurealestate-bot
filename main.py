@@ -4,6 +4,7 @@ import os
 
 app = Flask(__name__)
 PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN")
+VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN","thinyurealestate")
 
 # EDIT YOUR LISTINGS HERE
 LISTINGS = {
