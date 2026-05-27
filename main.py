@@ -238,16 +238,28 @@ LISTINGS = {
                 
                 for entry in data.get("entry", []):
                     for event in entry.get("messaging", []):
-                        if "message" in event:
+                        
                             sender_id = event["sender"]["id"]
-                    
-                        if "referral" in event:
+                            if "referral" in event:
+                            if "message" in event:
+
                     send_message(sender_id, "Thanks for coming from our ad!")
               
                 # 2. message_reactions
                if "reaction" in event:
-                   reaction = event["reaction"].get("reaction", "")
-                   send_message(sender_id, f"You reacted with {reaction}")
+        reaction = event["reaction"].get("reaction", "")
+        
+        if reaction == "love":
+            url = f"https://graph.facebook.com/v18.0/{sender_id}/labels?access_token={PAGE_ACCESS_TOKEN}"
+            requests.post(url, json={"name": "Hot Lead"})
+        
+        send_message(sender_id, f"You reacted with {reaction}")
+    
+    if reaction == "love":
+        url = f"https://graph.facebook.com/v18.0/{sender_id}/labels?access_token={PAGE_ACCESS_TOKEN}"
+        requests.post(url, json={"name": "Hot Lead"})
+
+    send_message(sender_id, f"You reacted with {reaction}")
                 
               # 3. message_reads
                 if "read" in event:
@@ -256,29 +268,23 @@ LISTINGS = {
                 payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
                text = event.get("message", {}).get("text", "")
 
-                if "referral" in event:
-                   send_message(sender_id, "Thanks for coming from our ad!")
-                    
-                    if "reaction" in event:
-                      reaction = event["reaction"].get("reaction", "")
-                        send_message(sender_id, f"You reacted with {reaction}")
-                    
-                        if "read" in event:
-                        print(f"User {sender_id} read the message")
-                    
-                   payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
-                   text = event.get("message", {}).get("text", "")
+                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
+                text = event.get("message", {}).get("text", "")
+                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
+                text = event.get("message", {}).get("text", "")
+                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
+                text = event.get("message", {}).get("text", "")
 
-                    payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
-                    text = event.get("message", {}).get("text", "")
-                    message_data = payload if payload else text
+                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
+                text = event.get("message", {}).get("text", "")
+                message_data = payload if payload else text
 
                     if message_data in LISTINGS:
                         send_listings_carousel(sender_id, message_data)
                     else:
                         send_welcome_with_buttons(sender_id)
         
-        return "ok", 200
+        return "OK", 200
 
 def send_welcome_with_buttons(recipient_id):
     url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
