@@ -226,8 +226,8 @@ LISTINGS = {
     "PRICE_10": []
 }
 
-        @app.route('/webhook', methods=['GET', 'POST'])
-        def webhook():
+@app.route('/webhook', methods=['GET', 'POST'])  
+def webhook():
             if request.method == 'GET':
                 if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
                     return request.args.get("hub.challenge")
