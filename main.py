@@ -398,3 +398,49 @@ def send_message(recipient_id, text):
         "message": {"text": text}
     }
     requests.post(url, json=payload)
+
+data = request.get_json()
+    
+    if data.get("object") == "page":
+        for entry in data.get("entry", []):
+            for event in entry.get("messaging", []):
+                sender_id = event.get("sender", {}).get("id")
+                
+                # 1. Normal messages
+                if "message" in event and "text" in event["message"]:
+                    text = event["message"]["text"]
+                    send_message(sender_id, f"You said: {text}")
+                
+                # 2. Button clicks / postbacks
+                if "postback" in event:
+                    payload = event["postback"]["payload"]
+                    send_message(sender_id, f"Button clicked: {payload}")
+                
+                # 3. messaging_referrals - where did they come from
+                if "referral" in event:
+                    source = event["referral"].get("source")
+                    ad_id = event["referral"].get("ad_id")
+                    send_message(sender_id, f"Thanks for coming from {source}! Ad ID: {ad_id}")
+                
+                # 4. message_reactions - user reacted with ❤️ 👍 etc
+                if "reaction" in event:
+                    reaction = event["reaction"].get("reaction")
+                    send_message(sender_id, f"You reacted with {reaction}! Thanks!")
+                
+                # 5. message_reads - user read your message
+                if "read" in event:
+                    print(f"User {sender_id} read the message")  # just log it, don’t reply here
+    
+    return "OK", 200
+
+def send_message(recipient_id, text):
+    url = f"https://graph.facebook.com/v19.0/me/messages"
+    payload = {
+        "recipient": {"id": recipient_id},
+        "message": {"text": text},
+        "access_token": PAGE_ACCESS_TOKEN
+    }
+    requests.post(url, json=payload)
+
+if _name_ == "_main_":
+    app.run(port=5000)
