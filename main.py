@@ -232,32 +232,24 @@ def webhook():
                 if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
                     return request.args.get("hub.challenge")
                 return "Invalid token", 403
-def webhook():
     data = request.get_json()
     
-    if "referral" in event:
-        if "message" in event:
-            pass
-        send_message(sender_id, "Thanks for coming from our ad!")
+    for event in data.get('entry', []):
+        for messaging_event in event.get('messaging', []):
+            sender_id = messaging_event['sender']['id']
+            
+            if 'message' in messaging_event:
+                message = messaging_event['message']
+                payload = message.get('quick_reply', {}).get('payload')
+                text = message.get('text')
+                message_data = payload if payload else text
 
-    if "reaction" in event:
-        reaction = event["reaction"].get("reaction", "")
-        if reaction == "love":
-            url = f"https://graph.facebook.com/v18.0/{sender_id}/labels?access_token={PAGE_ACCESS_TOKEN}"
-            requests.post(url, json={"name": "Hot Lead"})
-            send_message(sender_id, f"You reacted with {reaction}")
-
-    if "read" in event:
-        pass
-
-    message_data = payload if payload else text
-
-    if message_data in LISTINGS:
-        send_listings_carousel(sender_id, message_data)
-    else:
-        send_welcome_with_buttons(sender_id)
-
-    return "OK", 200
+                if message_data in LISTINGS:
+                    send_listings_carousel(sender_id, message_data)
+                else:
+                    send_welcome_with_buttons(sender_id)
+    
+    return "OK", 200  ← 4 spaces indent, same as "def webhook():"
 
 def send_welcome_with_buttons(recipient_id):
     url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
