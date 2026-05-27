@@ -245,11 +245,11 @@ if "referral" in event:
         pass
     send_message(sender_id, "Thanks for coming from our ad!")
 
-# 2. message_reactions
-    if "reaction" in event:
+if "reaction" in event:
     reaction = event["reaction"].get("reaction", "")
     if reaction == "love":
         url = f"https://graph.facebook.com/v18.0/{sender_id}/labels?access_token={PAGE_ACCESS_TOKEN}"
+        requests.post(url, json={"name": "Hot Lead"})
         send_message(sender_id, f"You reacted with {reaction}")
 
                 if "read" in event:
