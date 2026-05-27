@@ -240,11 +240,11 @@ def webhook():
                     for event in entry.get("messaging", []):
                         
                             sender_id = event["sender"]["id"]
-                        if "referral" in event:
+if "referral" in event:
     if "message" in event:
         pass
     send_message(sender_id, "Thanks for coming from our ad!")
-
+    
 if "reaction" in event:
     reaction = event["reaction"].get("reaction", "")
     if reaction == "love":
