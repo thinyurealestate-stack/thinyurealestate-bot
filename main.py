@@ -256,9 +256,9 @@ def webhook():
         send_listings_carousel(sender_id, message_data)
     else:
         send_welcome_with_buttons(sender_id)
-        return "OK", 200
+    return "OK", 200
 def send_welcome_with_buttons(recipient_id):
-url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
 payload = {
 "recipient": {"id": recipient_id},
 "message": {
