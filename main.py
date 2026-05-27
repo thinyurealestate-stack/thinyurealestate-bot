@@ -226,20 +226,49 @@ LISTINGS = {
     "PRICE_10": []
 }
 
-@app.route('/webhook', methods=['GET', 'POST'])
-def webhook():
-    if request.method == 'GET':
-        if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
-            return request.args.get("hub.challenge")
-        return "Invalid token", 403
-
-    if request.method == 'POST':
-        data = request.get_json()
+        @app.route('/webhook', methods=['GET', 'POST'])
+        def webhook():
+            if request.method == 'GET':
+                if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
+                    return request.args.get("hub.challenge")
+                return "Invalid token", 403
         
-        for entry in data.get("entry", []):
-            for event in entry.get("messaging", []):
-                if "message" in event:
-                    sender_id = event["sender"]["id"]
+            if request.method == 'POST':
+                data = request.get_json()
+                
+                for entry in data.get("entry", []):
+                    for event in entry.get("messaging", []):
+                        if "message" in event:
+                            sender_id = event["sender"]["id"]
+                    
+                        if "referral" in event:
+                    send_message(sender_id, "Thanks for coming from our ad!")
+              
+                # 2. message_reactions
+               if "reaction" in event:
+                   reaction = event["reaction"].get("reaction", "")
+                   send_message(sender_id, f"You reacted with {reaction}")
+                
+              # 3. message_reads
+                if "read" in event:
+                 print(f"User {sender_id} read the message")
+                
+                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
+               text = event.get("message", {}).get("text", "")
+
+                if "referral" in event:
+                   send_message(sender_id, "Thanks for coming from our ad!")
+                    
+                    if "reaction" in event:
+                      reaction = event["reaction"].get("reaction", "")
+                        send_message(sender_id, f"You reacted with {reaction}")
+                    
+                        if "read" in event:
+                        print(f"User {sender_id} read the message")
+                    
+                   payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
+                   text = event.get("message", {}).get("text", "")
+
                     payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
                     text = event.get("message", {}).get("text", "")
                     message_data = payload if payload else text
