@@ -226,30 +226,34 @@ LISTINGS = {
     "PRICE_10": []
 }
 
-@app.route('/webhook', methods=['GET', 'POST'])  
+@app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
-            if request.method == 'GET':
-                if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
-                    return request.args.get("hub.challenge")
-                return "Invalid token", 403
+    if request.method == 'GET':
+        if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
+            return request.args.get("hub.challenge")
+        return "Invalid token", 403
+    
     data = request.get_json()
     
-    for event in data.get('entry', []):
-        for messaging_event in event.get('messaging', []):
-            sender_id = messaging_event['sender']['id']
-            
-            if 'message' in messaging_event:
-                message = messaging_event['message']
-                payload = message.get('quick_reply', {}).get('payload')
-                text = message.get('text')
-                message_data = payload if payload else text
+    try:
+        for event in data.get('entry', []):
+            for messaging_event in event.get('messaging', []):
+                sender_id = messaging_event['sender']['id']
 
-                if message_data in LISTINGS:
-                    send_listings_carousel(sender_id, message_data)
-                else:
-                    send_welcome_with_buttons(sender_id)
+                if 'message' in messaging_event:
+                    message = messaging_event['message']
+                    payload = message.get('quick_reply', {}).get('payload')
+                    text = message.get('text')
+                    message_data = payload if payload else text
+
+                    if message_data in LISTINGS:
+                        send_listings_carousel(sender_id, message_data)
+                    else:
+                        send_welcome_with_buttons(sender_id)
+    except Exception as e:
+        print(f"Error: {e}")
     
-    return "OK", 200  ← 4 spaces indent, same as "def webhook():"
+    return "OK", 200
 
 def send_welcome_with_buttons(recipient_id):
     url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
