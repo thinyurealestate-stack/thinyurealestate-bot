@@ -247,7 +247,7 @@ if "referral" in event:
 
 # 2. message_reactions
 if "reaction" in event:
-    f "reaction" in event:
+    if "reaction" in event:
     reaction = event["reaction"].get("reaction", "")
     if reaction == "love":
         url = f"https://graph.facebook.com/v18.0/{sender_id}/labels?access_token={PAGE_ACCESS_TOKEN}"
