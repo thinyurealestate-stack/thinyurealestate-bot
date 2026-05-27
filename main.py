@@ -254,29 +254,14 @@ LISTINGS = {
             requests.post(url, json={"name": "Hot Lead"})
         
         send_message(sender_id, f"You reacted with {reaction}")
-    
-    if reaction == "love":
-        url = f"https://graph.facebook.com/v18.0/{sender_id}/labels?access_token={PAGE_ACCESS_TOKEN}"
-        requests.post(url, json={"name": "Hot Lead"})
 
-    send_message(sender_id, f"You reacted with {reaction}")
-                
-              # 3. message_reads
                 if "read" in event:
                  print(f"User {sender_id} read the message")
                 
                 payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
+
                text = event.get("message", {}).get("text", "")
-
-                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
-                text = event.get("message", {}).get("text", "")
-                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
-                text = event.get("message", {}).get("text", "")
-                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
-                text = event.get("message", {}).get("text", "")
-
-                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
-                text = event.get("message", {}).get("text", "")
+                
                 message_data = payload if payload else text
 
                     if message_data in LISTINGS:
