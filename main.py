@@ -256,30 +256,28 @@ def webhook():
         send_listings_carousel(sender_id, message_data)
     else:
         send_welcome_with_buttons(sender_id)
-
-    return "OK", 200  
-    
+        return "OK", 200
 def send_welcome_with_buttons(recipient_id):
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
-    payload = {
-        "recipient": {"id": recipient_id},
-        "message": {
-            "text": "👩🏻‍💼🏘️🏡🏘️👩🏻‍💼 Ma Thin Yu အိမ်ခြံမြေအကျိုးဆောင်မှာကြိုဆိုပါတယ် 📞 Contact :09424006004 📞 💜 Viber : 09767975004 💜 💙 Facebook : သင်းယု အိမ်ခြံမြေအကျိုးဆောင် 💙 🤍အိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ🤍\n\nနှစ်သက်ရာစျေးနှုန်းလေးများကိုအောက်ကဈေးနှုန်းဘားအတိုင်းနိတ်ပြီးဆွဲကြည့်လိုရပါတယ်နော်",
-            "quick_replies": [
-                {"content_type": "text", "title": "1.သိန်း၁သောင်းအောက်", "payload": "PRICE_1"},
-                {"content_type": "text", "title": "2.သိန်း၂သောင်းအောက်", "payload": "PRICE_2"},
-                {"content_type": "text", "title": "3.သိန်း၃သောင်းအောက်", "payload": "PRICE_3"},
-                {"content_type": "text", "title": "4.သိန်း၄သောင်းအောက်", "payload": "PRICE_4"},
-                {"content_type": "text", "title": "5.သိန်း၅သောင်းအောက်", "payload": "PRICE_5"},
-                {"content_type": "text", "title": "6.သိန်း၆သောင်းအောက်", "payload": "PRICE_6"},
-                {"content_type": "text", "title": "7.သိန်း၇သောင်းအောက်", "payload": "PRICE_7"},
-                {"content_type": "text", "title": "8.သိန်း၈သောင်းအောက်", "payload": "PRICE_8"},
-                {"content_type": "text", "title": "9.သိန်း၉သောင်းအောက်", "payload": "PRICE_9"},
-                {"content_type": "text", "title": "10.သိန်းကြီးတန်အိမ်များ", "payload": "PRICE_10"}
-            ]
-        }
-    }
-    requests.post(url, json=payload)
+url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+payload = {
+"recipient": {"id": recipient_id},
+"message": {
+"text": "👩🏻‍💼🏘️🏡🏘️👩🏻‍💼 Ma Thin Yu အိမ်ခြံမြေအကျိုးဆောင်မှာကြိုဆိုပါတယ် 📞 Contact :09424006004 📞 💜 Viber : 09767975004 💜 💙 Facebook : သင်းယု အိမ်ခြံမြေအကျိုးဆောင် 💙 🤍အိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ🤍\n\nနှစ်သက်ရာစျေးနှုန်းလေးများကိုအောက်ကဈေးနှုန်းဘားအတိုင်းနိတ်ပြီးဆွဲကြည့်လိုရပါတယ်နော်",
+"quick_replies": [
+{"content_type": "text", "title": "1.သိန်း၁သောင်းအောက်", "payload": "PRICE_1"},
+{"content_type": "text", "title": "2.သိန်း၂သောင်းအောက်", "payload": "PRICE_2"},
+{"content_type": "text", "title": "3.သိန်း၃သောင်းအောက်", "payload": "PRICE_3"},
+{"content_type": "text", "title": "4.သိန်း၄သောင်းအောက်", "payload": "PRICE_4"},
+{"content_type": "text", "title": "5.သိန်း၅သောင်းအောက်", "payload": "PRICE_5"},
+{"content_type": "text", "title": "6.သိန်း၆သောင်းအောက်", "payload": "PRICE_6"},
+{"content_type": "text", "title": "7.သိန်း၇သောင်းအောက်", "payload": "PRICE_7"},
+{"content_type": "text", "title": "8.သိန်း၈သောင်းအောက်", "payload": "PRICE_8"},
+{"content_type": "text", "title": "9.သိန်း၉သောင်းအောက်", "payload": "PRICE_9"},
+{"content_type": "text", "title": "10.သိန်းကြီးတန်အိမ်များ", "payload": "PRICE_10"}
+]
+}
+}
+requests.post(url, json=payload)
 
 def send_listings_carousel(recipient_id, price_key):
     listings = LISTINGS.get(price_key, [])
