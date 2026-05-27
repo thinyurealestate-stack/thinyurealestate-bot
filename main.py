@@ -246,7 +246,6 @@ if "referral" in event:
     send_message(sender_id, "Thanks for coming from our ad!")
 
 # 2. message_reactions
-if "reaction" in event:
     if "reaction" in event:
     reaction = event["reaction"].get("reaction", "")
     if reaction == "love":
