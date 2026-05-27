@@ -399,48 +399,58 @@ def send_message(recipient_id, text):
     }
     requests.post(url, json=payload)
 
-data = request.get_json()
-    
+@app.route('/webhook', methods=['GET', 'POST'])
+def webhook():
+    # Facebook verification for GET
+    if request.method == 'GET':
+        if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
+            return request.args.get("hub.challenge")
+        return "Invalid token", 403
+
+    # Handle POST events
+    data = request.get_json()
+
     if data.get("object") == "page":
         for entry in data.get("entry", []):
             for event in entry.get("messaging", []):
                 sender_id = event.get("sender", {}).get("id")
-                
+
                 # 1. Normal messages
-                if "message" in event and "text" in event["message"]:
-                    text = event["message"]["text"]
-                    send_message(sender_id, f"You said: {text}")
-                
-                # 2. Button clicks / postbacks
+                if "message" in event:
+                    message = event["message"]
+                    
+                    # If user clicked quick reply button
+                    if "quick_reply" in message:
+                        payload = message["quick_reply"]["payload"]
+                        send_message(sender_id, f"You selected: {payload}")
+                    
+                    # Normal text message
+                    elif "text" in message:
+                        text = message["text"]
+                        send_message(sender_id, f"You said: {text}")
+
+                # 2. Postback buttons
                 if "postback" in event:
                     payload = event["postback"]["payload"]
                     send_message(sender_id, f"Button clicked: {payload}")
-                
-                # 3. messaging_referrals - where did they come from
+
+                # 3. Referrals
                 if "referral" in event:
                     source = event["referral"].get("source")
                     ad_id = event["referral"].get("ad_id")
                     send_message(sender_id, f"Thanks for coming from {source}! Ad ID: {ad_id}")
-                
-                # 4. message_reactions - user reacted with ❤️ 👍 etc
+
+                # 4. Reactions
                 if "reaction" in event:
                     reaction = event["reaction"].get("reaction")
                     send_message(sender_id, f"You reacted with {reaction}! Thanks!")
-                
-                # 5. message_reads - user read your message
+
+                # 5. Reads
                 if "read" in event:
-                    print(f"User {sender_id} read the message")  # just log it, don’t reply here
-    
+                    print(f"User {sender_id} read the message")
+
     return "OK", 200
 
-def send_message(recipient_id, text):
-    url = f"https://graph.facebook.com/v19.0/me/messages"
-    payload = {
-        "recipient": {"id": recipient_id},
-        "message": {"text": text},
-        "access_token": PAGE_ACCESS_TOKEN
-    }
-    requests.post(url, json=payload)
 
 if _name_ == "_main_":
     app.run(port=5000)
