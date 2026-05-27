@@ -241,8 +241,9 @@ def webhook():
                         
                             sender_id = event["sender"]["id"]
                             if "referral" in event:
-                            if "message" in event:
                                 pass
+                                
+                            if "message" in event:
                                 send_message(sender_id, "Thanks for coming from our ad!")
               
                if "reaction" in event:
