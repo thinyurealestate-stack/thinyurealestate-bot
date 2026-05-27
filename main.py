@@ -240,7 +240,7 @@ def webhook():
                     for event in entry.get("messaging", []):
                         
                             sender_id = event["sender"]["id"]
-if "referral" in event:
+                        if "referral" in event:
     if "message" in event:
         pass
     send_message(sender_id, "Thanks for coming from our ad!")
@@ -252,21 +252,17 @@ if "reaction" in event:
         requests.post(url, json={"name": "Hot Lead"})
         send_message(sender_id, f"You reacted with {reaction}")
 
-                if "read" in event:
-                 print(f"User {sender_id} read the message")
-                
-                payload = event.get("message", {}).get("quick_reply", {}).get("payload", "")
+if "read" in event:
+    pass
 
-               text = event.get("message", {}).get("text", "")
-                
-                message_data = payload if payload else text
+message_data = payload if payload else text
 
-                    if message_data in LISTINGS:
-                        send_listings_carousel(sender_id, message_data)
-                    else:
-                        send_welcome_with_buttons(sender_id)
-        
-        return "OK", 200
+if message_data in LISTINGS:
+    send_listings_carousel(sender_id, message_data)
+else:
+    send_welcome_with_buttons(sender_id)
+
+return "OK", 200
 
 def send_welcome_with_buttons(recipient_id):
     url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
