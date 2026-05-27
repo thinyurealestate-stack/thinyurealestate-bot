@@ -451,5 +451,5 @@ def webhook():
     return "OK", 200
 
 
-if _name_ == "_main_":
+if _name_ == "__main__":
     app.run(port=5000)
