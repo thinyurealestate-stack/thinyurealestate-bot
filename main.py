@@ -399,7 +399,6 @@ def send_message(recipient_id, text):
     }
     requests.post(url, json=payload)
 
-@app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
     # Facebook verification for GET
     if request.method == 'GET':
