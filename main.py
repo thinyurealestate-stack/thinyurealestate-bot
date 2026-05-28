@@ -269,6 +269,11 @@ def webhook():
                     standby = messaging_event['standby']
                     print(f"Standby event: {standby}")
                     continue
+
+                if 'message_feedback' in messaging_event:
+                    feedback = messaging_event['message_feedback']
+                    print(f"Feedback received: {feedback}")
+                    continue
                     
                 if 'message' in messaging_event:
                     message = messaging_event['message']
