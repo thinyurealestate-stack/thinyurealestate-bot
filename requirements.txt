@@ -1,3 +1,4 @@
 flask
-gunicorn
+pkill gunicorn
+gunicorn main:app
 requests
