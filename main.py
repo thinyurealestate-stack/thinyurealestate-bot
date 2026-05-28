@@ -244,7 +244,27 @@ def webhook():
                     delivery = messaging_event['delivery']
                     print(f"Message delivered: {delivery}")
                     continue
-
+                    
+                if 'read' in messaging_event:
+                    read = messaging_event['read']
+                    print(f"Message read: {read}")
+                    continue
+                    
+                if 'reaction' in messaging_event:
+                    reaction = messaging_event['reaction']
+                    print(f"Reaction: {reaction}")
+                    continue
+                    
+                if 'referral' in messaging_event:
+                    referral = messaging_event['referral']
+                    print(f"Referral: {referral}")
+                    continue
+                    
+                if 'pass_thread_control' in messaging_event:
+                    handover = messaging_event['pass_thread_control']
+                    print(f"Handover: {handover}")
+                    continue
+                    
                 if 'message' in messaging_event:
                     message = messaging_event['message']
                     payload = message.get('quick_reply', {}).get('payload')
@@ -404,57 +424,3 @@ def send_message(recipient_id, text):
     }
     requests.post(url, json=payload)
 
-def webhook():
-    # Facebook verification for GET
-    if request.method == 'GET':
-        if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
-            return request.args.get("hub.challenge")
-        return "Invalid token", 403
-
-    # Handle POST events
-    data = request.get_json()
-
-    if data.get("object") == "page":
-        for entry in data.get("entry", []):
-            for event in entry.get("messaging", []):
-                sender_id = event.get("sender", {}).get("id")
-
-                # 1. Normal messages
-                if "message" in event:
-                    message = event["message"]
-                    
-                    # If user clicked quick reply button
-                    if "quick_reply" in message:
-                        payload = message["quick_reply"]["payload"]
-                        send_message(sender_id, f"You selected: {payload}")
-                    
-                    # Normal text message
-                    elif "text" in message:
-                        text = message["text"]
-                        send_message(sender_id, f"You said: {text}")
-
-                # 2. Postback buttons
-                if "postback" in event:
-                    payload = event["postback"]["payload"]
-                    send_message(sender_id, f"Button clicked: {payload}")
-
-                # 3. Referrals
-                if "referral" in event:
-                    source = event["referral"].get("source")
-                    ad_id = event["referral"].get("ad_id")
-                    send_message(sender_id, f"Thanks for coming from {source}! Ad ID: {ad_id}")
-
-                # 4. Reactions
-                if "reaction" in event:
-                    reaction = event["reaction"].get("reaction")
-                    send_message(sender_id, f"You reacted with {reaction}! Thanks!")
-
-                # 5. Reads
-                if "read" in event:
-                    print(f"User {sender_id} read the message")
-
-    return "OK", 200
-
-
-if __name__ == "__main__":
-    app.run(port=5000)
