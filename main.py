@@ -260,14 +260,14 @@ def webhook():
         return "Invalid token", 403
     
     data = request.get_json()
-    
+
     try:
         for event in data.get('entry', []):
-    for messaging_event in event.get('messaging', []):
-        sender_id = messaging_event['sender']['id']
-        if 'inbox_labels' in messaging_event:
-            user_id = messaging_event['recipient']['id']
-            added_labels = messaging_event['inbox_labels'].get('added_labels', [])
+            for messaging_event in event.get('messaging', []):
+                sender_id = messaging_event['sender']['id']
+                if 'inbox_labels' in messaging_event:
+                user_id = messaging_event['recipient']['id']
+                added_labels = messaging_event['inbox_labels'].get('added_labels', [])
             
             for label in added_labels:
                 label_name = label['label_name']
