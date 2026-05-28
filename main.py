@@ -252,9 +252,9 @@ def webhook():
     
     try:
         for event in data.get('entry', []):
-            for messaging_event in event.get('messaging', []):
-                sender_id = messaging_event['sender']['id']
-if 'inbox_labels' in messaging_event:
+    for messaging_event in event.get('messaging', []):
+        sender_id = messaging_event['sender']['id']
+        if 'inbox_labels' in messaging_event:
             user_id = messaging_event['recipient']['id']
             added_labels = messaging_event['inbox_labels'].get('added_labels', [])
             
@@ -270,12 +270,12 @@ if 'inbox_labels' in messaging_event:
             
             continue
 
-    if 'delivery' in messaging_event:
-        delivery = messaging_event['delivery']
-        print(f"Message delivered: {delivery}")
-        continue
-                    
-    if 'read' in messaging_event:
+        if 'delivery' in messaging_event:
+            delivery = messaging_event['delivery']
+            print(f"Message delivered: {delivery}")
+            continue
+
+        if 'read' in messaging_event:
         read = messaging_event['read']
         print(f"Message read: {read}")
         continue
