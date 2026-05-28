@@ -294,8 +294,31 @@ def webhook():
                         label_name = label.get('page_label_name', label.get('label_name', ''))
                         print(f"Label: {label_name}")
                         
-                        if label_name == 'Hot Lead':
-                            send_message(user_id, "မင်္ဂလာပါ VIP ဖောက်သည်ကြီး")
+                        # Label တစ်ခုချင်းစီအတွက် သင့်တော်တဲ့ တုံ့ပြန်မှု
+                if label_name == 'Hot Lead':
+                    send_message(user_id, "မင်္ဂလာပါ VIP ဖောက်သည်ကြီး ကြိုဆိုပါတယ်")
+                
+                elif label_name == 'သတိထားရမည့်သူ':
+                    # သတိထားရမည့်သူအတွက် လုပ်စေချင်တဲ့အလုပ်
+                    # ဥပမာ - ကိုယ်တိုင်အသေးစိတ်စစ်ဆေးဖို့ Admin ကို အကြောင်းကြားခြင်း
+                    send_message(user_id, "ကျေးဇူးပြု၍ အချိန်ယူပြီး စစ်ဆေးပါ။ ကျေးဇူးတင်ပါသည်။")
+                    print(f"⚠️ Warning: User {user_id} marked as 'စသတိထားရမည့်သူ'")
+                
+                elif label_name == 'လူလိမ်':
+                    # လူလိမ်အတွက် လုပ်စေချင်တဲ့အလုပ်
+                    # ဥပမာ - ဘာတုံ့ပြန်မှုမှမလုပ်တော့ဘဲ Block လုပ်ခြင်း သို့မဟုတ် Log ထားခြင်း
+                    send_message(user_id, "သင့်အကောင့်အား စစ်ဆေးနေပါသည်။")
+                    print(f"🚨 ALERT: User {user_id} marked as 'လူလိမ်'")
+                
+                elif label_name == 'မှတ်ထားရမည့်သူ':
+                    # မှတ်ထားရမည့်သူအတွက် အသိပေးခြင်း
+                    send_message(user_id, "ကျေးဇူးပါ။ သင့်အကြောင်းကို မှတ်သားထားပါမည်။ နောက်မှ အကြောင်းပြန်ပါမည်။")
+                    print(f"📝 Info: User {user_id} marked as 'မှတ်ထားရမည့်သူ'")
+                
+                else:
+                    continue
+                        
+                        
                 
                 # Log other events
                 if 'delivery' in messaging_event:
