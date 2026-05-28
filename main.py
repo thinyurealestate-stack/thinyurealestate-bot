@@ -265,6 +265,11 @@ def webhook():
                     print(f"Handover: {handover}")
                     continue
                     
+                if 'standby' in messaging_event:
+                    standby = messaging_event['standby']
+                    print(f"Standby event: {standby}")
+                    continue
+                    
                 if 'message' in messaging_event:
                     message = messaging_event['message']
                     payload = message.get('quick_reply', {}).get('payload')
