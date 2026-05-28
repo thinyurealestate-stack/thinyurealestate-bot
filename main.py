@@ -251,22 +251,22 @@ def send_message(recipient_id, message_text):
     }
     res = requests.post(url, json=payload)
     print(f"Sent message: {res.status_code}, {res.text}")
-    
+
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
     if request.method == 'GET':
-        if request.args.get("hub.verify_token") == os.environ.get("VERIFY_TOKEN"):
-            return request.args.get("hub.challenge")
+        if request.args.get('hub.verify_token') == os.environ.get('VERIFY_TOKEN'):
+            return request.args.get('hub.challenge')
         return "Invalid token", 403
-    
+
     data = request.get_json()
 
     try:
         for event in data.get('entry', []):
             for messaging_event in event.get('messaging', []):
                 sender_id = messaging_event['sender']['id']
-                
-    if 'inbox_labels' in messaging_event:
+
+                if 'inbox_labels' in messaging_event:
                     user_id = messaging_event['recipient']['id']
                     added_labels = messaging_event['inbox_labels'].get('added_labels', [])
                     for label in added_labels:
@@ -274,59 +274,47 @@ def webhook():
                         print(f"Label ADDED: {label_name} for user {user_id}")
 
                         if label_name == 'Hot Lead':
-                            send_message(user_id, "မင်္ဂလာပါ အသင်းဝင်အသစ် မှတ်ပုံတင်ပါ")
+                            send_message(user_id, "မင်္ဂလာပါ ဦးဆောင်အလားအလာ ကြိုဆိုပါတယ်")
                         elif label_name == 'Booked Viewing':
-                            send_message(user_id, "မင်္ဂလာပါ ထုတ်ကုန်အသစ်ရောင်းရန် မှတ်ပုံတင်ပါ")
+                            send_message(user_id, "မင်္ဂလာပါ အိမ်ကြည့်ရန် ရက်ချိန်းယူပြီးပါပြီ")
                         elif label_name == 'Need Callback':
-                            send_message(user_id, "ပြန်လည်ဆက်သွယ်ရန် တောင်းဆိုချက်")
+                            send_message(user_id, "မင်္ဂလာပါ ပြန်လည်ဆက်သွယ်ရန် လိုအပ်ပါသည်")
                         elif label_name == 'Sent Price List':
-                            send_message(user_id, "စျေးနှုန်းစာရင်း ပေးပို့ပြီးပါပြီ")
-                    continue
+                            send_message(user_id, "မင်္ဂလာပါ စျေးနှုန်းစာရင်း ပေးပို့ထားပါသည်")
+                        else:
+                            continue
 
-    if 'delivery' in messaging_event:
-        delivery = messaging_event['delivery']
-        print(f"Message delivered: {delivery}")
-        continue
+                if 'delivery' in messaging_event:
+                    delivery = messaging_event['delivery']
+                    print(f"Message delivered: {delivery}")
 
-    if 'read' in messaging_event:
-        read = messaging_event['read']
-        print(f"Message read: {read}")
-        continue
-                    
-    if 'reaction' in messaging_event:
-        reaction = messaging_event['reaction']
-        print(f"Reaction: {reaction}")
-        continue
-                    
-    if 'referral' in messaging_event:
-        referral = messaging_event['referral']
-        print(f"Referral: {referral}")
-        continue
-                    
-    if 'pass_thread_control' in messaging_event:
-        handover = messaging_event['pass_thread_control']
-        print(f"Handover: {handover}")
-        continue
-                    
-    if 'standby' in messaging_event:
-        standby = messaging_event['standby']
-        print(f"Standby event: {standby}")
-        continue
-                    
-    if 'message' in messaging_event:
-        message = messaging_event['message']
-        payload = message.get('quick_reply', {}).get('payload')
-        text = message.get('text')
-        message_data = payload if payload else text
+                if 'read' in messaging_event:
+                    read = messaging_event['read']
+                    print(f"Message read: {read}")
 
-    if message_data in LISTINGS:
-       send_listings_carousel(sender_id, message_data)
-       else:
-       send_welcome_with_buttons(sender_id)
-       except Exception as e:
-       print(f"Error: {e}")
-    
+                if 'reaction' in messaging_event:
+                    reaction = messaging_event['reaction']
+                    print(f"Reaction: {reaction}")
+
+                if 'referral' in messaging_event:
+                    referral = messaging_event['referral']
+                    print(f"Referral: {referral}")
+
+                if 'pass_thread_control' in messaging_event:
+                    handover = messaging_event['pass_thread_control']
+                    print(f"Handover: {handover}")
+
+                if 'standby' in messaging_event:
+                    standby = messaging_event['standby']
+                    print(f"Standby event: {standby}")
+
+                if 'message' in messaging_event:
+                    message = messaging_event['message']
+    except Exception as e:
+        print(f"Webhook error: {e}")
+
     return "OK", 200
+
 
 def send_welcome_with_buttons(recipient_id):
     url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
