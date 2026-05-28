@@ -265,7 +265,7 @@ def webhook():
         for event in data.get('entry', []):
             for messaging_event in event.get('messaging', []):
                 sender_id = messaging_event['sender']['id']
-                f 'inbox_labels' in messaging_event:
+                if 'inbox_labels' in messaging_event:
                 user_id = messaging_event['recipient']['id']        # <- 4 spaces in
                 added_labels = messaging_event['inbox_labels'].get('added_labels', [])  # <- 4 spaces in
                 
