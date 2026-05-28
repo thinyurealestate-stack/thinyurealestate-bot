@@ -265,21 +265,24 @@ def webhook():
         for event in data.get('entry', []):
             for messaging_event in event.get('messaging', []):
                 sender_id = messaging_event['sender']['id']
-                if 'inbox_labels' in messaging_event:
-                user_id = messaging_event['recipient']['id']
-                added_labels = messaging_event['inbox_labels'].get('added_labels', [])
-            
-            for label in added_labels:
-                label_name = label['label_name']
-                print(f"Label ADDED: {label_name} for user {user_id}")
+                f 'inbox_labels' in messaging_event:
+                user_id = messaging_event['recipient']['id']        # <- 4 spaces in
+                added_labels = messaging_event['inbox_labels'].get('added_labels', [])  # <- 4 spaces in
                 
-                if label_name == 'Hot Lead':
-                    send_message(user_id, "အထူးဝန်ဆောင်မှုအတွက် မကြာမီဆက်သွယ်ပေးပါမယ်။")
-                
-                elif label_name == 'Booked Viewing':
-                    send_message(user_id, "အိမ်ကြည့်ရှုရန် booking confirm ဖြစ်ပါပြီ။")
-            
-            continue
+                for label in added_labels:
+                    label_name = label['label_name']
+                    print(f"Label ADDED: {label_name} for user {user_id}")
+                    
+                    if label_name == 'Hot Lead':
+                        send_message(user_id, "အထူးဝန်ဆောင်မှုအတွက် မကြာမီဆက်သွယ်ပေးပါမယ်။")
+                    elif label_name == 'Booked Viewing':
+                        send_message(user_id, "အိမ်ကြည့်ရှုရန် booking confirm ဖြစ်ပါပြီ။")
+                    elif label_name == 'Need Callback':  # <- ADD THIS
+                        send_message(user_id, "အရောင်းတာဝန်ခံက ခဏအကြာ ဖုန်းဆက်ပေးပါမယ်။")
+                    elif label_name == 'Sent Price List':  # <- ADD THIS
+                        send_message(user_id, "ဈေးနှုန်းစာရင်း ပို့ပြီးပါပြီ။ မေးစရာရှိရင် မေးနိုင်ပါတယ်။")
+                        
+                continue
 
     if 'delivery' in messaging_event:
         delivery = messaging_event['delivery']
