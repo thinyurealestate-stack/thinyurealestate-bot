@@ -1,386 +1,51 @@
-from flask import Flask, request
-import json
-import requests
 import os
+import requests
+from flask import Flask, request
 
-app = Flask(__name__)
+app = Flask(_name_)
+
 PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN")
-VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN","thinyurealestate")
+VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "thinyurealestate")
 
-# EDIT YOUR LISTINGS HERE
+# ========== YOUR LISTINGS DATA ==========
 LISTINGS = {
     "PRICE_1": [
-        
-     {
-             "title": """အမြန်ရောင်းမည် အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး-ဘုရင့်နောင်လမ်းမကြီးဒဲ့ပေါက်,လမ်း-ကား၂စီးရှောင်လမ်း-အသင့်နေရုံ-2BN အိမ်ကောင်း
-                        🌸မြေအမျိုးစား🌸ဘိုးဘွားပိုင်မြေ🌸အစက်ဆက်စာချုပ်🌸မြေကွက်အမှတ်စစ်လို့ရ
-                        🌸ခြံထဲ ကားထားလို့ရ 🌸Solar ၆ချက်🌸အဲကွန်း ၅လုံး🌸CCTV ၁၂ လုံး
-                        🌸Toilet အပေါ်အောက် ရေပူရေအေးပါ
-                        💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကိုလုံး၀ပေးစရာမလိုပါ """,   
-            "subtitle": "🌸ခြံအကျယ် 18× 80 ပေအကျယ် 🏡2 BN နှစ်ထပ်အိမ် အသင့်သင့် , 💸ရောင်းစျေး4400(ညှိ့နိူင်း)",
+        {
+            "title": "အမြန်ရောင်းမည် အင်းစိန်မြို့နယ်",
+            "subtitle": "ခြံအကျယ် 18×80 ပေ, 2BN နှစ်ထပ်အိမ်",
             "image_url": "https://i.postimg.cc/rmTRnYJK/Image-25-05-2026-at-4-44-PM-(4).png",
-            "facebook_url": "https://www.facebook.com/share/p/1DaozjPCxM/" 
-            
-        },
-            {
-            "title": """ကျောက်ရေတွင်း လမ်းမဒဲ့ပေါက် လမ်းကျယ် မိန်လမ်းမပေါ် နေရာကောင်း အိမ်နှင်ခြံ အရောင်း
-                        🌺မရမ်းကုန်း မြို့နယ်  ၅ရပ်ကွက်
-                        🌸သဗ္ဗညုပုထိုးတော်ကြီး အနီး
-                        🌺စွယ်တော်မြတ် စေတီတော် အနီး
-                        🌸ကျောက်ရေတွင်း လမ်းမ ဒဲ့ပေါက်
-                        🌺ရန်ကုန် လေဆိပ် အနီး
-                        🌸ကားနှစ်စီးရှောင် မိန်လမ်မပေါ်
-                        🌸ခြံအကျယ် ၃၀ × ၈၀ ပေ
-                        🌺1RC တစ်ထပ်တိုက် အိမ်ကောင်း
-                        🌸လူတိုင်ကြိုက်တဲ့ အရှေ့အလှည့်
-                        🌺ခြံထဲ ကားနှစ်စီးခန့် ထားလို့ရ
-                        🌸မာစတာ (2) ခန်း ထပ်ခိုးပါ
-                        🌺ရေကူးကန် ငယ်တစ်ခုပါ
-                        🌸ကားဂိုထောင် (1) ထပ်ခိုးပါ
-                        🌸ဘိုးဘွားပိုင် အရပ်စာချုပ်
-                        🌺ဂရန်ပြန်လျောက်လို့ရသော မြေ""",
-            "subtitle": " 💸၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://i.postimg.cc/PJgjy0Wz/Image-25-05-2026-at-5-08-PM-(5).png",
-            "facebook_url": "https://www.facebook.com/share/p/1duXavUZYd/" 
-
-        },
-    
-            {
-            "title": """ရှယ်ပြင်ဆင်ပြီးအသင့်နေအိမ်ရောင်းမည်
-                        🌷အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး
-                        🌷လမ်းမကြီးမှကားနဲ့ ၁မီးနှစ်သာဝင်ရ
-                        🌷ဘဏ်နီး-ကျောင်းနီ-စျေးနီး
-                        🌷ခြံကျယ်၂၅x၆၀/၆၅၀၀
-                        🌷2 5,BN. အမိုးစလပ်ကိုယ်တိုင်နေဖို့ဆောက်ထားသောအိမ် ဖြစ်လို့အရမ်တန်သောလေး
-                        🌷အောက်ထပ်-ဧည့်ခန်း (1)ခန်း
-                        🌸Master bed room-(1)ခန်း
-                        🌸မီးဖိုခန်းကျယ်။(၁)ခန်း
-                        🌸ရေချိုးခန်းကျယ်(၁)ခန်း
-                        🌸ဘိုထိုင် (၁)
-                        🌸ဗားတပ်(၁)
-                        အခန်းကျင်း(၁)
-                        🌸အပေါ်ထပ်-ဧည့်ခန်း(၁)ခန်း
-                        🌸မာစတာခန်း (၂)ခန်း
-                        🌸စင်ဂယ်။(၂)ခန်း
-                        🌸ရေချိုးခန်း။(၂)ခန်း
-                        🌸ဘိုထိုင်(၂)
-                        🌸အပေါ်ဗားတပ်။(၁)
-                        အပေါ်စလပ်မိုးဖြစ်လို့လေကောင်းလေသန့်ရတဲ့ပြင်-အပင်စိုက်လို့လည်းရပါတယ်ရှင့်
-                        မြေကွက် ၁ကွက်အပိုရသလိုပါပဲရှင့်
-                        🏡အပေါ်စလပ်မှာ ဘိုထိုင်ပါသေးတယ်နော်
-                        🏡ကား၂စီးရှောင်လမ်း
-                        🏡မြေအမျိုးစား
-                        🏡ဘိုးဘွားပိုင်-အစက်ဆက်စာချုပ်
-                        🏡အရူပ်ရှင်းကင်း
-                        မြေကွက်အမှတ်စစ်လို့ရ
-                        စာရွက်စာတမ်း-ခိုင်မာပြီး
-                        အရူပ်ရှင်းကင်းသော-အိမ်-ခြံ
-                        မြေ-များကိုသာအရောင်းဝယ်
-                        လုပ်ပေးပါတယ်ရှင့်
-                        💁‍♂️လူကြီးမင်းစိတ်ဝင်စားလျင်
-                        လူကိုယ်တိုင်လာကြည့်ဖို့ဖိတ်ခေါ်ပါရစေရှင့်🙏
-                        💸💸ဝယ်ယူသူဖက်မှအကျိုးဆောင်ခ(လုံးဝ)ပေးးန်မ
-                        လိုပါရှင့်🙏
-                        👉စာရွက်စာတမ်းခိုင်မာပြီးအရူပ်ရှင်းကင်းသော-အိမ်ခြံမြေများကိုသာ-အရောင်းဝယ်လုပ်ပေးပါတယ်ရှင့်💁‍♂️""",
-            "subtitle": "💸2.5.RC 25.60,6500(ညှိ့နိူင်း)",
-            "image_url": "https://i.postimg.cc/fymwGwT8/Image-26-05-2026-at-1-12-AM.png",
-            "facebook_url": "https://www.facebook.com/share/p/1EwVh5nBds/" 
-
-        },
-            {
-            "title": """🏠 ကျောက်ရေတွင်း လမ်းမဒဲ့ပေါက် လမ်းကျယ်မိန်လမ်းမပေါ် နေရာကောင်း အိမ်နှင်ခြံ အရောင်း
-                        🌸မရမ်းကုန်း မြို့နယ်  ၅ရပ်ကွက်
-                        🌸သဗ္ဗညုပုထိုးတော်ကြီး အနီး
-                        🌸စွယ်တော်မြတ် စေတီတော် အနီး
-                        🌸ကျောက်ရေတွင်း လမ်းမ ဒဲ့ပေါက်
-                        🌸ရန်ကုန် လေဆိပ် အနီး
-                        🌸ကားနှစ်စီးရှောင် မိန်းလမ်မပေါ်
-                        🌸အိမ်ကနေ လမ်းမကြီးမြင်နေရ
-                        🌺2BN နှစ်ထပ်တိုက် အိမ်ကောင်း
-                        🌺အနောက်ဘက်အလှည့် ထောင့်ကွက် 
-                        🌺ခြံထဲ ကားထားလို့ရ
-                        🌸ဘိုးဘွားပိုင်  အဆက်စပ် စာချုပ်
-                        💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကို
-                        လုံး၀ပေးစရာမလိုပါ""",
-            "subtitle": "🌺ခြံအကျယ် ၂၅ × ၆၀ေပ , 💸၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://i.postimg.cc/JntCLRK6/Image-25-05-2026-at-5-14-PM-(1).png",
-            "facebook_url": "https://www.facebook.com/share/p/1duXavUZYd/" 
-}, 
-{
-    "title": "ဂရံအမည်ပေါက် အိမ်နှင့်ခြံအရောင်း🌸...",
-    "subtitle": "💸၄၀x၆၀ပေကျယ် 💸သိန်း ၈၅၀ (ညှိ့နိူင်းစျေး)",
-    "image_url": "https://i.postimg.cc/q7z1BgVM/IMG-5193.jpg",
-    "facebook_url": "https://www.facebook.com/share/p/1E1Uj9bsaT/"
-},
-   {
-       "title": "အရမ်းလှတဲ့အခန်းလေအလွှာနှိမ့်လေကို1100မပြည့်တဲ့စျေးနဲ့ရမယ်နော် ♥စရံဦးသူယူပါ,လူမျိုးဘာသာမရွေးဝယ်ယူလို့ရ,ဒုတိယထပ်အရောင်း(မှန်ခန်းမပါပါ),မင်းနန်ဒါလမ်းမကြီး ဒဲ့ဆင်း ၂လမ်းမြှောက်,တိုက်သက်တမ်းနု,အရှေ့လှည့်,မြေရှင်သဘောကောင်း,Bcc မီတာကျပြီး,လမ်းသန့် လေဝင်လေထွက်ကောင်း,စျေးနီး ,ကျောင်းနီးဘဏ်နီး,မှတ်တိုင်အနီး capitalနီး",
-       "subtitle": "၁၂ပေ ခွဲ ပေ၅၀,စျေး၁၀၉၀ညှိနှိုင်း",
-       "image_url": "https://i.postimg.cc/MKhM7YtY/IMG-5246.jpg",
-        "facebook_url": "https://www.facebook.com/share/p/1CTm4CTYVd/"
-   },
-
-    {
-        "title": "🌴တခါတလေအပန်းဖြေသွားမလား ဝယ်ဥထားရင်လည်းအမြတ်ရမှာနော်🌴မှော်ဘီမြို့နယ်-မင်္ဂလာကုန်းရွာ🌴ခြံကျယ် ၁ ဧကခွဲ🌴ခြံထဲမှာ သရက်/ပိန္နဲပင်/မာက🌴လာပင်နဲ့အပင်စုံပါတယ်ရှင့်🌴မြေဝယ်မကျမို့ဒီခြံလေးဝယ်ပြီး💸ဥထားရင် အပင်စုံအသီးစုံမို့🌴ပိန္နဲသီးခူးရောင်းရင်တောင်အရင်းကျေနေပြီသူဌးမင်းများရှင့်🌴မြေ အမျိုးစား-G -မြေ",
-        "subtitle": "ပေ ၄၀x၉၀ ကျယ် ,💸သိန်း ၆၀၀ ၁ကွက်လမ်းမမေးတင်,ပေကျယ် ၁၅၀x၁၅၀/၃၀၀၀,ပေကျယ်၁၀၅x၁၅၀/ ၂၈၀၀,ပေကျယ် ၁၀၀x၂၀၀/၁၅၀၀",
-        "image_url": "https://i.postimg.cc/gkC9GwkG/IMG-5250.jpg",
-        "facebook_url": "https://www.facebook.com/share/r/1EFoSBmMqR/"
-    }
-
-
-            ],
+            "facebook_url": "https://www.facebook.com/share/p/1DaozjPCxM/"
+        }
+    ],
     "PRICE_2": [
-    {    "title": """၉မိုင် ပြည်လမ်းမဒဲ့ပေါက် နေရာကောင်းလမ်းမ အနီး အိမ်နှင့်ခြံ ရောင်းမည်။
-                    🌸 မရမ်းကုန်မြို့နယ် ၉မိုင် ၅ ရက်ကွက်
-                    🌸ပြည်လမ်း ဒဲ့ပေါက်
-                    🌸Ocean center အနီး
-                    🌸✈ ရန်ကုန်လေဆိပ် အနီး
-                    🌸ကားနှစ်စီးရှောင် လမ်း
-                    🌸မြောက်ဘက်အလှည့် 
-                    🌸2BN နှစ်ထပ်တိုက် အသင့်သင့်
-                    🌸ခြံထဲ 🚕သုံးစီး ထားလို့ရ
-                    🌸မြေပိုင်မြေ အမျိုးအစား
-                    🌸အမည်ပေါက် လျောက်ထားဆဲ ပါ
-                    🌺ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကိုလုံး၀ပေးစရာမလိုပါ""",
-        "subtitle": "🌸ခြံ  အကျယ်  ၄၀ × ၈၀ ပေ,💸သိန်း ၁၁၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
-        "image_url": "https://i.postimg.cc/RZbjLkv4/Image-26-05-2026-at-1-15-AM.png",
-        "facebook_url": "https://www.facebook.com/share/p/1HdcYcGFfY/" 
-
-        },
-        { "title": "ဂရန်အမည်ပေါက် နေရာကောင်း လမ်းကျယ် ပတ်ဝန်ကျင်သန့် အိမ်နင့်ခြံ အရောင်း\n"
-                    "🌸အင်းစိန်မြို့နယ် မြို့သစ် ရက်ကွက်\n"
-                    "🌺ဘုရင့်နောင် ရိပ်သာ Vip လမ်းသန့်\n"
-                    "🌸ဘုရင်နောင် လမ်းမကြီး အနီး\n"
-                    "🌸မြို့သစ်စျေး အနီး\n"
-                    "🌸ဘုရင်နောင်း စျေးကြီး 🚗 5 မီနစ်ခန့်\n"
-                    "🌸စျေးနီးကျောင်းနီး မှတ်တိုင် အနီး\n"
-                    "🌸ကားနှစ်စီးရှောင် လမ်းကျယ်\n"
-                    "🌸လူတိုင်ကြိုက်တဲ့ အရှေ့အလှည့်\n"
-                    "🌸နှစ်ထပ်ပြင်ထောင်အိမ်\n"   
-                    "🌸ဂရံအမည်ပေါက် သက်ရှိထင်ရှား ရှိ\n"
-                    "🌸အရောင်းမြေပူံ ကူးပေးမည်",
-            "subtitle": "🌸ခြံအကျယ် ၃၀ × ၆၀ ပေ အကျယ်,💸ရောင်းစျေး ၁၄၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://i.postimg.cc/L69wK9Xj/Image-26-05-2026-at-1-16-AM.png",
-            "facebook_url": "https://www.facebook.com/share/p/1Lu5qCkvfg/" 
-
-            
-     },
-        { "title": "ကိုယ်တိုင်နေဖို့ ရှယ်ကိုလုပ်ထားတာမလို့။ဒါပေမယ့် ရောင်းရဖို့အကြောင်းပါလာတော့လဲရောင်းရတော့မယ်။ရွှေပြည်သာ Vip3 ရပ်ကွက်မှာပါ။ အမှတ် ၄လမ်းနဲ့တော်တော်နီးပါတယ်။ ခြံရှေ့လမ်းကျယ်ပါတယ်။",
-         "subtitle": "➡️ခြံအကျယ်60'x90',➡️အိမ်အကျယ်35'x55'➡️ရေကူးကန်-15'x30',သိန်း ၁၈,၀၀၀",
-         "image_url": "https://i.postimg.cc/3wrxk43f/Image-26-05-2026-at-1-46-AM.png",
-         "facebook_url": "https://www.facebook.com/share/p/18oWZFS9zC/"
-        },
-    {
-        "title": " နာမည်ကြီး မင်းသမီးခြံ အနီး နေရာကောင်း စိတ်ငြိမ်ရပ်ကွက် အမည်ပေါက်  ခြံအရောင်း,မရမ်းကုန်းမြို့နယ် ၅ ရပ်ကွက်,🌸၉ မိုင်\n"
-                 "ဗိုလ်ညာဏ လမ်းသွယ် 🌸ပြည့်လမ်းမကြီး အနီး🌸Ocean Center အနီး🌸✈ ရန်ကုန် လေဆိပ် အနီး🌸ပတ်ဝန်ကျင်သန့် စိတ်ငြိမ်ရပ်ကွက်",
-        "subtitle": "🌸ခြံအကျယ် ၃၆ × ၆၂ ပေ,💸၁၅၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-        "image_url": "https://i.postimg.cc/XY92Ypz5/Image-27-05-2026-at-2-32-AM.png",
-        "facebook_url": "https://www.facebook.com/share/p/17m6ESdwqN/"
-    },
-
-    {
-        "title": " မီး အမြဲမှန်တဲ့ လေဆိပ်လမ်းထဲက နေရာကောင်လမ်းကျယ် 1RC အိမ်နဲ့ခြံ  အရောင်း🍀 အင်းစိန်မြို့နယ် ၊ စောဘွားကြီးကုန်းရပ်ကွက်,🌸လေဆိပ်ရိပ်သာ လမ်းသွယ်,🌸ပြည်လမ်းမကြီး အနီး,🌸✈️ ရန်ကုန်လေဆိပ်အနီး,🌸Ocean Center အနီး,🌸ဆယ်မိုင်ကုန်းစျေး ,🌸တောင်ဘက်အလှည်,🌸ကားနှစ်စီးရှောင် လမ်း",
-        "subtitle": "🌸ခြံအကျယ် ၆၀ × ၅၅ ,💸၁၅၀၀၀ သိန်း ( ညှိနှိုင်းစျေး)",
-        "image_url": "https://i.postimg.cc/jdcHgPmH/Image-27-05-2026-at-2-52-AM.png",
-        "facebook_url": "https://www.facebook.com/share/p/1chPdC9zSS/"
-    }
- ],
-        
-    "PRICE_3": 
-    [
-        { "title": """မီးအမြဲလာတဲ့_လေဆိပ်ရိပ်သာလမ်းမပေါ်_နေရာကောင်း_အိမ်နှင့်ခြံအရောင်း
-                📍 အင်းစိန်မြို့နယ် ၊ စောဘွားကြီးကုန်းရပ်ကွက်
-                📍 လေဆိပ်ရိပ်သာလမ်းမပေါ်
-                📍လေဆိပ်လမ်းမကြီးရဲ ၃ ခြံ မြောက်
-                ✈️ ရန်ကုန်လေဆိပ်အနီး
-                🛍 Ocean Center ၊ ဆယ်မိုင်ကုန်းစျေး ၊ ပြည်လမ်းမကြီး အနီး
-                ✨ VIP နေရာကောင်း ၊ ပတ်ဝန်းကျင်သန့်
-                ✨ 24hr မီးမပြတ်သော ရပ်ကွက်
-                ✨ 2RC နှစ်ထပ်တိုက် အိမ်ကောင်းအိမ်သန့်
-                ✨ ခြံထဲ ကား ၅ စီးခန့် ရပ်နားနိုင်
-                ✨ ဘိုးဘပိုင်မြေ  အဆက်အစပ်စာချုပ်
-                ✨ အကွက်အမှတ် စစ်ဆေးနိုင်
-                ✨ အထူးဂရန် လျှောက်ထားနိုင်သော မြေ
-                💸ဝယ်ယူသူဘတ်မှ အကျိုးဆောင်ခကို""",
-        "subtitle": "✨ ခြံအကျယ် 70 × 100 ( 7000 Sqft),💵 ၂၂၀၀၀ သိန်း (ပိုင်ရှင်တိုက်ရိုက် ညှိနှိုင်း)",
-        "image_url": "https://i.postimg.cc/9Q4xCrj2/Image-26-05-2026-at-1-18-AM.png",
-        "facebook_url": "https://www.facebook.com/share/p/1BDGbQti5V/" 
-
-        },
-
-        
-    { "title": "မိုင် ပြည်လမ်းမ အလွန်းနီး လမ်းကျယ်နေရာကောင်း မြေသီသန့် ခြံကွက်အရောင်း,🌸မရမ်းကုန်းမြို့နယ် ၅ ရပ်ကွက်,🌸၉ မိုင် ဘောဂလမ်း,🌸ရန်ကုန်လေဆိပ် အနီး,🌸Ocean center အနီး,🌸ပြည်လမ်းမကြီး ဒဲပေါက့် အလွန်နီး,🌸ကားနှစ်စီးရှောင် လမ်းကျယ်",
-           "subtitle": "🌸ခြံ အကျယ် 37 × 90  ပေ,💸ရောင်းစျေး  ၂၉၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-           "image_url": "https://i.postimg.cc/ncXFgtwS/Image-27-05-2026-at-2-57-AM.png",
-           "facebook_url": "https://www.facebook.com/share/p/1DrXZbppAw/"
-      }
-            
-            ],
-            
-    "PRICE_4": [
-    {
-            "title": """👉 ရင်းနှီးမြှုပ်နှံမလား ၊ ကိုယ်တိုင်နေမလား ၊ ကုမ္ပဏီရုံးခန်းလား ၊ ဝင်ငွေကောင်းတဲ့ Inn ဖွင့်မလား အားလုံးအဆင်ပြေတာမို့ ဝယ်ယူဖို့ အကြံပြုပါရစေ
-                        🌺မရမ်းကုန်မြို့နယ် ၉ မိုင်
-                        🌸ပြည်လမ်း ဒဲ့ပေါက်
-                        🌺Ocean center အနီး
-                        🌸✈ ရန်ကုန်လေဆိပ် အနီး
-                        🌺ကားနှစ်စီးရှောင် လမ်းကျယ် နေရာကောင်း
-                        🌺2RC နှစ်ထပ်တိုက် 
-                        🌸Master Bedrooms (11) ခန်း
-                        🌺လူကြီး  ရေကူးကန် ပါ
-                        🌸မြေပိုင်မြေအမည်ပေါက် """,
-                        
-            "subtitle": "🌸ခြံအကျယ် ၅၅×၁၀၀ ပေ,💵 သိန်း ၄၀၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
-            "image_url": "https://i.postimg.cc/FRGbj449/703503390-1602069564214217-7649272277303429298-n.jpg",
-            "facebook_url": "https://www.facebook.com/share/p/18czyUKQ2V/" 
-}
-     ],
-    "PRICE_5": [],
-    "PRICE_6": [],
-    "PRICE_7": [],
-    "PRICE_8": [],
-    "PRICE_9": [],
-    "PRICE_10": []
+        {
+            "title": "9မိုင် ပြည်လမ်းမဒဲ့ပေါက် အိမ်ခြံရောင်းမည်",
+            "subtitle": "ခြံအကျယ် 40×80 ပေ, 11000 သိန်း",
+            "image_url": "https://i.postimg.cc/RZbjLkv4/Image-26-05-2026-at-1-15-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1HdcYcGFfY/"
+        }
+    ]
 }
 
-def send_message(recipient_id, message_text):
-    page_access_token = os.environ.get("PAGE_ACCESS_TOKEN")
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={page_access_token}"
+# ========== HELPER FUNCTIONS ==========
+
+def send_message(recipient_id, text):
+    """Send a simple text message"""
+    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
     payload = {
         "recipient": {"id": recipient_id},
-        "message": {"text": message_text}
+        "message": {"text": text}
     }
-    res = requests.post(url, json=payload)
-    print(f"Sent message: {res.status_code}, {res.text}")
-
-@app.route('/webhook', methods=['GET', 'POST'])
-def webhook():
-    if request.method == 'GET':
-        if request.args.get('hub.verify_token') == os.environ.get('VERIFY_TOKEN'):
-            return request.args.get('hub.challenge')
-        return "Invalid token", 403
-
-    data = request.get_json()
-
     try:
-        for event in data.get('entry', []):
-            for messaging_event in event.get('messaging', []):
-                sender_id = messaging_event['sender']['id']
-
-                if 'inbox_labels' in messaging_event:
-                    user_id = messaging_event['recipient']['id']
-                    added_labels = messaging_event['inbox_labels'].get('added_labels', [])
-                    for label in added_labels:
-                        label_name = label['label_name']
-                        print(f"Label ADDED: {label_name} for user {user_id}")
-
-                        if label_name == 'Hot Lead':
-                            send_message(user_id, "မင်္ဂလာပါ VIP ကာစတွန်မာ ကြိုဆိုပါတယ်")
-                        elif label_name == 'Booked Viewing':
-                            send_message(user_id, "မင်္ဂလာပါ အိမ်ကြည့်ရန် ရက်ချိန်းယူပြီးပါပြီ")
-                        elif label_name == 'Need Callback':
-                            send_message(user_id, "မင်္ဂလာပါ ပြန်လည်ဆက်သွယ်ရန် လိုအပ်ပါသည်")
-                        elif label_name == 'Sent Price List':
-                            send_message(user_id, "မင်္ဂလာပါ စျေးနှုန်းစာရင်း ပေးပို့ထားပါသည်")
-                        else:
-                            continue
-
-                if 'delivery' in messaging_event:
-                    delivery = messaging_event['delivery']
-                    print(f"Message delivered: {delivery}")
-
-                if 'read' in messaging_event:
-                    read = messaging_event['read']
-                    print(f"Message read: {read}")
-
-                if 'reaction' in messaging_event:
-                    reaction = messaging_event['reaction']
-                    print(f"Reaction: {reaction}")
-
-                if 'referral' in messaging_event:
-                    referral = messaging_event['referral']
-                    print(f"Referral: {referral}")
-
-                if 'pass_thread_control' in messaging_event:
-                    handover = messaging_event['pass_thread_control']
-                    print(f"Handover: {handover}")
-
-                if 'standby' in messaging_event:
-                    standby = messaging_event['standby']
-                    print(f"Standby event: {standby}")
-
-                if 'message' in messaging_event:
-                    message = messaging_event['message']
+        response = requests.post(url, json=payload)
+        print(f"Sent message: {response.status_code}")
+        return response
     except Exception as e:
-        print(f"Webhook error: {e}")
-
-    return "OK", 200
-
-
-def send_welcome_with_buttons(recipient_id):
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
-    payload = {
-        "recipient": {"id": recipient_id},
-        "message": {
-            "text": "✨ Ma Thin Yu အိမ်ခြံမြေအကျိုးဆောင်မှ ကြိုဆိုပါတယ် ☎️ Contact :09424006004 ☎️ 💖 Viber : 09767975004 💖 💙 Facebook : သင်းယု အိမ်ခြံမြေအကျိုးဆောင် 💙 🤍အိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ🤍",
-            "quick_replies": [
-                {"content_type": "text", "title": "1.သိန်း၁သောင်းအောက်", "payload": "PRICE_1"},
-                {"content_type": "text", "title": "2.သိန်း၂သောင်းအောက်", "payload": "PRICE_2"},
-                {"content_type": "text", "title": "3.သိန်း၃သောင်းအောက်", "payload": "PRICE_3"},
-                {"content_type": "text", "title": "4.သိန်း၄သောင်းအောက်", "payload": "PRICE_4"},
-                {"content_type": "text", "title": "5.သိန်း၅သောင်းအောက်", "payload": "PRICE_5"},
-                {"content_type": "text", "title": "6.သိန်း၆သောင်းအောက်", "payload": "PRICE_6"},
-                {"content_type": "text", "title": "7.သိန်း၇သောင်းအောက်", "payload": "PRICE_7"},
-                {"content_type": "text", "title": "8.သိန်း၈သောင်းအောက်", "payload": "PRICE_8"},
-                {"content_type": "text", "title": "9.သိန်း၉သောင်းအောက်", "payload": "PRICE_9"},
-                {"content_type": "text", "title": "10.သိန်းကြီးတန်အိမ်များ", "payload":"PRICE_10"}
-            ]
-        }
-    }
-    requests.post(url, json=payload)
-
-def send_listings_carousel(recipient_id, price_key):
-    listings = LISTINGS.get(price_key, [])
-
-    if not listings:
-        send_message(recipient_id, "လောလောဆယ် ဒီစျေးနှုန်းမှာ အိမ်မရှိသေးပါဘူး။ နောက်တခု ရွေးပေးပါ။")
-        send_price_quick_replies(recipient_id)
-        return
-
-    elements = []
-    for item in listings:
-        elements.append({
-            "title": item["title"],
-            "subtitle": item["subtitle"],
-            "image_url": item["image_url"],
-            "buttons": [
-                {
-                    "type": "web_url",
-                    "url": item["facebook_url"],
-                    "title": "ပြည်စုံကြည့်ရန်လင့်"
-                }
-            ]
-        })
-
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
-    payload = {
-        "recipient": {"id": recipient_id},
-        "message": {
-            "attachment": {
-                "type": "template",
-                "payload": {
-                    "template_type": "generic",
-                    "elements": elements
-                }
-            }
-        }
-    }
-    requests.post(url, json=payload)
-
-    send_message(recipient_id, "👉 နောက်ထပ် စျေးနှုန်းတွေကိုလည်း အောက်မှာဆွဲ၍ နှိပ်ကြည့်နိုင်ပါတယ်:")
-    send_price_quick_replies(recipient_id)
-
+        print(f"Error: {e}")
+        return None
 
 def send_price_quick_replies(recipient_id):
+    """Send price range quick replies"""
     label_map = {
         "PRICE_1": "1.သိန်း၁သောင်းအောက်",
         "PRICE_2": "2.သိန်း၂သောင်းအောက်",
@@ -413,50 +78,163 @@ def send_price_quick_replies(recipient_id):
             }
         }
         requests.post(url, json=payload)
-    requests.post(url, json=payload)
 
-    # ADD THESE 2 LINES AT THE END:
-    send_message(recipient_id, "👉 နောက်ထပ် စျေးနှုန်းတွေကိုလည်း အောက်မှာဆွဲ၍ နှိပ်ကြည့်နိုင်ပါတယ်:")
-    send_price_quick_replies(recipient_id)
-def send_price_quick_replies(recipient_id):
-    # Map your payloads to readable titles
-    label_map = {
-        "PRICE_1": "1.သိန်း၁သောင်းအောက်",
-        "PRICE_2": "2.သိန်း၂သောင်းအောက်",
-        "PRICE_3": "3.သိန်း၃သောင်းအောက်", 
-        "PRICE_4": "4.သိန်း၄သောင်းအောက်",
-        "PRICE_5": "5.သိန်း၅သောင်းအောက်",
-        "PRICE_6": "6.သိန်း၆သောင်းအောက်",
-        "PRICE_7": "7.သိန်း၇သောင်းအောက်",
-        "PRICE_8": "8.သိန်း၈သောင်းအောက်",
-        "PRICE_9": "9.သိန်း၉သောင်းအောက်",
-        "PRICE_10": "10.သိန်းကြီးတန်အိမ်များ"
-    }
-
-    quick_replies = []
-    for key, items in LISTINGS.items():
-        if len(items) > 0:  # only show prices that have listings
-            quick_replies.append({
-                "content_type": "text",
-                "title": label_map.get(key, key),
-                "payload": key
-            })
-
-    if quick_replies:
-        url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
-        payload = {
-            "recipient": {"id": recipient_id},
-            "message": {
-                "text": "စျေးနှုန်း ရွေးပါ:",
-                "quick_replies": quick_replies
-            }
-        }
-        requests.post(url, json=payload)
-def send_message(recipient_id, text):
+def send_welcome_with_buttons(recipient_id):
+    """Send welcome message with price range buttons"""
     url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
     payload = {
         "recipient": {"id": recipient_id},
-        "message": {"text": text}
+        "message": {
+            "text": "မင်္ဂလာပါ အိမ်ခြံမြေအကျိုးဆောင်မှ ကြိုဆိုပါတယ်\n\nContact: 09424006004\n\nအိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ",
+            "quick_replies": [
+                {"content_type": "text", "title": "1.သိန်း၁သောင်းအောက်", "payload": "PRICE_1"},
+                {"content_type": "text", "title": "2.သိန်း၂သောင်းအောက်", "payload": "PRICE_2"},
+                {"content_type": "text", "title": "3.သိန်း၃သောင်းအောက်", "payload": "PRICE_3"},
+                {"content_type": "text", "title": "4.သိန်း၄သောင်းအောက်", "payload": "PRICE_4"},
+                {"content_type": "text", "title": "5.သိန်း၅သောင်းအောက်", "payload": "PRICE_5"},
+                {"content_type": "text", "title": "6.သိန်း၆သောင်းအောက်", "payload": "PRICE_6"},
+                {"content_type": "text", "title": "7.သိန်း၇သောင်းအောက်", "payload": "PRICE_7"},
+                {"content_type": "text", "title": "8.သိန်း၈သောင်းအောက်", "payload": "PRICE_8"},
+                {"content_type": "text", "title": "9.သိန်း၉သောင်းအောက်", "payload": "PRICE_9"},
+                {"content_type": "text", "title": "10.သိန်းကြီးတန်အိမ်များ", "payload": "PRICE_10"}
+            ]
+        }
     }
-    requests.post(url, json=payload)
+    try:
+        response = requests.post(url, json=payload)
+        print(f"Sent welcome: {response.status_code}")
+        return response
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
 
+def send_listings_carousel(recipient_id, price_key):
+    """Send property listings as a carousel"""
+    listings = LISTINGS.get(price_key, [])
+    
+    if not listings:
+        send_message(recipient_id, "လောလောဆယ် ဒီစျေးနှုန်းမှာ အိမ်မရှိသေးပါဘူး")
+        send_price_quick_replies(recipient_id)
+        return
+    
+    elements = []
+    for item in listings:
+        elements.append({
+            "title": item["title"][:80],
+            "subtitle": item["subtitle"][:80],
+            "image_url": item["image_url"],
+            "buttons": [
+                {
+                    "type": "web_url",
+                    "url": item["facebook_url"],
+                    "title": "အသေးစိတ်ကြည့်ရန်"
+                }
+            ]
+        })
+    
+    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    payload = {
+        "recipient": {"id": recipient_id},
+        "message": {
+            "attachment": {
+                "type": "template",
+                "payload": {
+                    "template_type": "generic",
+                    "elements": elements
+                }
+            }
+        }
+    }
+    try:
+        response = requests.post(url, json=payload)
+        print(f"Sent carousel: {response.status_code}")
+        
+        # Send follow-up message
+        send_message(recipient_id, "👉 နောက်ထပ် စျေးနှုန်းတွေကိုလည်း အောက်မှာဆွဲ၍ နှိပ်ကြည့်နိုင်ပါတယ်:")
+        send_price_quick_replies(recipient_id)
+    except Exception as e:
+        print(f"Error: {e}")
+
+# ========== WEBHOOK ==========
+
+@app.route('/webhook', methods=['GET', 'POST'])
+def webhook():
+    if request.method == 'GET':
+        token = request.args.get('hub.verify_token')
+        challenge = request.args.get('hub.challenge')
+        if token == VERIFY_TOKEN:
+            return challenge
+        return "Invalid token", 403
+
+    data = request.get_json()
+    if not data:
+        return "OK", 200
+    
+    try:
+        for event in data.get('entry', []):
+            for messaging_event in event.get('messaging', []):
+                sender_id = messaging_event.get('sender', {}).get('id')
+                
+                if not sender_id:
+                    continue
+                
+                # Handle messages
+                if 'message' in messaging_event:
+                    message = messaging_event['message']
+                    
+                    if 'text' in message:
+                        message_text = message['text'].lower().strip()
+                        print(f"Received: {message_text}")
+                        
+                        if message_text in ['hi', 'hello', 'start', 'help']:
+                            send_welcome_with_buttons(sender_id)
+                        else:
+                            send_message(sender_id, "မင်္ဂလာပါ။ စာရင်းကြည့်ရန် 'hi' လို့ရိုက်ပါ။")
+                    
+                    if 'quick_reply' in message:
+                        payload = message['quick_reply'].get('payload', '')
+                        if payload.startswith('PRICE_'):
+                            send_listings_carousel(sender_id, payload)
+                
+                # Handle postbacks
+                elif 'postback' in messaging_event:
+                    payload = messaging_event['postback'].get('payload', '')
+                    if payload.startswith('PRICE_'):
+                        send_listings_carousel(sender_id, payload)
+                
+                # Handle inbox_labels
+                if 'inbox_labels' in messaging_event:
+                    user_id = messaging_event['recipient']['id']
+                    added_labels = messaging_event['inbox_labels'].get('added_labels', [])
+                    for label in added_labels:
+                        label_name = label.get('page_label_name', label.get('label_name', ''))
+                        print(f"Label: {label_name}")
+                        
+                        if label_name == 'Hot Lead':
+                            send_message(user_id, "မင်္ဂလာပါ VIP ဖောက်သည်မာကြီး")
+                
+                # Log other events
+                if 'delivery' in messaging_event:
+                    print("Message delivered")
+                if 'read' in messaging_event:
+                    print("Message read")
+                if 'reaction' in messaging_event:
+                    print("Reaction received")
+                if 'referral' in messaging_event:
+                    print("Referral received")
+                if 'pass_thread_control' in messaging_event:
+                    print("Handover received")
+                if 'standby' in messaging_event:
+                    print("Standby event")
+                        
+    except Exception as e:
+        print(f"Error: {e}")
+
+    return "OK", 200
+
+@app.route('/', methods=['GET'])
+def health_check():
+    return "Bot is running!", 200
+
+if _name_ == '_main_':
+    app.run(host='0.0.0.0', port=8080)
