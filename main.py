@@ -272,8 +272,6 @@ def webhook():
                         
                         if message_text in ['hi', 'hello', 'start', 'help']:
                             send_welcome_with_buttons(sender_id)
-                        else:
-                            send_message(sender_id, "📞contact📞 ပြန်ကြည်လိုပါက 'hi' လို့ရိုက်ပါ🤍")
                     
                     if 'quick_reply' in message:
                         payload = message['quick_reply'].get('payload', '')
