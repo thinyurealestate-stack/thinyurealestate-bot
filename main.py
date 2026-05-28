@@ -239,6 +239,11 @@ def webhook():
         for event in data.get('entry', []):
             for messaging_event in event.get('messaging', []):
                 sender_id = messaging_event['sender']['id']
+                
+                if 'delivery' in messaging_event:
+                    delivery = messaging_event['delivery']
+                    print(f"Message delivered: {delivery}")
+                    continue
 
                 if 'message' in messaging_event:
                     message = messaging_event['message']
