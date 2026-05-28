@@ -1,4 +1,5 @@
 from flask import Flask, request
+import json
 import requests
 import os
 
@@ -241,6 +242,16 @@ LISTINGS = {
     "PRICE_10": []
 }
 
+def send_message(recipient_id, message_text):
+    page_access_token = os.environ.get("PAGE_ACCESS_TOKEN")
+    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={page_access_token}"
+    payload = {
+        "recipient": {"id": recipient_id},
+        "message": {"text": message_text}
+    }
+    res = requests.post(url, json=payload)
+    print(f"Sent message: {res.status_code}, {res.text}")
+    
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
     if request.method == 'GET':
@@ -270,12 +281,12 @@ def webhook():
             
             continue
 
-        if 'delivery' in messaging_event:
-            delivery = messaging_event['delivery']
-            print(f"Message delivered: {delivery}")
-            continue
+    if 'delivery' in messaging_event:
+        delivery = messaging_event['delivery']
+        print(f"Message delivered: {delivery}")
+        continue
 
-        if 'read' in messaging_event:
+    if 'read' in messaging_event:
         read = messaging_event['read']
         print(f"Message read: {read}")
         continue
