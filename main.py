@@ -11,10 +11,34 @@ VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "thinyurealestate")
 LISTINGS = {
     "PRICE_1": [
         {
-            "title": "အမြန်ရောင်းမည် အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး-ဘုရင့်နောင်လမ်းမကြီးဒဲ့ပေါက်,လမ်း-ကား၂စီးရှောင်လမ်း-အသင့်နေရုံ-2BN အိမ်ကောင်း",
+            "title": "အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး-ဘုရင့်နောင်လမ်းမကြီးဒဲ့ပေါက်,ကားလမ်း၂စီးရှောင်လမ်း-အသင့်နေရုံ-2BN အိမ်ကောင်း",
             "subtitle": "8× 80 ပေအကျယ် 🏡2 BN နှစ်ထပ်အိမ် အသင့်သင့် , 💸ရောင်းစျေး4400(ညှိ့နိူင်း)",
             "image_url": "https://i.postimg.cc/rmTRnYJK/Image-25-05-2026-at-4-44-PM-(4).png",
             "facebook_url": "https://www.facebook.com/share/p/1DaozjPCxM/"
+        },
+        {
+            "title": "ကျောက်ရေတွင်း,မိန်လမ်းမပေါ်,,သဗ္ဗညုပုထိုးတော်ကြီး အနီး,ကားနှစ်စီးရှောင် မိန်လမ်မပေါ်",
+            "subtitle": "၃၀ × ၈၀ ပေ,၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/PJgjy0Wz/Image-25-05-2026-at-5-08-PM-(5).png",
+            "facebook_url": "https://www.facebook.com/share/p/1duXavUZYd/"
+        },
+        {
+            "title": "အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး,လမ်းမကြီးမှကားနဲ့ ၁မီးနှစ်သာဝင်ရ,ဘဏ်နီး-ကျောင်းနီ-စျေးနီး",
+            "subtitle": "25x60,6500(ညှိ့နိူင်း)",
+            "image_url": "https://i.postimg.cc/fymwGwT8/Image-26-05-2026-at-1-12-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1EwVh5nBds/"
+        },
+        {
+            "title": "ရန်ကုန် လေဆိပ် အနီး,ကားနှစ်စီးရှောင် မိန်းလမ်မပေါ်,သဗ္ဗညုပုထိုးတော်ကြီး အနီး",
+            "subtitle": "၂၅ × ၆၀ ပေ,၅၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/FR654bv1/Image-28-05-2026-at-11-44-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1AxEFygDE1/"
+        },
+        {
+            "title": "မရမ်းကုန်း မြို့နယ်  ၅ရပ်ကွက်,သဗ္ဗညုပုထိုးတော်ကြီး အနီး,ကျောက်ရေတွင်း လမ်းမ အနီး,ကားနှစ်စီးရှောင် လမ်းကျယ်",
+            "subtitle": "၄၀ × ၆၀ ပေ,၇၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/d3FXv5Xs/Image-25-05-2026-at-5-14-PM-(1).png",
+            "facebook_url": "https://www.facebook.com/share/p/1Ffm963ffL/"
         }
     ],
     "PRICE_2": [
@@ -23,7 +47,38 @@ LISTINGS = {
             "subtitle": "ခြံ  အကျယ်  ၄၀ × ၈၀ ပေ,သိန်း ၁၁၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
             "image_url": "https://i.postimg.cc/RZbjLkv4/Image-26-05-2026-at-1-15-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1HdcYcGFfY/"
+        },
+        {
+            "title": "ဂရန်အမည်ပေါက်,လမ်းကျယ်,ပတ်ဝန်ကျင်သန့်,အင်းစိန်မြို့နယ် မြို့သစ် ရက်ကွက်,ဘုရင့်နောင် ရိပ်သာ Vip လမ်းသန့်",
+            "subtitle": "ခ၃၀ × ၆၀ ပေ အကျယ်,၁၄၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/T3TDmn8f/Image-26-05-2026-at-1-16-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1GeBfDq5Pb/"
+        },
+        {
+            "title": "နာမည်ကြီးမင်းသမီးခြံအနီး,စိတ်ငြိမ်ရပ်ကွက် အမည်ပေါက်,၉ မိုင် ဗိုလ်ညာဏ လမ်းသွယ်,ရန်ကုန် လေဆိပ် အနီး ",
+            "subtitle": "ခြံအကျယ် ၃၆ × ၆၂ ပေ,၁၅၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/XY92Ypz5/Image-27-05-2026-at-2-32-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1Fx3xqX3TD/"
+        },
+        {
+            "title": "မီး အမြဲမှန်တဲ့,လေဆိပ်လမ်းထဲ လမ်းကျယ်,အင်းစိန်မြို့နယ် စောဘွားကြီးကုန်းရပ်ကွက်,ပြည်လမ်းမကြီး အနီး",
+            "subtitle": "ခြံအကျယ် ၆၀ × ၅၅,၁၅၀၀၀ သိန်း ( ညှိနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/jdcHgPmH/Image-27-05-2026-at-2-52-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1GbLC4R9qi/"
+        },
+        {
+            "title": "ရွှေပြည်သာ Vip3 ရပ်ကွက်,အမှတ် ၄လမ်းနဲ့တော်တော်နီး,ခြံရှေ့လမ်းကျယ်,ရေကူးကန် - 15' x 30'",
+            "subtitle": "အိမ်အကျယ် - 35' x 55',သိန်း ၁၈,၀၀၀",
+            "image_url": "https://i.postimg.cc/KYvp9KM6/Image-26-05-2026-at-1-46-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/17SKswxhxW/"
+        },
+        {
+            "title": "ပြည်လမ်းမကြိး အနီး စျေးတန် တိုက်သစ်,မရမ်းကုန်းမြို့နယ် ၅ရပ်ကွက်,",
+            "subtitle": "ခြံအကျယ် ၃၅ × ၅၅ ပေ,၁၆၅၀၀ သိန်း (ညှီနှိုင်း)",
+            "image_url": "https://i.postimg.cc/7LF75dwK/Image-29-05-2026-at-12-14-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1CvrKUZjoP/"
         }
+        
     ],
     "PRICE_3": [
         {
@@ -31,6 +86,12 @@ LISTINGS = {
             "subtitle": "70 × 100 ( 7000 Sqft),၂၂၀၀၀ သိန်း (ပိုင်ရှင်တိုက်ရိုက် ညှိနှိုင်း)",
             "image_url": "https://i.postimg.cc/9Q4xCrj2/Image-26-05-2026-at-1-18-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1BDGbQti5V/"
+        },
+        {
+            "title": "၉မိုင် ပြည်လမ်းမ အလွန်းနီး လမ်းကျယ်,၉ မိုင် ဘောဂလမ်း,ကားနှစ်စီးရှောင် လမ်းကျယ်",
+            "subtitle": "ခြံ အကျယ် 37 × 90 ပေ,၂၉၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/ncXFgtwS/Image-27-05-2026-at-2-57-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1HnUUviamn/"
         }
     ],
     "PRICE_4": [
@@ -108,7 +169,7 @@ def send_welcome_with_buttons(recipient_id):
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
-            "text": "မင်္ဂလာပါ အိမ်ခြံမြေအကျိုးဆောင်မှ ကြိုဆိုပါတယ်\n\nContact: 09424006004\n\nအိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ",
+            "text": "👩🏻‍💼🏘️🏡🏡🏡🏡🏡🏡🏘️👩🏻‍💼မင်္ဂလာပါ မသင်းယု အိမ်ခြံမြေအကျိုးဆောင်မှ ကြိုဆိုပါတယ်\n\n💜 Viber : 09767975004 💜\n\n📞 Contact :09424006004 📞\n\n💙 Facebook : သင်းယု အိမ်ခြံမြေအကျိုးဆောင် 💙\n\n🤍အိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ🤍",
             "quick_replies": [
                 {"content_type": "text", "title": "1.သိန်း၁သောင်းအောက်", "payload": "PRICE_1"},
                 {"content_type": "text", "title": "2.သိန်း၂သောင်းအောက်", "payload": "PRICE_2"},
@@ -212,7 +273,7 @@ def webhook():
                         if message_text in ['hi', 'hello', 'start', 'help']:
                             send_welcome_with_buttons(sender_id)
                         else:
-                            send_message(sender_id, "မင်္ဂလာပါ။ စာရင်းကြည့်ရန် 'hi' လို့ရိုက်ပါ။")
+                            send_message(sender_id, "မင်္ဂလာပါ။ contact ပြန်ကြည်လိုပါက 'hi' လို့ရိုက်ပါ။")
                     
                     if 'quick_reply' in message:
                         payload = message['quick_reply'].get('payload', '')
@@ -234,7 +295,7 @@ def webhook():
                         print(f"Label: {label_name}")
                         
                         if label_name == 'Hot Lead':
-                            send_message(user_id, "မင်္ဂလာပါ VIP ဖောက်သည်မာကြီး")
+                            send_message(user_id, "မင်္ဂလာပါ VIP ဖောက်သည်ကြီး")
                 
                 # Log other events
                 if 'delivery' in messaging_event:
