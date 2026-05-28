@@ -169,7 +169,7 @@ def send_welcome_with_buttons(recipient_id):
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
-            "text": "👩🏻‍💼🏘️🏡🏡🏡🏡🏡🏡🏘️👩🏻‍💼မင်္ဂလာပါ မသင်းယု အိမ်ခြံမြေအကျိုးဆောင်မှ ကြိုဆိုပါတယ်\n\n💜 Viber : 09767975004 💜\n\n📞 Contact :09424006004 📞\n\n💙 Facebook : သင်းယု အိမ်ခြံမြေအကျိုးဆောင် 💙\n\n🤍အိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ🤍",
+            "text": "👩🏻‍💼🏘️🏡🏡🏡🏡🏡🏡🏘️👩🏻‍💼\n\nမင်္ဂလာပါ မသင်းယု အိမ်ခြံမြေအကျိုးဆောင်မှ ကြိုဆိုပါတယ်\n\n💜 Viber : 09767975004 💜\n\n📞 Contact :09424006004 📞\n\n💙 Facebook : သင်းယု အိမ်ခြံမြေအကျိုးဆောင် 💙\n\n🤍အိမ်ကြည့်မယ်ဆို 3နာရီကြိုဆက်ပေးပါ🤍",
             "quick_replies": [
                 {"content_type": "text", "title": "1.သိန်း၁သောင်းအောက်", "payload": "PRICE_1"},
                 {"content_type": "text", "title": "2.သိန်း၂သောင်းအောက်", "payload": "PRICE_2"},
@@ -273,7 +273,7 @@ def webhook():
                         if message_text in ['hi', 'hello', 'start', 'help']:
                             send_welcome_with_buttons(sender_id)
                         else:
-                            send_message(sender_id, "မင်္ဂလာပါ။ contact ပြန်ကြည်လိုပါက 'hi' လို့ရိုက်ပါ။")
+                            send_message(sender_id, "📞contact📞 ပြန်ကြည်လိုပါက 'hi' လို့ရိုက်ပါ🤍")
                     
                     if 'quick_reply' in message:
                         payload = message['quick_reply'].get('payload', '')
