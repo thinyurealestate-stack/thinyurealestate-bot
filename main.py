@@ -274,7 +274,7 @@ def webhook():
                         print(f"Label ADDED: {label_name} for user {user_id}")
 
                         if label_name == 'Hot Lead':
-                            send_message(user_id, "မင်္ဂလာပါ ဦးဆောင်အလားအလာ ကြိုဆိုပါတယ်")
+                            send_message(user_id, "မင်္ဂလာပါ VIP ကာစတွန်မာ ကြိုဆိုပါတယ်")
                         elif label_name == 'Booked Viewing':
                             send_message(user_id, "မင်္ဂလာပါ အိမ်ကြည့်ရန် ရက်ချိန်းယူပြီးပါပြီ")
                         elif label_name == 'Need Callback':
