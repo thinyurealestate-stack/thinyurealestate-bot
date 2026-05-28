@@ -254,65 +254,64 @@ def webhook():
         for event in data.get('entry', []):
             for messaging_event in event.get('messaging', []):
                 sender_id = messaging_event['sender']['id']
-
                 if 'inbox_labels' in messaging_event:
-                    user_id = messaging_event['recipient']['id']  
-                    added_labels = messaging_event['inbox_labels'].get('added_labels', [])
-                    
-            for label in added_labels:
-                        label_name = label['label_name']
-                        print(f"Label ADDED: {label_name} for user {user_id}")
-                        
-                 if label_name == 'Hot Lead':
+                user_id = messaging_event['recipient']['id']
+                added_labels = messaging_event['inbox_labels'].get('added_labels', [])
+        
+                for label in added_labels:
+                    label_name = label['label_name']
+                    print(f"Label ADDED: {label_name} for user {user_id}")
+            
+                    if label_name == 'Hot Lead':
                     send_message(user_id, "အထူးဝန်ဆောင်မှုအတွက် မကြာမီဆက်သွယ်ပေးပါမယ်။")
-                     
-                elif label_name == 'Booked Viewing':
+            
+                    elif label_name == 'Booked Viewing':
                     send_message(user_id, "အိမ်ကြည့်ရှုရန် booking confirm ဖြစ်ပါပြီ။")
-                    
-        continue  
+        
+                continue
                 
-                if 'delivery' in messaging_event:
-                    delivery = messaging_event['delivery']
-                    print(f"Message delivered: {delivery}")
-                    continue
+    if 'delivery' in messaging_event:
+        delivery = messaging_event['delivery']
+        print(f"Message delivered: {delivery}")
+        continue
                     
-                if 'read' in messaging_event:
-                    read = messaging_event['read']
-                    print(f"Message read: {read}")
-                    continue
+    if 'read' in messaging_event:
+        read = messaging_event['read']
+        print(f"Message read: {read}")
+        continue
                     
-                if 'reaction' in messaging_event:
-                    reaction = messaging_event['reaction']
-                    print(f"Reaction: {reaction}")
-                    continue
+    if 'reaction' in messaging_event:
+        reaction = messaging_event['reaction']
+        print(f"Reaction: {reaction}")
+        continue
                     
-                if 'referral' in messaging_event:
-                    referral = messaging_event['referral']
-                    print(f"Referral: {referral}")
-                    continue
+    if 'referral' in messaging_event:
+        referral = messaging_event['referral']
+        print(f"Referral: {referral}")
+        continue
                     
-                if 'pass_thread_control' in messaging_event:
-                    handover = messaging_event['pass_thread_control']
-                    print(f"Handover: {handover}")
-                    continue
+    if 'pass_thread_control' in messaging_event:
+        handover = messaging_event['pass_thread_control']
+        print(f"Handover: {handover}")
+        continue
                     
-                if 'standby' in messaging_event:
-                    standby = messaging_event['standby']
-                    print(f"Standby event: {standby}")
-                    continue
+    if 'standby' in messaging_event:
+        standby = messaging_event['standby']
+        print(f"Standby event: {standby}")
+        continue
                     
-                if 'message' in messaging_event:
-                    message = messaging_event['message']
-                    payload = message.get('quick_reply', {}).get('payload')
-                    text = message.get('text')
-                    message_data = payload if payload else text
+    if 'message' in messaging_event:
+        message = messaging_event['message']
+        payload = message.get('quick_reply', {}).get('payload')
+        text = message.get('text')
+        message_data = payload if payload else text
 
-                    if message_data in LISTINGS:
-                        send_listings_carousel(sender_id, message_data)
-                    else:
-                        send_welcome_with_buttons(sender_id)
-    except Exception as e:
-        print(f"Error: {e}")
+    if message_data in LISTINGS:
+       send_listings_carousel(sender_id, message_data)
+       else:
+       send_welcome_with_buttons(sender_id)
+       except Exception as e:
+       print(f"Error: {e}")
     
     return "OK", 200
 
