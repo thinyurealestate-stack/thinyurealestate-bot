@@ -39,6 +39,24 @@ LISTINGS = {
             "subtitle": "၄၀ × ၆၀ ပေ,၇၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
             "image_url": "https://i.postimg.cc/d3FXv5Xs/Image-25-05-2026-at-5-14-PM-(1).png",
             "facebook_url": "https://www.facebook.com/share/p/1Ffm963ffL/"
+        },
+        {
+            "title": "သာကေတမြို့နယ်,အောင်သပြေ အနောက်( -)လမ်း,၇ရပ်ကွက် -ပျဉ်ထောင်အိမ်,ဂရံအမည်ပေါက်",
+            "subtitle": "၄၀x၆၀ပေကျယ်,သိန်း ၈၅၀၀ (ညှိ့နိူင်းစျေး)",
+            "image_url": "https://i.postimg.cc/0N7cKZY4/Image-29-05-2026-at-1-52-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1Eev1FQdnA/"
+        },
+        {
+            "title": "စရံဦးသူယူပါ,မင်းနန်ဒါလမ်းမကြီး ဒဲ့ဆင်း ၂လမ်းမြှောက်,စျေးနီးကျောင်းနီးဘဏ်နီးမှတ်တိုင်အနီးcapitalနီး",
+            "subtitle": "၁၂ပေ ခွဲ ပေ၅၀,၁၀၉၀ပါးပါးညှိနှိုင်း",
+            "image_url": "https://i.postimg.cc/0N7cKZY4/Image-29-05-2026-at-1-52-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1Eev1FQdnA/"
+        },
+        {
+            "title": "သိန်း၃၀၀၀(ပါးပါးရှော့)မှော်ဘီမြို့နယ်-မင်္ဂလာကုန်းရွာ,ခြံကျယ် ၁ ဧကခွဲ,မြေ အမျိုးစား-G -မြေ",
+            "subtitle": "ပေကျယ် ၄၀x၉၀ (၆၀၀),၁၅၀x၁၅၀(၃၀၀၀),၁၀၅x၁၅၀(၂၈၀၀),၁၀၀x၂၀၀(၁၅၀၀)",
+            "image_url": "https://i.postimg.cc/nzXFFjbN/post-558794-featured.jpg",
+            "facebook_url": "https://www.facebook.com/share/r/18YgKNwfCC/"
         }
     ],
     "PRICE_2": [
