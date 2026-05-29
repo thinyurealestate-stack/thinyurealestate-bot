@@ -63,7 +63,14 @@ LISTINGS = {
             "subtitle": "ပေကျယ် ၄၀x၉၀ (၆၀၀),၁၅၀x၁၅၀(၃၀၀၀),၁၀၅x၁၅၀(၂၈၀၀),၁၀၀x၂၀၀(၁၅၀၀)",
             "image_url": "https://i.postimg.cc/nzXFFjbN/post-558794-featured.jpg",
             "facebook_url": "https://www.facebook.com/share/r/18YgKNwfCC/"
+        },
+        {
+            "title": "အင်းစိန်မြို့နယ် ဆယ်မိုင်စျေးအနီး ရန်ကြီးအောင်းလမ်း,ကား၂စီးရှောင်လမ်း",
+            "subtitle": "ဘိုးဘပိုင်မြေ,အစက်ဆက်စာချုပ်,၃၀x၆၀.၅၅၀၀(ပါးပါးရှော့)",
+            "image_url": "https://i.postimg.cc/4dsCRVxj/IMG-5263.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/17Q7uLvfKA/"
         }
+        
     ],
     "PRICE_2": [
         {
