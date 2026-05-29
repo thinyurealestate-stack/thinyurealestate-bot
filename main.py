@@ -97,10 +97,16 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/17SKswxhxW/"
         },
         {
-            "title": "ပြည်လမ်းမကြိး အနီး စျေးတန် တိုက်သစ်,မရမ်းကုန်းမြို့နယ် ၅ရပ်ကွက်,",
+            "title": "ပြည်လမ်းမကြိး အနီး စျေးတန် တိုက်သစ်,မရမ်းကုန်းမြို့နယ် ၅ရပ်ကွက်",
             "subtitle": "ခြံအကျယ် ၃၅ × ၅၅ ပေ,၁၆၅၀၀ သိန်း (ညှီနှိုင်း)",
             "image_url": "https://i.postimg.cc/7LF75dwK/Image-29-05-2026-at-12-14-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1CvrKUZjoP/"
+        },
+        {
+            "title": "မရမ်းကုန်းမြို့နယ်ကျိုက်ဝိုင်းအနီး,ဈေးနီး လမ်းမတန်းနီး,၃ ထပ်ခွဲ ရုံး စီးပွားရေးအသင့်သုံး အဆောက်အဦး",
+            "subtitle": "မြေအကျယ် (35’ x 70’),(33’ x 55’) အကျယ်ရှိ (၃) ထပ်ခွဲ ,သိန်း 18,000 (ညှိနှိုင်း)",
+            "image_url": "https://i.postimg.cc/C1DLZwgd/IMG-5255.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/1H2HyMEswu/"
         }
         
     ],
