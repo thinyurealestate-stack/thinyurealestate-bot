@@ -49,8 +49,14 @@ LISTINGS = {
         {
             "title": "စရံဦးသူယူပါ,မင်းနန်ဒါလမ်းမကြီး ဒဲ့ဆင်း ၂လမ်းမြှောက်,စျေးနီးကျောင်းနီးဘဏ်နီးမှတ်တိုင်အနီးcapitalနီး",
             "subtitle": "၁၂ပေ ခွဲ ပေ၅၀,၁၀၉၀ပါးပါးညှိနှိုင်း",
-            "image_url": "https://i.postimg.cc/0N7cKZY4/Image-29-05-2026-at-1-52-PM.png",
+            "image_url": "https://i.postimg.cc/MGj3zq3f/IMG-5244.jpg",
             "facebook_url": "https://www.facebook.com/share/p/1Eev1FQdnA/"
+        },
+        {
+            "title": "Spring Line Hotel ကပ်လျက်,လမ်းမမေးတင်-လူစည်ကားသောနေရာကောင်း,ဘိုးဘပိုင်မြေ",
+            "subtitle": "27x78.3000-သိန်း(ညှို့နိူင်း)",
+            "image_url": "https://i.postimg.cc/tJy9hrnN/IMG-5253.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/172BwdwPeK/"
         },
         {
             "title": "သိန်း၃၀၀၀(ပါးပါးရှော့)မှော်ဘီမြို့နယ်-မင်္ဂလာကုန်းရွာ,ခြံကျယ် ၁ ဧကခွဲ,မြေ အမျိုးစား-G -မြေ",
