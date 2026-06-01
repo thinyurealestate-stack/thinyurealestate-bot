@@ -153,10 +153,10 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1HBHWdLC1B/"
         }
     ],
-    "Rent": [],
     "PRICE_5": [],
     "PRICE_6": [],
-    "PRICE_7": [
+    "PRICE_7": [],
+    "PRICE_8": [
         {
             "title": "ရှစ်မိုင် ကျောက်ဝိုင်းဘုရားလမ်မကြီး အလွန်းနီး,ကျောက်ဝိုင်းဘုရားလမ်းမကြီး ဒဲ့ပေါက်,မင်းဓမ္မလမ်းမကြီး အနီး",
             "subtitle": "0.235 ဧက,၁၇ ပေကျယ် နှစ်ဦးသုံး ကိုယ်ပိုင်လမ်း,၇၅၀၀၀ သိန်း (ညှီနှိုင်း)",
@@ -164,9 +164,9 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/16q5DAcqGq/"
         }
     ],
-    "PRICE_8": [],
     "PRICE_9": [],
-    "PRICE_10": []
+    "PRICE_10": [],
+    "PRICE_11": []
 }
 
 
@@ -194,13 +194,13 @@ def send_price_quick_replies(recipient_id):
         "PRICE_2": "2.သိန်း၂သောင်းအောက်",
         "PRICE_3": "3.သိန်း၃သောင်းအောက်", 
         "PRICE_4": "4.သိန်း၄သောင်းအောက်",
-        "Rent": "ငှားရန်ရှိသောအိမ်များ",
-        "PRICE_5": "5.သိန်း၅သောင်းအောက်",
-        "PRICE_6": "6.သိန်း၆သောင်းအောက်",
-        "PRICE_7": "7.သိန်း၇သောင်းအောက်",
-        "PRICE_8": "8.သိန်း၈သောင်းအောက်",
-        "PRICE_9": "9.သိန်း၉သောင်းအောက်",
-        "PRICE_10": "10.သိန်းကြီးတန်အိမ်များ"
+        "PRICE_5": "5.ငှားရန်ရှိသောအိမ်များ",
+        "PRICE_6": "6.သိန်း၅သောင်းအောက်",
+        "PRICE_7": "7.သိန်း၆သောင်းအောက်",
+        "PRICE_8": "8.သိန်း၇သောင်းအောက်",
+        "PRICE_9": "9.သိန်း၈သောင်းအောက်",
+        "PRICE_10": "10.သိန်း၉သောင်းအောက်",
+        "PRICE_11": "11.သိန်းကြီးတန်အိမ်များ"
     }
 
     quick_replies = []
@@ -235,13 +235,13 @@ def send_welcome_with_buttons(recipient_id):
                 {"content_type": "text", "title": "2.သိန်း၂သောင်းအောက်", "payload": "PRICE_2"},
                 {"content_type": "text", "title": "3.သိန်း၃သောင်းအောက်", "payload": "PRICE_3"},
                 {"content_type": "text", "title": "4.သိန်း၄သောင်းအောက်", "payload": "PRICE_4"},
-                {"content_type": "text", "title": "ငှားရန်ရှိသောအိမ်များ", "payload": "Rent"},
-                {"content_type": "text", "title": "5.သိန်း၅သောင်းအောက်", "payload": "PRICE_5"},
-                {"content_type": "text", "title": "6.သိန်း၆သောင်းအောက်", "payload": "PRICE_6"},
-                {"content_type": "text", "title": "7.သိန်း၇သောင်းအောက်", "payload": "PRICE_7"},
-                {"content_type": "text", "title": "8.သိန်း၈သောင်းအောက်", "payload": "PRICE_8"},
-                {"content_type": "text", "title": "9.သိန်း၉သောင်းအောက်", "payload": "PRICE_9"},
-                {"content_type": "text", "title": "10.သိန်းကြီးတန်အိမ်များ", "payload": "PRICE_10"}
+                {"content_type": "text", "title": "5.ငှားရန်ရှိသောအိမ်များ", "payload": "PRICE_5"},
+                {"content_type": "text", "title": "6.သိန်း၅သောင်းအောက်", "payload": "PRICE_6"},
+                {"content_type": "text", "title": "7.သိန်း၆သောင်းအောက်", "payload": "PRICE_7"},
+                {"content_type": "text", "title": "8.သိန်း၇သောင်းအောက်", "payload": "PRICE_8"},
+                {"content_type": "text", "title": "9.သိန်း၈သောင်းအောက်", "payload": "PRICE_9"},
+                {"content_type": "text", "title": "10.သိန်း၉သောင်းအောက်", "payload": "PRICE_10"},
+                {"content_type": "text", "title": "11.သိန်းကြီးတန်အိမ်များ", "payload": "PRICE_11"}
             ]
         }
     }
