@@ -69,6 +69,12 @@ LISTINGS = {
             "subtitle": "ဘိုးဘပိုင်မြေ,အစက်ဆက်စာချုပ်,၃၀x၆၀.၅၅၀၀(ပါးပါးရှော့)",
             "image_url": "https://i.postimg.cc/4dsCRVxj/IMG-5263.jpg",
             "facebook_url": "https://www.facebook.com/share/p/17Q7uLvfKA/"
+        },
+        {
+            "title": "အင်းစိန်မြို့နယ်,နံသာကုန်းရပ်ကွက်,နံသာမြိုင်လမ်း,ဇီးကွက်မျက်မှန်ဆိုင် အနီး",
+            "subtitle": "ခြံ အကျယ် 1770 Sqft,၂၆၅၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/SNbHCvhX/IMG-5295.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/16q5DAcqGq/"
         }
         
     ],
@@ -139,9 +145,25 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/18czyUKQ2V"
         }
     ],
+    "Rent": [
+        {
+            "title": "အင်းစိန်မြို့နယ် အောင်ဆန်းရပ်ကွက်,အောက်မင်္ဂလာဒုံ လမ်းမကြီးအနီး,စျေးနီး ကျောင်းးနီး နေရာကောင်း",
+            "subtitle": "ခြံအကျယ်-20 × 100ပေ,၁လ ၁၅ သိန်း",
+            "image_url": "https://i.postimg.cc/4NzyQqHj/IMG-5298.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/1HBHWdLC1B/"
+        }
+    ],
+    "Rent": [],
     "PRICE_5": [],
     "PRICE_6": [],
-    "PRICE_7": [],
+    "PRICE_7": [
+        {
+            "title": "ရှစ်မိုင် ကျောက်ဝိုင်းဘုရားလမ်မကြီး အလွန်းနီး,ကျောက်ဝိုင်းဘုရားလမ်းမကြီး ဒဲ့ပေါက်,မင်းဓမ္မလမ်းမကြီး အနီး",
+            "subtitle": "0.235 ဧက,၁၇ ပေကျယ် နှစ်ဦးသုံး ကိုယ်ပိုင်လမ်း,၇၅၀၀၀ သိန်း (ညှီနှိုင်း)",
+            "image_url": "https://i.postimg.cc/SxR0xzqh/IMG-5294.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/16q5DAcqGq/"
+        }
+    ],
     "PRICE_8": [],
     "PRICE_9": [],
     "PRICE_10": []
@@ -172,6 +194,7 @@ def send_price_quick_replies(recipient_id):
         "PRICE_2": "2.သိန်း၂သောင်းအောက်",
         "PRICE_3": "3.သိန်း၃သောင်းအောက်", 
         "PRICE_4": "4.သိန်း၄သောင်းအောက်",
+        "Rent": "ငှားရန်ရှိသောအိမ်များ",
         "PRICE_5": "5.သိန်း၅သောင်းအောက်",
         "PRICE_6": "6.သိန်း၆သောင်းအောက်",
         "PRICE_7": "7.သိန်း၇သောင်းအောက်",
@@ -212,6 +235,7 @@ def send_welcome_with_buttons(recipient_id):
                 {"content_type": "text", "title": "2.သိန်း၂သောင်းအောက်", "payload": "PRICE_2"},
                 {"content_type": "text", "title": "3.သိန်း၃သောင်းအောက်", "payload": "PRICE_3"},
                 {"content_type": "text", "title": "4.သိန်း၄သောင်းအောက်", "payload": "PRICE_4"},
+                {"content_type": "text", "title": "ငှားရန်ရှိသောအိမ်များ", "payload": "Rent"},
                 {"content_type": "text", "title": "5.သိန်း၅သောင်းအောက်", "payload": "PRICE_5"},
                 {"content_type": "text", "title": "6.သိန်း၆သောင်းအောက်", "payload": "PRICE_6"},
                 {"content_type": "text", "title": "7.သိန်း၇သောင်းအောက်", "payload": "PRICE_7"},
