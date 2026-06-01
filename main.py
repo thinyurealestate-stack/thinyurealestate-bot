@@ -145,7 +145,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/18czyUKQ2V"
         }
     ],
-    "Rent": [
+    "PRICE_5": [
         {
             "title": "အင်းစိန်မြို့နယ် အောင်ဆန်းရပ်ကွက်,အောက်မင်္ဂလာဒုံ လမ်းမကြီးအနီး,စျေးနီး ကျောင်းးနီး နေရာကောင်း",
             "subtitle": "ခြံအကျယ်-20 × 100ပေ,၁လ ၁၅ သိန်း",
@@ -153,10 +153,10 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1HBHWdLC1B/"
         }
     ],
-    "PRICE_5": [],
     "PRICE_6": [],
     "PRICE_7": [],
-    "PRICE_8": [
+    "PRICE_8": [],
+    "PRICE_9": [
         {
             "title": "ရှစ်မိုင် ကျောက်ဝိုင်းဘုရားလမ်မကြီး အလွန်းနီး,ကျောက်ဝိုင်းဘုရားလမ်းမကြီး ဒဲ့ပေါက်,မင်းဓမ္မလမ်းမကြီး အနီး",
             "subtitle": "0.235 ဧက,၁၇ ပေကျယ် နှစ်ဦးသုံး ကိုယ်ပိုင်လမ်း,၇၅၀၀၀ သိန်း (ညှီနှိုင်း)",
@@ -164,7 +164,6 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/16q5DAcqGq/"
         }
     ],
-    "PRICE_9": [],
     "PRICE_10": [],
     "PRICE_11": []
 }
