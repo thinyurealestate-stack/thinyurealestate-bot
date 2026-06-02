@@ -170,19 +170,6 @@ LISTINGS = {
 
 
 # ========== HELPER FUNCTIONS ==========
-def send_message(recipient_id, text):
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
-    payload = {"recipient": {"id": recipient_id}, "message": {"text": text}}
-    try:
-        response = requests.post(url, json=payload)
-        if response.status_code == 200:
-            print(f"✅ Message sent to {recipient_id}")
-        else:
-            print(f"❌ ERROR {response.status_code}: {response.text}")
-        return response
-    except Exception as e:
-        print(f"❌ Exception: {e}")
-        return None
 
 def send_welcome_with_buttons(recipient_id):
 def send_message(recipient_id, text):
