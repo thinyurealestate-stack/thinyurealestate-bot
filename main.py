@@ -11,72 +11,39 @@ VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "thinyurealestate")
 LISTINGS = {
     "PRICE_1": [
         {
-            "title": "အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး-ဘုရင့်နောင်လမ်းမကြီးဒဲ့ပေါက်,ကားလမ်း၂စီးရှောင်လမ်း-အသင့်နေရုံ-2BN အိမ်ကောင်း",
-            "subtitle": "8× 80 ပေအကျယ် 🏡2 BN နှစ်ထပ်အိမ် အသင့်သင့် , 💸ရောင်းစျေး4400(ညှိ့နိူင်း)",
+            "title": "အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး",
+            "subtitle": "8×80 ပေ, 2BN နှစ်ထပ်အိမ်, 4400 သိန်း",
             "image_url": "https://i.postimg.cc/rmTRnYJK/Image-25-05-2026-at-4-44-PM-(4).png",
             "facebook_url": "https://www.facebook.com/share/p/1DaozjPCxM/"
-        },
-        {
-            "title": "ကျောက်ရေတွင်း,မိန်လမ်းမပေါ်,,သဗ္ဗညုပုထိုးတော်ကြီး အနီး,ကားနှစ်စီးရှောင် မိန်လမ်မပေါ်",
-            "subtitle": "၃၀ × ၈၀ ပေ,၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://i.postimg.cc/PJgjy0Wz/Image-25-05-2026-at-5-08-PM-(5).png",
-            "facebook_url": "https://www.facebook.com/share/p/1duXavUZYd/"
-        },
-        {
-            "title": "အင်းစိန်မြို့နယ်-အောင်ဆန်းစျေးအနီး,လမ်းမကြီးမှကားနဲ့ ၁မီးနှစ်သာဝင်ရ,ဘဏ်နီး-ကျောင်းနီ-စျေးနီး",
-            "subtitle": "25x60,6500(ညှိ့နိူင်း)",
-            "image_url": "https://i.postimg.cc/fymwGwT8/Image-26-05-2026-at-1-12-AM.png",
-            "facebook_url": "https://www.facebook.com/share/p/1EwVh5nBds/"
         }
     ],
     "PRICE_2": [
         {
-            "title": "၉မိုင် ပြည်လမ်းမဒဲ့ပေါက် နေရာကောင်းလမ်းမ အနီး အိမ်နှင့်ခြံ,မရမ်းကုန်မြို့နယ် ၉မိုင် ၅ ရက်ကွက်",
-            "subtitle": "ခြံ  အကျယ်  ၄၀ × ၈၀ ပေ,သိန်း ၁၁၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
+            "title": "၉မိုင် ပြည်လမ်းမဒဲ့ပေါက်",
+            "subtitle": "40×80 ပေ, 11000 သိန်း",
             "image_url": "https://i.postimg.cc/RZbjLkv4/Image-26-05-2026-at-1-15-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1HdcYcGFfY/"
         }
     ],
     "PRICE_3": [
         {
-            "title": "မီးအမြဲလာတဲ့,လေဆိပ်ရိပ်သာလမ်းမပေါ်_နေရာကောင်း,အိမ်နှင့်ခြံအရောင်း",
-            "subtitle": "70 × 100 ( 7000 Sqft),၂၂၀၀၀ သိန်း (ညှိနှိုင်း)",
+            "title": "လေဆိပ်ရိပ်သာလမ်းမ",
+            "subtitle": "70×100 ပေ, 22000 သိန်း",
             "image_url": "https://i.postimg.cc/9Q4xCrj2/Image-26-05-2026-at-1-18-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1BDGbQti5V/"
         }
     ],
-    "PRICE_4": [
-        {
-            "title": "ရင်းနှီးမြှုပ်နှံမလား,ကိုယ်တိုင်နေမလား,ကုမ္ပဏီရုံးခန်းလား",
-            "subtitle": "၅၅×၁၀၀ ပေ,💵 သိန်း ၄၀၀၀၀ သိန်း (ညှီနှိုင်စျေး)",
-            "image_url": "https://i.postimg.cc/FRGbj449/703503390-1602069564214217-7649272277303429298-n.jpg",
-            "facebook_url": "https://www.facebook.com/share/p/18czyUKQ2V"
-        }
-    ],
-    "PRICE_5": [
-        {
-            "title": "အင်းစိန်မြို့နယ် အောင်ဆန်းရပ်ကွက်,အောက်မင်္ဂလာဒုံ လမ်းမကြီးအနီး",
-            "subtitle": "ခြံအကျယ်-20 × 100ပေ,၁လ ၁၅ သိန်း",
-            "image_url": "https://i.postimg.cc/4NzyQqHj/IMG-5298.jpg",
-            "facebook_url": "https://www.facebook.com/share/p/1HBHWdLC1B/"
-        }
-    ],
+    "PRICE_4": [],
+    "PRICE_5": [],
     "PRICE_6": [],
     "PRICE_7": [],
-    "PRICE_8": [
-        {
-            "title": "ရှစ်မိုင် ကျောက်ဝိုင်းဘုရားလမ်မကြီး အလွန်းနီး",
-            "subtitle": "0.235 ဧက,၇၅၀၀၀ သိန်း (ညှီနှိုင်း)",
-            "image_url": "https://i.postimg.cc/SxR0xzqh/IMG-5294.jpg",
-            "facebook_url": "https://www.facebook.com/share/p/16q5DAcqGq/"
-        }
-    ],
+    "PRICE_8": [],
     "PRICE_9": [],
     "PRICE_10": [],
     "PRICE_11": []
 }
 
-# ========== FIXED send_message WITH DETAILED ERROR LOGGING ==========
+# ========== SEND MESSAGE FUNCTION (WITH DETAILED ERROR LOGGING) ==========
 
 def send_message(recipient_id, text):
     """Send a simple text message with detailed error logging"""
@@ -93,14 +60,14 @@ def send_message(recipient_id, text):
         print(f"❌ Exception: {e}")
         return None
 
-# ========== HELPER FUNCTIONS ==========
+# ========== PRICE QUICK REPLIES ==========
 
 def send_price_quick_replies(recipient_id):
     """Send price range quick replies"""
     label_map = {
         "PRICE_1": "1.သိန်း၁သောင်းအောက်",
         "PRICE_2": "2.သိန်း၂သောင်းအောက်",
-        "PRICE_3": "3.သိန်း၃သောင်းအောက်", 
+        "PRICE_3": "3.သိန်း၃သောင်းအောက်",
         "PRICE_4": "4.သိန်း၄သောင်းအောက်",
         "PRICE_5": "5.အငှားအိမ်များ",
         "PRICE_6": "6.သိန်း၅သောင်းအောက်",
@@ -110,7 +77,7 @@ def send_price_quick_replies(recipient_id):
         "PRICE_10": "10.သိန်း၉သောင်းအောက်",
         "PRICE_11": "11.သိန်းကြီးတန်အိမ်များ"
     }
-
+    
     quick_replies = []
     for key, items in LISTINGS.items():
         if len(items) > 0:
@@ -119,7 +86,7 @@ def send_price_quick_replies(recipient_id):
                 "title": label_map.get(key, key),
                 "payload": key
             })
-
+    
     if quick_replies:
         url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
         payload = {
@@ -130,6 +97,8 @@ def send_price_quick_replies(recipient_id):
             }
         }
         requests.post(url, json=payload)
+
+# ========== WELCOME WITH BUTTONS ==========
 
 def send_welcome_with_buttons(recipient_id):
     """Send welcome message with price range buttons"""
@@ -158,8 +127,10 @@ def send_welcome_with_buttons(recipient_id):
         print(f"Sent welcome: {response.status_code}")
         return response
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error sending welcome: {e}")
         return None
+
+# ========== LISTINGS CAROUSEL ==========
 
 def send_listings_carousel(recipient_id, price_key):
     """Send property listings as a carousel"""
@@ -201,12 +172,10 @@ def send_listings_carousel(recipient_id, price_key):
     try:
         response = requests.post(url, json=payload)
         print(f"Sent carousel: {response.status_code}")
-        
-        # Send follow-up message
         send_message(recipient_id, "👉 နောက်ထပ် စျေးနှုန်းတွေကိုလည်း အောက်မှာဆွဲ၍ နှိပ်ကြည့်နိုင်ပါတယ်:")
         send_price_quick_replies(recipient_id)
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error sending carousel: {e}")
 
 # ========== WEBHOOK ==========
 
@@ -231,7 +200,7 @@ def webhook():
                 if not sender_id:
                     continue
                 
-                # Handle messages
+                # Handle text messages
                 if 'message' in messaging_event:
                     message = messaging_event['message']
                     
@@ -242,7 +211,6 @@ def webhook():
                         if message_text in ['hi', 'hello', 'start', 'help']:
                             send_welcome_with_buttons(sender_id)
                         else:
-                            # Optional: reply for other messages
                             send_message(sender_id, "မင်္ဂလာပါ။ အိမ်စာရင်းကြည့်ရန် 'hi' လို့ရိုက်ပါ။")
                     
                     if 'quick_reply' in message:
