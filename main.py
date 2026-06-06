@@ -33,14 +33,34 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1BDGbQti5V/"
         }
     ],
-    "PRICE_4": [],
+    "PRICE_4": [
+        {
+            "title": "မရမ်းကုန်းမြို့နယ် ၅ ရပ်ကွက်,၉မိုင် ရွှေ နှင်းဆီ မင်္ဂလာကန် အနီး",
+            "subtitle": "ပြည်လမ်းမကြီး အနီး,ခြံအကျယ် ၅၀ × ၇၀ ပေ အကျယ်,၃၅၀၀၀ သိန်း (ညှီနှိုင်း)",
+            "image_url": "https://i.postimg.cc/c4Y9Vg9M/IMG-5355.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/1EDpBUShAA/"
+        }
+        {
+            "title": "၇မိုင် ကုန်းမြင့်သာ,မရမ်းကုန်းမြို့နယ်,မင်းဓမ္မလမ်းမကြီး ပြည်လမ်းမ အနီး",
+            "subtitle": "ခြံအကျယ် ၅၀ × ၅၀ ပေ,လေးထောင့်ကျထောင့်ကွက်,၃၈၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/HxDjvNVS/IMG-5353.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/1Ppiv2a38n/"
+        }
+    ],
     "PRICE_5": [],
     "PRICE_6": [],
     "PRICE_7": [],
     "PRICE_8": [],
     "PRICE_9": [],
     "PRICE_10": [],
-    "PRICE_11": []
+    "PRICE_11": [
+        {
+            "title": " Luxury Residence ဘုရင့်နောင်တံတားအောက်၊ မင်္ဂလာသန်းမြင့်ဘေးလမ်း",
+            "subtitle": "ခမရမ်းကုန်းမြို့နယ်ရှိ အဆင့်မြင့် လူနေမှုပုံစံ,သိန်းကြီး 120000(ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/W46PjY5h/IMG-5346.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/1EEaxo7r77/"
+        }
+    ]
 }
 
 # ========== SEND MESSAGE FUNCTION (WITH DETAILED ERROR LOGGING) ==========
