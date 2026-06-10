@@ -248,8 +248,8 @@ def send_price_quick_replies(recipient_id):
 
 # ========== WELCOME WITH BUTTONS ==========
 
-def send_welcome_with_buttons(recipient_id):
-    """Send welcome message with price range buttons"""
+def some_function_name():
+    pass  # This means "do nothing"    """Send welcome message with price range buttons"""
     url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
     def setup_get_started():
     """Configure the Get Started button for your page"""
