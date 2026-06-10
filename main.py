@@ -250,25 +250,42 @@ def send_price_quick_replies(recipient_id):
 
 def some_function_name():
     pass
+
 def setup_get_started():
     url = f"https://graph.facebook.com/v18.0/me/messenger_profile?access_token={PAGE_ACCESS_TOKEN}"
     payload = {"get_started": {"payload": "GET_STARTED"}}
     try:
         response = requests.post(url, json=payload)
-        print(f" Get Started: {response.status_code}")
-    except Exception as e:
-        print(f"Error: {e}")
-
-setup_get_started()
-    try:
-        response = requests.post(url, json=payload)
-        print(f" Get Started button configured: {response.status_code}")
+        print(f"Get Started: {response.status_code}")
         if response.status_code != 200:
             print(f"Error: {response.text}")
         return response
     except Exception as e:
         print(f"Error setting up Get Started: {e}")
         return None
+
+setup_get_started()
+
+payload = {
+    "recipient": {"id": recipient_id},
+    "message": {
+        "text": "...",
+        "quick_replies": [
+            {"content_type": "text", "title": "1....", "payload": "PRICE_1"},
+            {"content_type": "text", "title": "2....", "payload": "PRICE_2"},
+            # ... rest of your items
+        ]
+    }
+}
+try:
+    response = requests.post(url, json=payload)
+    print(f"Sent welcome: {response.status_code}")
+    return response
+except Exception as e:
+    print(f"Error sending welcome: {e}")
+        return None
+
+setup_get_started()
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
