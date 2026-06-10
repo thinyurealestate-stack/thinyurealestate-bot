@@ -361,7 +361,13 @@ def webhook():
                 if 'message' in messaging_event:
                     message = messaging_event['message']
 
-                    if 'text' in message:
+                    # Check quick_reply FIRST — before plain text
+                    if 'quick_reply' in message:
+                        payload = message['quick_reply'].get('payload', '')
+                        if payload.startswith('PRICE_'):
+                            send_listings_carousel(sender_id, payload)
+
+                    elif 'text' in message:
                         message_text = message['text'].lower().strip()
                         print(f"Received: {message_text}")
 
@@ -369,11 +375,6 @@ def webhook():
                             send_welcome_with_buttons(sender_id)
                         else:
                             send_message(sender_id, "မင်္ဂလာပါ။ အိမ်စာရင်း ကြည့်ရန် 'hi' လိုက်ရိုက်ပါ။")
-
-                    if 'quick_reply' in message:
-                        payload = message['quick_reply'].get('payload', '')
-                        if payload.startswith('PRICE_'):
-                            send_listings_carousel(sender_id, payload)
 
                 # Handle postbacks
                 elif 'postback' in messaging_event:
@@ -433,3 +434,4 @@ setup_get_started()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
+
