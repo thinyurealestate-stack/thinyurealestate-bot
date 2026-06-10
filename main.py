@@ -277,7 +277,7 @@ LISTINGS = {
             "image_url": "https://i.postimg.cc/W46PjY5h/IMG-5346.jpg",
             "facebook_url": "https://www.facebook.com/share/p/1EEaxo7r77/"
         }
-    }
+    
 ]
      
 # ========== SEND MESSAGE FUNCTION ==========
