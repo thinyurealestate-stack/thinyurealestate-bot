@@ -141,12 +141,6 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/18FHc9gwSo/"
         },
         {
-            "title": "မရမ်းကုန်း မြို့နယ်၊ ကျိုက်ဝိုင်းအနီး,ဘိုးဘွားပိုင် မြေ (စာရွက်စာတမ်းအပြည့်အစုံ)BCC ကျပြီးသား",
-            "subtitle": "၃ ထပ်ခွဲဆုံး စီးပွားရေးအသင့်သုံး အဆောက်အဦး 33' x 55',သိန်း 18,000 ညှိနိုင်း",
-            "image_url": "https://i.postimg.cc/ZKZmS8mt/IMG-5255.jpg",
-            "facebook_url": "https://www.facebook.com/share/p/1Xq4U7jYGz/"
-        },
-        {
             "title": "နာမည်ကြီး မင်းသမီး ခြံအနီး,မရမ်းကုန်း မြို့နယ်၅ ရပ်ကွက်,၉ မိုင်ဗိုလ်ညဏလမ်းသွယ်",
             "subtitle": "စိတ်ငြိမ်ရပ်ကွက်အမည်ပေါက်, ခြံအကျယ်၃၆ × ၆၂ ပေ,၁၅၅၀၀ သိန်း (ညှိနိုင်းစျေး)",
             "image_url": "https://i.postimg.cc/XJH5bjZs/Image-27-05-2026-at-2-32-AM.png",
@@ -173,6 +167,12 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/14eeZywwfZo/"
         },
         {
+            "title": "မရမ်းကုန်း မြို့နယ်၊ ကျိုက်ဝိုင်းအနီး,ဘိုးဘွားပိုင် မြေ (စာရွက်စာတမ်းအပြည့်အစုံ)BCC ကျပြီးသား",
+            "subtitle": "၃ ထပ်ခွဲဆုံး စီးပွားရေးအသင့်သုံး အဆောက်အဦး 33' x 55',သိန်း 18,000 ညှိနိုင်း",
+            "image_url": "https://i.postimg.cc/ZKZmS8mt/IMG-5255.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/1Xq4U7jYGz/"
+        },
+        {
             "title": "ပြည်လမ်းမကြီး အနီး,မရမ်းကုန်း မြို့နယ်၅ရပ်ကွက်,အဆက်ဆက်စာချုပ်",
             "subtitle": "ခြံအကျယ်၃၅ × ၅၅ ပေ,၁၆၅၀၀ သိန်းညှိနိုင်း",
             "image_url": "https://i.postimg.cc/q7LGYdpg/Image-29-05-2026-at-12-14-AM.png",
@@ -197,6 +197,12 @@ LISTINGS = {
             "subtitle": "70×100 ပေ, 22000 သိန်း",
             "image_url": "https://i.postimg.cc/9Q4xCrj2/Image-26-05-2026-at-1-18-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1BDGbQti5V/"
+        },
+        {
+            "title": "အင်းစိန်မြို့နယ် ရွာမအရှေ့ရပ်ကွက်,ဂျပန်လမ်းမကြီး အနီး,Jade Vista Hotel အနီး",
+            "subtitle": "ခြံ အကျယ် - 122 × 220 ပေ,၂၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/7YdSgjWx/IMG-5374.jpg",
+            "facebook_url": "https://i.postimg.cc/7YdSgjWx/IMG-5374.jpg"
         },
         {
             "title": "မရမ်းကုန်းမြို့နယ် (၉) ရပ်ကွက်,ကမ္ဘာအေးလမ်းမကြီးအနီး,ဂမုန်းပွင့်ကုန်တိုက်အနီး",
@@ -229,12 +235,6 @@ LISTINGS = {
             "subtitle": "ခြံအကျယ်၅၀ × ၅၀ ပေ, လေးထောင့်ကျ ထောင့်ကွက်,၃၈၀၀၀ သိန်း (ညှိနိုင်းစျေး)",
             "image_url": "https://i.postimg.cc/HxDjvNVS/IMG-5353.jpg",
             "facebook_url": "https://www.facebook.com/share/p/1Ppiv2a38n/"
-        },
-        {
-            "title": "အင်းစိန်မြို့နယ် ရွာမအရှေ့ရပ်ကွက်,ဂျပန်လမ်းမကြီး အနီး,Jade Vista Hotel အနီး",
-            "subtitle": "ခြံ အကျယ် - 122 × 220 ပေ,၂၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
-            "image_url": "https://i.postimg.cc/7YdSgjWx/IMG-5374.jpg",
-            "facebook_url": "https://i.postimg.cc/7YdSgjWx/IMG-5374.jpg"
         },
         {
             "title": "၉မိုင်ပြည်လမ်းမဒဲ့ပေါက်,Ocean center အနီး,ကား၂စီး ဂိုဒေါင်လမ်းကျယ်",
