@@ -111,6 +111,30 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1HdcYcGFfY/"
         },
         {
+            "title": "လမ်းမကြီး အလွန်းနီး,အင်းစိန်မြို့နယ် ရွာမအရှေ့ရပ်ကွက်,အောက်မင်္ဂလာဒုံ လမ်းမကြီး အနီးကွယ်ကဘော အင်းစိန်ဆေးရုံကြီး အနီး",
+            "subtitle": "ခြံအကျယ်  32 × 90 ပေအကျယ်,၁၃၀၀၀သိန်း (ပိုင်ရှင်တိုက်ရိုက် ညှီနှိုင်း)",
+            "image_url": "https://i.postimg.cc/qM14STTB/Image-10-06-2026-at-5-45-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1B4QFnC7zs/"
+        },
+        {
+            "title": "အင်းစိန်မြို့နယ် ရွာမအရှေ့ရပ်ကွက်,မင်းကြီးလမ်းမကြီး အနီး,အောက်မင်္ဂလာဒုံ လမ်းမကြီး အနီး",
+            "subtitle": "ကားနှစ်စီရှောင် လမ်း ရပ်ကွက်သန့်,ခြံအကျယ်  25 × 90 ပေအကျယ်, ၁၂၀၀၀ သိန်း (ပိုင်ရှင်တိုက်ရိုက် ညှီနှိုင်း)",
+            "image_url": "https://i.postimg.cc/hvG37N3p/Image-10-06-2026-at-5-48-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1D7qMpgxfF/"
+        },
+        {
+            "title": "အင်းစိန်မြို့နယ် ဖော့ကန်ရပ်ကွက်,ဖောကန်စျေး အနီး ဝါဦးလမ်း,City Mart / KFC ကြက်ကြော် ဆိုင် အနီး",
+            "subtitle": "ခြံအကျယ်  ၅၅x၉၀ပေ အကျယ်,၁၂၀၀၀ သိန်း ညှီနှိုင်းစျး,KBZ/AYA ဘဏ် များ နီး",
+            "image_url": "https://i.postimg.cc/5NnRb9yk/IMG-5380.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/18pY8chwks/"
+        },
+        {
+            "title": "အင်းစိန်မြို့နယ် ရွာမအရှေ့ ရပ်ကွက်,ကွယ်ကဘောဆေးရုံ အနီး,ဘိုကုန်းစျေး အနီးမင်းကြီးလမ်း /အောက်မင်္ဂလာဒုံ လမ်း အနီး",
+            "subtitle": "ခြံအကျယ် ၅၀ × ၈၀ ပေ,၁၂၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/SKKC6qfD/Image-10-06-2026-at-5-14-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1DJGniW6jP/"
+        },
+        {
             "title": "အင်းစိန်မြို့နယ် နဲသာကုန်း ရပ်ကွက်,လမ်းသစ်လမ်း မကြီး အနီး,Pro (1) Global Home အနီး",
             "subtitle": "ခြံအကျယ် ၄၀ × ၆၀ ပေ,၁၅၀၀၀ သိန်း ညှီနှိုင်းစျေး",
             "image_url": "https://i.postimg.cc/PqS2mSsj/Image-10-06-2026-at-4-53-PM.png",
@@ -129,17 +153,19 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1BRai2EH5x/"
         },
         {
-            "title": "အင်းစိန် မြို့နယ် မြို့သစ်ရပ်ကွက်,ဘုရင့်နောင်ရိပ်သာ Vip လမ်း",
-            "subtitle": "လူတိုင်းကြိုက်တဲ့အဂိုဒေါင်အလှည့်, ခြံအကျယ်၃၀ × ၆၀ ပေအကျယ်,၁၄၀၀၀သိန်းညှိနိုင်းစျေး",
-            "image_url": "https://i.postimg.cc/rwjxJNV2/Image-26-05-2026-at-1-16-AM.png",
-            "facebook_url": "https://www.facebook.com/share/p/1BeZ8m2wyd/"
+            "title": "အင်းစိန် မြို့နယ်၊ စောဘွားကြီးကုန်းရပ်ကွက်, လေဆိပ်ရိပ်သာ လမ်းသွယ်,Ocean Center အနီး",
+            "subtitle": "တောင်ဘက်အလှည့်,ကား၂စီး ဂိုဒေါင်လမ်း, ခြံအကျယ်၆၀ × ၅၅,၁၅၀၀၀ သိန်း ညှိနိုင်းစျေး",
+            "image_url": "https://i.postimg.cc/RhPqtX1s/Image-27-05-2026-at-2-52-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1Hi635363E/"
         },
         {
             "title": "အင်းစိန် မြို့နယ်၊ စောဘွားကြီးကုန်းရပ်ကွက်, လေဆိပ်ရိပ်သာ လမ်းသွယ်,Ocean Center အနီး",
             "subtitle": "တောင်ဘက်အလှည့်,ကား၂စီး ဂိုဒေါင်လမ်း, ခြံအကျယ်၆၀ × ၅၅,၁၅၀၀၀ သိန်း ညှိနိုင်းစျေး",
             "image_url": "https://i.postimg.cc/RhPqtX1s/Image-27-05-2026-at-2-52-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1Hi635363E/"
-        },
+        }
+    ],
+    "PRICE_4": [
         {
             "title": "ရွေပြည်သာ Vip3 ရပ်ကွက်,အမှတ်၄လမ်းနဲ့တာတော်နီး,စာရွက်စာတမ်း အပြည့်အစုံ",
             "subtitle": "အိမ်အကျယ် - 35' x 55', ခြံအကျယ် 60' x 90', ရေကူးကန် - 15' x 30',သိန်း ၁၈,၀၀၀",
@@ -151,6 +177,12 @@ LISTINGS = {
             "subtitle": "ခြံအကျယ်၃၅ × ၅၅ ပေ,၁၆၅၀၀ သိန်းညှိနိုင်း",
             "image_url": "https://i.postimg.cc/q7LGYdpg/Image-29-05-2026-at-12-14-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1KQgHPSarU/"
+        },
+        {
+            "title": "မရမ်းကုန်း ၅ ရပ်ကွက်, စွယ်တော်မြတ်စေတီအနီး,ကမ္ဘာအေးဗီလာအနီး",
+            "subtitle": "မ မြေ 75’ × 30’ (ထောင့်ခြံ),ရောင်းစျေး  ၁၉၇၀၀ သိန်း (ညှီနှိုင်း)",
+            "image_url": "https://i.postimg.cc/mDkrpgcs/Image-10-06-2026-at-5-40-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1BHpbqC2ao/"
         },
         {
             "title": "အင်းစိန် မြို့နယ်-မင်းဓမ္မလမ်းမကြီးအနီး,အောင်သိဒ္ဓိ Villa-နီး ဝိတိုရိယ ဆေးဆုံအနီး",
@@ -187,10 +219,22 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1EDpBUShAA/"
         },
         {
+            "title": "မရမ်းကုန်းမြို့နယ် ဆိတ်ငြိမ်ရပ်ကွက်, ၉မိုင် ပြည်လမ်းဒဲ့ပေါက်အ",
+            "subtitle": "SQFT - 3100ပေ,အဆောက်အဉီးအကျယ် 5 x 65 ( နှစ်ထပ်),သိန်း35000 ညှိနှိုင်း",
+            "image_url": "https://i.postimg.cc/4yYWBVvw/Image-10-06-2026-at-5-19-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/18xKZp6Ane/"
+        },
+        {
             "title": "၇မိုင်ကုန်း မြင့်သာ,မရမ်းကုန်း မြို့နယ်,မင်းဓမ္မလမ်းမကြီး ပြည်လမ်းမ အနီး",
             "subtitle": "ခြံအကျယ်၅၀ × ၅၀ ပေ, လေးထောင့်ကျ ထောင့်ကွက်,၃၈၀၀၀ သိန်း (ညှိနိုင်းစျေး)",
             "image_url": "https://i.postimg.cc/HxDjvNVS/IMG-5353.jpg",
             "facebook_url": "https://www.facebook.com/share/p/1Ppiv2a38n/"
+        },
+        {
+            "title": "အင်းစိန်မြို့နယ် ရွာမအရှေ့ရပ်ကွက်,ဂျပန်လမ်းမကြီး အနီး,Jade Vista Hotel အနီး",
+            "subtitle": "ခြံ အကျယ် - 122 × 220 ပေ,၂၈၅၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/7YdSgjWx/IMG-5374.jpg",
+            "facebook_url": "https://i.postimg.cc/7YdSgjWx/IMG-5374.jpg"
         },
         {
             "title": "၉မိုင်ပြည်လမ်းမဒဲ့ပေါက်,Ocean center အနီး,ကား၂စီး ဂိုဒေါင်လမ်းကျယ်",
@@ -200,7 +244,14 @@ LISTINGS = {
         }
     ],
     "PRICE_6": [],
-    "PRICE_7": [],
+    "PRICE_7": [
+        {
+            "title": "အင်းစိန်မြို့နယ် တောင်သူကုန်းရပ်ကွက်,မင်းကြီးလမ်း အနီး,ဘိုကုန်းစျေး ယိုးဒယာစျေး အနီး,ကွယ်ကဘော ဆေးရုံ အနီး",
+            "subtitle": "ခြံအကျယ် ၁၀၀ × ၂၀၀  ပေ (20000Sqft),ကား ၃စီးရှောင်လမ်းအကျယ်,၅၀၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
+            "image_url": "https://i.postimg.cc/BQgCHhG6/Image-10-06-2026-at-5-24-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1ByBBmDqcH/"
+        }
+    ],
     "PRICE_8": [],
     "PRICE_9": [],
     "PRICE_10": [
@@ -244,16 +295,17 @@ def send_price_quick_replies(recipient_id):
     label_map = {
         "PRICE_1": "1.သိန်း၅ထောင်အောက်",
         "PRICE_2": "2.သိန်း၁သောင်းအောက်",
-        "PRICE_3": "3.သိန်း၂သောင်းအောက်",
-        "PRICE_4": "4.သိန်း၃သောင်းအောက်",
-        "PRICE_5": "5.သိန်း၄သောင်းအောက်",
-        "PRICE_6": "6.အငှားအိမ်များ",
-        "PRICE_7": "7.သိန်း၅သောင်းအောက်",
-        "PRICE_8": "8.သိန်း၆သောင်းအောက်",
-        "PRICE_9": "9.သိန်း၇သောင်းအောက်",
-        "PRICE_10": "10.သိန်း၈သောင်းအောက်",
-        "PRICE_11": "11.သိန်း၉သောင်းအောက်",
-        "PRICE_12": "12.သိန်းကြီးတန်အိမ်များ"
+        "PRICE_3": "3.သိန်း၁သောင်းခွဲအောက်",
+        "PRICE_4": "4.သိန်း၂သောင်းအောက်",
+        "PRICE_5": "5.သိန်း၃သောင်းအောက်",
+        "PRICE_6": "6.သိန်း၄သောင်းအောက်",
+        "PRICE_7": "7.အငှားအိမ်များ",
+        "PRICE_8": "8.သိန်း၅သောင်းအောက်",
+        "PRICE_9": "9.သိန်း၆သောင်းအောက်",
+        "PRICE_10": "10.သိန်း၇သောင်းအောက်",
+        "PRICE_11": "11.သိန်း၈သောင်းအောက်",
+        "PRICE_12": "12.သိန်း၉သောင်းအောက်",
+        "PRICE_13": "13.သိန်းကြီးတန်အိမ်များ"
     }
 
     quick_replies = []
@@ -287,16 +339,17 @@ def send_welcome_with_buttons(recipient_id):
             "quick_replies": [
                 {"content_type": "text", "title": "1.သိန်း၅ထောင်အောက်", "payload": "PRICE_1"},
                 {"content_type": "text", "title": "2.သိန်း၁သောင်းအောက်", "payload": "PRICE_2"},
-                {"content_type": "text", "title": "3.သိန်း၂သောင်းအောက်", "payload": "PRICE_3"},
-                {"content_type": "text", "title": "4.သိန်း၃သောင်းအောက်", "payload": "PRICE_4"},
-                {"content_type": "text", "title": "5.သိန်း၄သောင်းအောက်", "payload": "PRICE_5"},
-                {"content_type": "text", "title": "6.အငှားအိမ်များ", "payload": "PRICE_6"},
-                {"content_type": "text", "title": "7.သိန်း၅သောင်းအောက်", "payload": "PRICE_7"},
-                {"content_type": "text", "title": "8.သိန်း၆သောင်းအောက်", "payload": "PRICE_8"},
-                {"content_type": "text", "title": "9.သိန်း၇သောင်းအောက်", "payload": "PRICE_9"},
-                {"content_type": "text", "title": "10.သိန်း၈သောင်းအောက်", "payload": "PRICE_10"},
-                {"content_type": "text", "title": "11.သိန်း၉သောင်းအောက်", "payload": "PRICE_11"},
-                {"content_type": "text", "title": "12.သိန်းကြီးတန်အိမ်များ", "payload": "PRICE_12"}
+                {"content_type": "text", "title": "3.သိန်း၁သောင်းခွဲအောက်", "payload": "PRICE_3"},
+                {"content_type": "text", "title": "4.သိန်း၂သောင်းအောက်", "payload": "PRICE_4"},
+                {"content_type": "text", "title": "5.သိန်း၃သောင်းအောက်", "payload": "PRICE_5"},
+                {"content_type": "text", "title": "6.သိန်း၄သောင်းအောက်", "payload": "PRICE_6"},
+                {"content_type": "text", "title": "7.အငှားအိမ်များ", "payload": "PRICE_7"},
+                {"content_type": "text", "title": "8.သိန်း၅သောင်းအောက်", "payload": "PRICE_8"},
+                {"content_type": "text", "title": "9.သိန်း၆သောင်းအောက်", "payload": "PRICE_9"},
+                {"content_type": "text", "title": "10.သိန်း၇သောင်းအောက်", "payload": "PRICE_10"},
+                {"content_type": "text", "title": "11.သိန်း၈သောင်းအောက်", "payload": "PRICE_11"},
+                {"content_type": "text", "title": "12.သိန်း၉သောင်းအောက်", "payload": "PRICE_12"},
+                {"content_type": "text", "title": "13.သိန်းကြီးတန်အိမ်များ", "payload": "PRICE_13"}
             ]
         }
     }
