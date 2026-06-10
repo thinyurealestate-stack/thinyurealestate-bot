@@ -272,14 +272,12 @@ LISTINGS = {
     "PRICE_12": [],
     "PRICE_13": [
         {    
-            "title": "Luxury Residence ဘုရင့်နောင်တံတား အောက်၊ မင်္ဂလာသန်းမြင့် ဘေးလမ်း",
-            "subtitle": "မရမ်းကုန်း မြို့နယ်ရှိအဆင့်မြင့်လူနေမှုပုံစံ,သိန်းကြီး 120000(ညှိနိုင်းစျေး)",
+            "title": "Luxury Residence ဘုရင့်နောင်တံတား အောက် မင်္ဂလာသန်းမြင့် ဘေးလမ်း",
+            "subtitle": "မရမ်းကုန်း မြို့နယ်ရှိအဆင့်မြင့်လူနေမှုပုံစံ,သိန်းကြီး 120000ညှိနိုင်းစျေး",
             "image_url": "https://i.postimg.cc/W46PjY5h/IMG-5346.jpg",
             "facebook_url": "https://www.facebook.com/share/p/1EEaxo7r77/"
         }
     ]
-}
-],
      
 # ========== SEND MESSAGE FUNCTION ==========
 def send_message(recipient_id, text):
