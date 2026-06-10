@@ -250,6 +250,7 @@ def send_price_quick_replies(recipient_id):
 
 def some_function_name():
 def setup_get_started():
+    pass
     url = f"https://graph.facebook.com/v18.0/me/messenger_profile?access_token={PAGE_ACCESS_TOKEN}"
     payload = {"get_started": {"payload": "GET_STARTED"}}
     try:
