@@ -251,6 +251,23 @@ def send_price_quick_replies(recipient_id):
 def send_welcome_with_buttons(recipient_id):
     """Send welcome message with price range buttons"""
     url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    def setup_get_started():
+    """Configure the Get Started button for your page"""
+    url = f"https://graph.facebook.com/v18.0/me/messenger_profile?access_token={PAGE_ACCESS_TOKEN}"
+    payload = {
+        "get_started": {
+            "payload": "GET_STARTED"
+        }
+    }
+    try:
+        response = requests.post(url, json=payload)
+        print(f" Get Started button configured: {response.status_code}")
+        if response.status_code != 200:
+            print(f"Error: {response.text}")
+        return response
+    except Exception as e:
+        print(f"Error setting up Get Started: {e}")
+        return None
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
@@ -370,7 +387,10 @@ def webhook():
                 elif 'postback' in messaging_event:
                     payload = messaging_event['postback'].get('payload', '')
                     if payload.startswith('PRICE_'):
-                        send_listings_carousel(sender_id, payload)
+                    send_listings_carousel(sender_id, payload)
+                elif payload == 'GET_STARTED':
+                    send_welcome_with_buttons(sender_id)
+                    
                 
                 # Handle inbox_labels
                 if 'inbox_labels' in messaging_event:
@@ -415,5 +435,8 @@ def webhook():
 def health_check():
     return "Bot is running!", 200
 
-if __name__ == '__main__':
+# Call this once when the bot starts
+setup_get_started()
+
+if _name_ == '_main_':
     app.run(host='0.0.0.0', port=8080)
