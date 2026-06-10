@@ -23,6 +23,12 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1CdefBLAM3/"
         },
         {
+            "title": "အင်းစိန်မြို့နယ် ဖော့ကန်,ဝါဦး(၅)လမ်း-လမ်းကျယ်,စိတ်ညိမ်ရပ်ကွက်",
+            "subtitle": "၁၅x၁၀၀.၂၈၀၀ ညှိ့နိူင်း,မြေပိုင်မြေအမျိုးစား,စည်ပင်မြေကွက်",
+            "image_url": "https://i.postimg.cc/wB10Qh6X/Image-10-06-2026-at-5-00-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1D9GGGtkJ9/"
+        },
+        {
             "title": "ဆယ်မိုင် စျေးအနီး ရန်ကုန်းအောင်းလမ်း,ဘိုးဘပိုင် မြေ,အင်းစိန် မြို့နယ်",
             "subtitle": "ကား၂စီး ဂိုဒေါင်လမ်း,၃၀x၆၀.၅၅၀၀(ပါးပါး ညှော့)",
             "image_url": "https://i.postimg.cc/RCW6tzJ7/IMG-5263.jpg",
@@ -65,6 +71,12 @@ LISTINGS = {
             "subtitle": "ရေကူးကန်ငယ်တစ်ခုပါ,ဘိုးဘွားပိုင်အရပ်စာချုပ်,၈၅၀၀ သိန်း (ညှိနိုင်းစျေး)",
             "image_url": "https://i.postimg.cc/zB4H2dHT/Image-25-05-2026-at-5-08-PM-(5).png",
             "facebook_url": "https://www.facebook.com/share/p/1EmM7sSUsU/"
+        },
+        {
+            "title": "Lucky 7 Tea house အနီး,ရမ်းကုန်းမြို့နယ် ၅ ရက်ကွက်,Ocean center အနီး",
+            "subtitle": "ခြံအကျယ် 18 × 58 ပေ,၉၈၀၀ သိန်း ညှီနှိုင်းစျေး,မြေပိုင်မြေ အဆက်စပ်စာချုပ်",
+            "image_url": "https://i.postimg.cc/TwwG9NKn/Image-10-06-2026-at-5-06-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1JKXu3w7Qh/"
         },
         {
             "title": "အင်းစိန် မြို့နယ်- အောင်ဆန်း စျေးအနီး,ဘဏ်နီး- ကျောင်းနီး- စျေးနီး",
