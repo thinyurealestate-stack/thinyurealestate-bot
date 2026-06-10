@@ -249,16 +249,16 @@ def send_price_quick_replies(recipient_id):
 # ========== WELCOME WITH BUTTONS ==========
 
 def some_function_name():
-    pass  # This means "do nothing"    """Send welcome message with price range buttons"""
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
-    def setup_get_started():
-    """Configure the Get Started button for your page"""
+def setup_get_started():
     url = f"https://graph.facebook.com/v18.0/me/messenger_profile?access_token={PAGE_ACCESS_TOKEN}"
-    payload = {
-        "get_started": {
-            "payload": "GET_STARTED"
-        }
-    }
+    payload = {"get_started": {"payload": "GET_STARTED"}}
+    try:
+        response = requests.post(url, json=payload)
+        print(f" Get Started: {response.status_code}")
+    except Exception as e:
+        print(f"Error: {e}")
+
+setup_get_started()
     try:
         response = requests.post(url, json=payload)
         print(f" Get Started button configured: {response.status_code}")
