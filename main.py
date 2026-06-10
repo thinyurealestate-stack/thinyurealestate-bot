@@ -191,7 +191,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/18vbwdBjVv/"
         }
     ],
-    "PRICE_4": [
+    "PRICE_5": [
         {
             "title": "လေဆိပ်ရိပ်သာလမ်းမ",
             "subtitle": "70×100 ပေ, 22000 သိန်း",
@@ -211,7 +211,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1DCfLUWDbn/"
         }
     ],
-    "PRICE_5": [
+    "PRICE_6": [
         {
             "title": "မရမ်းကုန်း မြို့နယ်၅ ရပ်ကွက်,၉မိုင် ရေနှင်းဆီမင်္ဂလာကန်အနီး",
             "subtitle": "ပြည်လမ်းမကြီး အနီး, ခြံအကျယ်၅၀ × ၇၀ ပေအကျယ်,၃၅၀၀၀ သိန်း (ညှိနိုင်း)",
@@ -243,8 +243,14 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/17XtJz4td8/"
         }
     ],
-    "PRICE_6": [],
-    "PRICE_7": [],
+    "PRICE_7": [
+        {
+            "title": "အင်းစိန်မြို့နယ် အောင်ဆန်းရပ်ကွက်,အောက်မင်္ဂလာဒုံ လမ်းမကြီးအနီးလမ်းမကြီးမှ လမ်လျောက် တစ်မီနစ် -လှမ်းကြည့်လမ်းမကြီးမြင်ရ",
+            "subtitle": "ခြံအကျယ်-20 × 100ပေ,2RC.2ထပ်အိမ် ဌားမည်,၁လ ၁၅ သိန်း",
+            "image_url": "https://i.postimg.cc/x8wxF5P3/710756262-1611823103238863-620643681076249583-n.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/1HgdrNAccb/"
+        }
+    ],
     "PRICE_8": [
         {
             "title": "အင်းစိန်မြို့နယ် တောင်သူကုန်းရပ်ကွက်,မင်းကြီးလမ်း အနီး,ဘိုကုန်းစျေး ယိုးဒယာစျေး အနီး,ကွယ်ကဘော ဆေးရုံ အနီး",
@@ -264,16 +270,15 @@ LISTINGS = {
         }
     ],
     "PRICE_12": [],
-     "PRICE_13":
-    {
+    "PRICE_13": [{    
             "title": "Luxury Residence ဘုရင့်နောင်တံတား အောက်၊ မင်္ဂလာသန်းမြင့် ဘေးလမ်း",
             "subtitle": "မရမ်းကုန်း မြို့နယ်ရှိအဆင့်မြင့်လူနေမှုပုံစံ,သိန်းကြီး 120000(ညှိနိုင်းစျေး)",
             "image_url": "https://i.postimg.cc/W46PjY5h/IMG-5346.jpg",
             "facebook_url": "https://www.facebook.com/share/p/1EEaxo7r77/"
         }
     ]
-}
-
+}],
+     
 # ========== SEND MESSAGE FUNCTION ==========
 def send_message(recipient_id, text):
     """Send a simple text message"""
