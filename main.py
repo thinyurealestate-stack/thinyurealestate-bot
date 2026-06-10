@@ -93,6 +93,12 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1HdcYcGFfY/"
         },
         {
+            "title": "အင်းစိန်မြို့နယ် နဲသာကုန်း ရပ်ကွက်,လမ်းသစ်လမ်း မကြီး အနီး,Pro (1) Global Home အနီး",
+            "subtitle": "ခြံအကျယ် ၄၀ × ၆၀ ပေ,၁၅၀၀၀ သိန်း ညှီနှိုင်းစျေး",
+            "image_url": "https://i.postimg.cc/PqS2mSsj/Image-10-06-2026-at-4-53-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/18FHc9gwSo/"
+        },
+        {
             "title": "မရမ်းကုန်း မြို့နယ်၊ ကျိုက်ဝိုင်းအနီး,ဘိုးဘွားပိုင် မြေ (စာရွက်စာတမ်းအပြည့်အစုံ)BCC ကျပြီးသား",
             "subtitle": "၃ ထပ်ခွဲဆုံး စီးပွားရေးအသင့်သုံး အဆောက်အဦး 33' x 55',သိန်း 18,000 ညှိနိုင်း",
             "image_url": "https://i.postimg.cc/ZKZmS8mt/IMG-5255.jpg",
@@ -141,6 +147,12 @@ LISTINGS = {
             "subtitle": "70×100 ပေ, 22000 သိန်း",
             "image_url": "https://i.postimg.cc/9Q4xCrj2/Image-26-05-2026-at-1-18-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1BDGbQti5V/"
+        },
+        {
+            "title": "မရမ်းကုန်းမြို့နယ် (၉) ရပ်ကွက်,ကမ္ဘာအေးလမ်းမကြီးအနီး,ဂမုန်းပွင့်ကုန်တိုက်အနီး",
+            "subtitle": "မြေအကျယ် 70' × 70' 4,900 Sqft,ရောင်းစျေး  ၂၉,၀၀၀ သိန်း ညှိနှိုင်း",
+            "image_url": "https://i.postimg.cc/4xq3mgnR/Image-10-06-2026-at-4-56-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1Dhs8sqMsm/"
         },
         {
             "title": "၉မိုင် ပြည်လမ်းမ အလွန်းနီး လမ်းကျယ်,၉ မိုင် ဘောဂလမ်း,Ocean center အနီး",
