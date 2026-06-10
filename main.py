@@ -67,6 +67,12 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1BG5exRsdz/"
         },
         {
+            "title": "အင်းစိန်မြို့နယ် က+ခ ရက်ကွက်-ဘုရင့်နောင်လမ်းမကြီးအနီး မြို့သစ်စျေးအနီး",
+            "subtitle": "၂၀x၆၀.၇၅၀၀(ညှိ့နိူင်း),လမ်းမကြီးမှလှမ်းကြည့်မြင်ရ",
+            "image_url": "https://i.postimg.cc/VN02kybY/Image-10-06-2026-at-5-10-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1CeANQP3Ev/"
+        },
+        {
             "title": "ကျောက်ရေတွင်း လမ်းမဒဲ့ပေါက်လမ်းကျယ်,မရမ်းကုန်း မြို့နယ် ၅ရပ်ကွက်,စွယ်တောင်မြတ်စေတီတောင်အနီး",
             "subtitle": "ရေကူးကန်ငယ်တစ်ခုပါ,ဘိုးဘွားပိုင်အရပ်စာချုပ်,၈၅၀၀ သိန်း (ညှိနိုင်းစျေး)",
             "image_url": "https://i.postimg.cc/zB4H2dHT/Image-25-05-2026-at-5-08-PM-(5).png",
