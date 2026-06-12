@@ -17,6 +17,12 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1DaozjPCxM/"
         },
         {
+            "title": "အင်းစိန်မြို့နယ်-ဂျပန်လမ်းနီး,အဘထ လမ်း,အဆက်စက်စာချုပ်-အရူပ်ရှင်းကင်း",
+            "subtitle": "ဂရမ်မြေ-သိန်း ၂၈၀၀,စိတ်ညိမ်ရပ်ကွက်,ပတ်ဝန်းကျင်သန့်",
+            "image_url": "https://i.postimg.cc/kgFWHsTK/IMG-5836.jpg",
+            "facebook_url": "https://www.facebook.com/share/p/17jfG4U9PD/?mibextid=wwXIfr"
+        },
+        {
             "title": " လမ်းသစ်လမ်းမကြီး အနီး,နံသာမြို့င်လမ်း,Pro (1) global home အနီး",
             "subtitle": "ကား၂စီးကပ် ဂိုဒေါင်,လမ်းကျယ် ခြံအကျယ် 1770 Sqft,၂၆၅၀ သိန်း (ညှိနိုင်းစျေး)",
             "image_url": "https://i.postimg.cc/1Rvnn33Y/IMG-5293.jpg",
