@@ -315,20 +315,24 @@ LISTINGS = {
 }
 # ========== SEND MESSAGE FUNCTION ==========
 def send_message(recipient_id, text):
-    """Send a simple text message"""
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
-    payload = {"recipient": {"id": recipient_id}, "message": {"text": text}}
-    try:
-        response = requests.post(url, json=payload)
-            print(f"FB ERROR: {response.text}")
-        if response.status_code == 200:
-            print(f"✅ Message sent to {recipient_id}")
-        else:
-            print(f"❌ ERROR {response.status_code}: {response.text}")
-        return response
-    except Exception as e:
-        print(f"❌ Exception: {e}")
-        return None
+    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    
+    headers = {
+        "Content-Type": "application/json"  # <-- ADD THIS
+    }
+    
+    payload = {
+        "recipient": {"id": recipient_id},
+        "messaging_type": "RESPONSE",
+        "message": {"text": text}
+    }
+    
+    response = requests.post(url, json=payload, headers=headers)  # <-- ADD headers HERE
+    
+    if response.status_code != 200:
+        print(f"ERROR: {response.text}")
+    
+    return response
 
 # ========== PRICE QUICK REPLIES ==========
 def send_price_quick_replies(recipient_id):
