@@ -320,6 +320,7 @@ def send_message(recipient_id, text):
     payload = {"recipient": {"id": recipient_id}, "message": {"text": text}}
     try:
         response = requests.post(url, json=payload)
+            print(f"FB ERROR: {response.text}")
         if response.status_code == 200:
             print(f"✅ Message sent to {recipient_id}")
         else:
