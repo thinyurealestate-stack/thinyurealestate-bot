@@ -16,8 +16,9 @@ LISTINGS = {
             "image_url": "https://i.postimg.cc/0Qys0Mf3/Image-15-06-2026-at-10-58-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1EJf62y4SH/"
         },
+     ],
        
-    "PRICE_2": [
+     "PRICE_2": [
         {
             "title": "ဘုရင့်နောင်လမ်းမကြီးမှလမ်းလျှောက်-၂မိနစ်သာဝင်ရ,တိုက်ခန်းစျေးနဲ့မို့အရယူပါရှင်",
             "subtitle": "ကိုယ်ပိုင်မီတာ မော်တာပါ,ပိုင်ရှင်ကိုယ်တိုင်ရောင်းချသောရှုပ်ရှင်းကင်း",
