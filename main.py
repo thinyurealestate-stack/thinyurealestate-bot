@@ -16,6 +16,12 @@ LISTINGS = {
             "image_url": "https://i.postimg.cc/0Qys0Mf3/Image-15-06-2026-at-10-58-AM.png",
             "facebook_url": "https://www.facebook.com/share/p/1EJf62y4SH/"
         },
+        {
+            "title": "ဆယ်မိုင်ရန်ကြီးအောင်လမ်း,အရှေ့အလှည့်,မြေပိုင်မြေအမျိုးစား",
+            "subtitle": "အဆက်စက်စာချုပ်-အရူပ်ရှင်းကင်း,၂၀x၆၀.၃၅၀၀(ညှိ့နိူင်း)",
+            "image_url": "https://i.postimg.cc/cLZ15PKC/Image-15-06-2026-at-5-50-PM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1RB3W5xwpY/"
+        }  
      ],
        
      "PRICE_2": [
