@@ -314,26 +314,28 @@ LISTINGS = {
     ]
 }
 # ========== SEND MESSAGE FUNCTION ==========
-def send_message(recipient_id, text):
-    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
-    
-    headers = {
-        "Content-Type": "application/json"  # <-- ADD THIS
-    }
+def send_facebook_message(recipient_id, message_text, page_access_token):
+    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={page_access_token}"
     
     payload = {
         "recipient": {"id": recipient_id},
         "messaging_type": "RESPONSE",
-        "message": {"text": text}
+        "message": {"text": message_text}
     }
     
-    response = requests.post(url, json=payload, headers=headers)  # <-- ADD headers HERE
+    headers = {"Content-Type": "application/json"}
     
+    response = requests.post(url, json=payload, headers=headers)
+    
+    # THIS BLOCK SAVES YOU HOURS
     if response.status_code != 200:
-        print(f"ERROR: {response.text}")
+        error_data = response.json()
+        print(f"ERROR CODE: {error_data.get('error', {}).get('code')}")
+        print(f"ERROR MSG: {error_data.get('error', {}).get('message')}")
+        print(f"FULL ERROR: {response.text}")
+        return False
     
-    return response
-
+    return True
 # ========== PRICE QUICK REPLIES ==========
 def send_price_quick_replies(recipient_id):
     """Send price range quick replies"""
