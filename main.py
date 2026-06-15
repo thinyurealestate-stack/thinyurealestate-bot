@@ -9,7 +9,21 @@ VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "thinyurealestate")
 
 # ========== YOUR LISTINGS DATA ==========
 LISTINGS = {
-    "PRICE_1": [
+     "PRICE_1": [
+        {
+            "title": "ယိုးဒယားစျေးအနီး,ရေ မီးစုံ အခန်း ၁ခန်းပါပတ်ဝန်းကျင်သန့် လူစည်ကားသောနေရာ",
+            "subtitle": "ပထမထပ် 12.5x55.ပေကျယ်,၁၃၅၀(ညှိ့နိူင်းစျေး)ရောင်းမည်",
+            "image_url": "https://i.postimg.cc/0Qys0Mf3/Image-15-06-2026-at-10-58-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1EJf62y4SH/"
+        },
+       
+    "PRICE_2": [
+        {
+            "title": "ဘုရင့်နောင်လမ်းမကြီးမှလမ်းလျှောက်-၂မိနစ်သာဝင်ရ,တိုက်ခန်းစျေးနဲ့မို့အရယူပါရှင်",
+            "subtitle": "ကိုယ်ပိုင်မီတာ မော်တာပါ,ပိုင်ရှင်ကိုယ်တိုင်ရောင်းချသောရှုပ်ရှင်းကင်း",
+            "image_url": "https://i.postimg.cc/XqrsV4jY/Image-15-06-2026-at-10-49-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1BNNHbSrc9/"
+        },
         {
             "title": "အင်းစိန် မြို့နယ်- အောင်ဆန်း စျေးအနီး",
             "subtitle": "8×80 ပေ , 2BN နှစ်ထပ်အိမ်, 4400 သိန်း",
@@ -65,7 +79,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/18igS589wC/"
         }
     ],
-    "PRICE_2": [
+    "PRICE_3": [
         {
             "title": "သာကေတ မြို့နယ်, အောင်သပြေ အနောက်(-)လမ်း,ဂရံအမည်ပေါက်အိမ်နှင့် ခြံအရောင်း",
             "subtitle": "ပေကျယ်၄၀'၆၀,သိန်း ၈၅၀၀ (ညှိနိုင်းစျေး)",
@@ -109,7 +123,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1CRS21Zhin/"
         }
     ],
-    "PRICE_3": [
+    "PRICE_4": [
         {
             "title": "မရမ်းကုန် မြို့နယ်၉မိုင်၅ ရပ်ကွက်,ပြည်လမ်းမဒဲ့ပေါက်,ရန်ကုန် လေဆိပ်အနီး,ကား၂စီး ဂိုဒေါင်လမ်း",
             "subtitle": "40×80 ပေ, 11000 သိန်း",
@@ -165,7 +179,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1Hi635363E/"
         }
     ],
-    "PRICE_4": [
+    "PRICE_5": [
         {
             "title": "ရွေပြည်သာ Vip3 ရပ်ကွက်,အမှတ်၄လမ်းနဲ့တာတော်နီး,စာရွက်စာတမ်း အပြည့်အစုံ",
             "subtitle": "အိမ်အကျယ် - 35' x 55', ခြံအကျယ် 60' x 90', ရေကူးကန် - 15' x 30',သိန်း ၁၈,၀၀၀",
@@ -197,7 +211,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/18vbwdBjVv/"
         }
     ],
-    "PRICE_5": [
+    "PRICE_6": [
         {
             "title": "လေဆိပ်ရိပ်သာလမ်းမ",
             "subtitle": "70×100 ပေ, 22000 သိန်း",
@@ -223,7 +237,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1DCfLUWDbn/"
         }
     ],
-    "PRICE_6": [
+    "PRICE_7": [
         {
             "title": "မရမ်းကုန်း မြို့နယ်၅ ရပ်ကွက်,၉မိုင် ရေနှင်းဆီမင်္ဂလာကန်အနီး",
             "subtitle": "ပြည်လမ်းမကြီး အနီး, ခြံအကျယ်၅၀ × ၇၀ ပေအကျယ်,၃၅၀၀၀ သိန်း (ညှိနိုင်း)",
@@ -249,7 +263,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/17XtJz4td8/"
         }
     ],
-    "PRICE_7": [
+    "PRICE_8": [
         {
             "title": "အင်းစိန်မြို့နယ် အောင်ဆန်းရပ်ကွက်,အောက်မင်္ဂလာဒုံ လမ်းမကြီးအနီးလမ်းမကြီးမှ လမ်လျောက် တစ်မီနစ် -လှမ်းကြည့်လမ်းမကြီးမြင်ရ",
             "subtitle": "ခြံအကျယ်-20 × 100ပေ,2RC.2ထပ်အိမ် ဌားမည်,၁လ ၁၅ သိန်း",
@@ -257,7 +271,7 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1HgdrNAccb/"
         }
     ],
-    "PRICE_8": [
+    "PRICE_9": [
         {
             "title": "အင်းစိန်မြို့နယ် တောင်သူကုန်းရပ်ကွက်,မင်းကြီးလမ်း အနီး,ဘိုကုန်းစျေး ယိုးဒယာစျေး အနီး,ကွယ်ကဘော ဆေးရုံ အနီး",
             "subtitle": "ခြံအကျယ် ၁၀၀ × ၂၀၀  ပေ (20000Sqft),ကား ၃စီးရှောင်လမ်းအကျယ်,၅၀၀၀၀ သိန်း (ညှီနှိုင်းစျေး)",
@@ -265,9 +279,9 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1ByBBmDqcH/"
         }
     ],
-    "PRICE_9": [],
     "PRICE_10": [],
-    "PRICE_11": [
+    "PRICE_11": [],
+    "PRICE_12": [
         {
             "title": "နှစ်မိုင် ကျောက်ဝိုင်းဘုရားလမ်းမကြီး,မရမ်းကုန်း မြို့နယ်၄ ရပ်ကွက်",
             "subtitle": "၇ ပေကျယ်နှစ်ဦးသုံး ကိုယ်ပိုင်လမ်း,၇၅၀၀၀ သိန်း (ညှိနိုင်း)",
@@ -275,8 +289,15 @@ LISTINGS = {
             "facebook_url": "https://www.facebook.com/share/p/1GeYDV6592/"
         }
     ],
-    "PRICE_12": [],
     "PRICE_13": [
+        {
+            "title": "ရန်ကင်းမြို့နယ်,သုခီတာလမ်း,ကားသုံးစီး ရှောင် လမ်းကျယ်",
+            "subtitle": "ခြံအကျယ် ၅၀ × ၇၀ ပေ,အိမ် အကျယ် ၃၀ × ၄၀ ပေ အိမ် အကျယ် ၃၀ × ၄၀ ပေ ,၈၉၀၀၀ သိန်း (ညှီနှိုင်း)",
+            "image_url": "https://i.postimg.cc/3Nh2qhyH/Image-15-06-2026-at-10-53-AM.png",
+            "facebook_url": "https://www.facebook.com/share/p/1GeYDV6592/"
+        }
+    ],
+    "PRICE_14": [
         {    
             "title": "Luxury Residence ဘုရင့်နောင်တံတား အောက် မင်္ဂလာသန်းမြင့် ဘေးလမ်း",
             "subtitle": "မရမ်းကုန်း မြို့နယ်ရှိအဆင့်မြင့်လူနေမှုပုံစံ,သိန်းကြီး 120000ညှိနိုင်းစျေး",
@@ -305,19 +326,20 @@ def send_message(recipient_id, text):
 def send_price_quick_replies(recipient_id):
     """Send price range quick replies"""
     label_map = {
-        "PRICE_1": "1.သိန်း၅ထောင်အောက်",
-        "PRICE_2": "2.သိန်း၁သောင်းအောက်",
-        "PRICE_3": "3.သိန်း၁သောင်းခွဲအောက်",
-        "PRICE_4": "4.သိန်း၂သောင်းအောက်",
-        "PRICE_5": "5.သိန်း၃သောင်းအောက်",
-        "PRICE_6": "6.သိန်း၄သောင်းအောက်",
-        "PRICE_7": "7.အငှားအိမ်များ",
-        "PRICE_8": "8.သိန်း၅သောင်းအောက်",
-        "PRICE_9": "9.သိန်း၆သောင်းအောက်",
-        "PRICE_10": "10.သိန်း၇သောင်းအောက်",
-        "PRICE_11": "11.သိန်း၈သောင်းအောက်",
-        "PRICE_12": "12.သိန်း၉သောင်းအောက်",
-        "PRICE_13": "13.သိန်းကြီးတန်အိမ်များ"
+        "PRICE_1": "1.သိန်း၃ထောင်အောက်",
+        "PRICE_2": "2.သိန်း၅ထောင်အောက်",
+        "PRICE_3": "3.သိန်း၁သောင်းအောက်",
+        "PRICE_4": "4.သိန်း၁သောင်းခွဲအောက်",
+        "PRICE_5": "5.သိန်း၂သောင်းအောက်",
+        "PRICE_6": "6.သိန်း၃သောင်းအောက်",
+        "PRICE_7": "7.သိန်း၄သောင်းအောက်",
+        "PRICE_8": "8.အငှားအိမ်များ",
+        "PRICE_9": "9.သိန်း၅သောင်းအောက်",
+        "PRICE_10": "10.သိန်း၆သောင်းအောက်",
+        "PRICE_11": "11.သိန်း၇သောင်းအောက်",
+        "PRICE_12": "12.သိန်း၈သောင်းအောက်",
+        "PRICE_13": "13.သိန်း၉သောင်းအောက်",
+        "PRICE_14": "14.သိန်းကြီးတန်အိမ်များ"
     }
 
     quick_replies = []
@@ -349,19 +371,20 @@ def send_welcome_with_buttons(recipient_id):
         "message": {
             "text": "မင်္ဂလာပါ 👩‍💼🏘🏠\nမသင်းယုအိမ်ခြံမြေ အကျိုးဆောင်မှုကိုဆိုပါတယ်\n\n💜 Viber : 09767975004 💜\n\n📞 Contact :09424006004 📞\n\nအိမ်ကြည့်မယ်ဆို 3နာရီ ကြိုဆက်ပေးပါ 🏠\n\nအိမ်များကိုကျပ်သိန်း၁ ထောင်မှစ အောက်ကစျေးနှုန်းအတိုင်းဆွဲ၍ \n ကြည့်နိုင်ပါတယ်\n\n",
             "quick_replies": [
-                {"content_type": "text", "title": "1.သိန်း၅ထောင်အောက်", "payload": "PRICE_1"},
-                {"content_type": "text", "title": "2.သိန်း၁သောင်းအောက်", "payload": "PRICE_2"},
-                {"content_type": "text", "title": "3.သိန်း၁သောင်းခွဲအောက်", "payload": "PRICE_3"},
-                {"content_type": "text", "title": "4.သိန်း၂သောင်းအောက်", "payload": "PRICE_4"},
-                {"content_type": "text", "title": "5.သိန်း၃သောင်းအောက်", "payload": "PRICE_5"},
-                {"content_type": "text", "title": "6.သိန်း၄သောင်းအောက်", "payload": "PRICE_6"},
-                {"content_type": "text", "title": "7.အငှားအိမ်များ", "payload": "PRICE_7"},
-                {"content_type": "text", "title": "8.သိန်း၅သောင်းအောက်", "payload": "PRICE_8"},
-                {"content_type": "text", "title": "9.သိန်း၆သောင်းအောက်", "payload": "PRICE_9"},
-                {"content_type": "text", "title": "10.သိန်း၇သောင်းအောက်", "payload": "PRICE_10"},
-                {"content_type": "text", "title": "11.သိန်း၈သောင်းအောက်", "payload": "PRICE_11"},
-                {"content_type": "text", "title": "12.သိန်း၉သောင်းအောက်", "payload": "PRICE_12"},
-                {"content_type": "text", "title": "13.သိန်းကြီးတန်အိမ်များ", "payload": "PRICE_13"}
+                {"content_type": "text", "title": "1.သိန်း၃ထောင်အောက်", "payload": "PRICE_1"},
+                {"content_type": "text", "title": "2.သိန်း၅ထောင်အောက်", "payload": "PRICE_2"},
+                {"content_type": "text", "title": "3.သိန်း၁သောင်းအောက်", "payload": "PRICE_3"},
+                {"content_type": "text", "title": "4.သိန်း၁သောင်းခွဲအောက်", "payload": "PRICE_4"},
+                {"content_type": "text", "title": "5.သိန်း၂သောင်းအောက်", "payload": "PRICE_5"},
+                {"content_type": "text", "title": "6.သိန်း၃သောင်းအောက်", "payload": "PRICE_6"},
+                {"content_type": "text", "title": "7.သိန်း၄သောင်းအောက်", "payload": "PRICE_7"},
+                {"content_type": "text", "title": "8.အငှားအိမ်များ", "payload": "PRICE_8"},
+                {"content_type": "text", "title": "9.သိန်း၅သောင်းအောက်", "payload": "PRICE_9"},
+                {"content_type": "text", "title": "10.သိန်း၆သောင်းအောက်", "payload": "PRICE_10"},
+                {"content_type": "text", "title": "11.သိန်း၇သောင်းအောက်", "payload": "PRICE_11"},
+                {"content_type": "text", "title": "12.သိန်း၈သောင်းအောက်", "payload": "PRICE_12"},
+                {"content_type": "text", "title": "13.သိန်း၉သောင်းအောက်", "payload": "PRICE_13"},
+                {"content_type": "text", "title": "14.သိန်းကြီးတန်အိမ်များ", "payload": "PRICE_14"}
             ]
         }
     }
