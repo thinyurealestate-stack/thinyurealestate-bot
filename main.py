@@ -371,7 +371,7 @@ def send_price_quick_replies(recipient_id):
             })
 
     if quick_replies:
-        url = f"https://graph.facebook.com/v18.0/me/messages?access_token={thinyurealestate}"
+        url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
         payload = {
             "recipient": {"id": recipient_id},
             "message": {
@@ -384,7 +384,7 @@ def send_price_quick_replies(recipient_id):
 # ========== WELCOME WITH BUTTONS ==========
 def send_welcome_with_buttons(recipient_id):
     """Send welcome message with price quick replies"""
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={thinyurealestate}"
+    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
@@ -455,7 +455,7 @@ def send_listings_carousel(recipient_id, price_key):
             ]
         })
 
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={thinyurealestate}"
+    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN"
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
