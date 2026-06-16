@@ -5,7 +5,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 PAGE_ACCESS_TOKEN = os.environ.get("thinyurealestate")
-VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "thinyurealestate")
+VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "PAGE_ACCESS_TOKEN")
 
 # ========== YOUR LISTINGS DATA ==========
 LISTINGS = {
