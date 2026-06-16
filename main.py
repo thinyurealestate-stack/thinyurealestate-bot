@@ -315,7 +315,7 @@ LISTINGS = {
 }
 # ========== SEND MESSAGE FUNCTION ==========
 def send_feedback_message(recipient_id, message_text, page_access_token):
-    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={page_access_token}"
     
     payload = {
         "recipient": {"id": recipient_id},
@@ -324,17 +324,22 @@ def send_feedback_message(recipient_id, message_text, page_access_token):
     }
     
     headers = {"Content-Type": "application/json"}
+    
     try:
-        response = requests.post(url, json=payload)
+        response = requests.post(url, json=payload, headers=headers)
+        
+        # Log the FULL response for debugging
+        print(f"Response Status: {response.status_code}", flush=True)
+        print(f"Response Body: {response.text}", flush=True)  # <- This will show the exact error
+        
         if response.status_code != 200:
             error_data = response.json()
-            print(f"ERROR CODE: {error_data.get('error', {}).get('code')}", flush=True)
-            print(f"ERROR MSG: {error_data.get('error', {}).get('message')}", flush=True)
-            print(f"FULL ERROR: {response.text}", flush=True)
-        print(f"Sent message: {response.status_code}", flush=True)
+            print(f"ERROR: {error_data}", flush=True)  # Show full error
+            return None
+            
         return response
     except Exception as e:
-        print(f"Error sending message: {e}", flush=True)
+        print(f"Exception: {e}", flush=True)
         return None
 # ========== PRICE QUICK REPLIES ==========
 def send_price_quick_replies(recipient_id):
@@ -474,16 +479,37 @@ def send_listings_carousel(recipient_id, price_key):
 # ========== WEBHOOK ==========
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
+    # Debug: Log the token (first few chars only for security)
+    token = os.environ.get('PAGE_ACCESS_TOKEN')
+    print(f"Token exists: {bool(token)}", flush=True)
+    print(f"Token length: {len(token) if token else 0}", flush=True)  # ✅ Fixed this line too
+    
     if request.method == 'GET':
-        token = request.args.get('hub.verify_token')
-        challenge = request.args.get('hub.challenge')
-        if token == VERIFY_TOKEN:
-            return challenge
-        return "Invalid token", 403
-
-    data = request.get_json()
+        verify_token = request.args.get('hub.verify_token')  # ✅ Indented
+        challenge = request.args.get('hub.challenge')        # ✅ Indented
+        if verify_token == VERIFY_TOKEN:                     # ✅ Indented
+            return challenge                                 # ✅ Indented (nested)
+        return "Invalid token", 403                          # ✅ Indented (but at if level)
+    
+    data = request.get_json()  # ✅ Now properly at function level
     if not data:
         return "OK", 200
+    
+    try:
+        for event in data.get('entry', []):
+            for messaging_event in event.get('messaging', []):
+                sender_id = messaging_event.get('sender', {}).get('id')
+                
+                if not sender_id:
+                    continue
+                
+                # Your message handling code here
+                # ...
+                
+    except Exception as e:
+        print(f"Error: {e}", flush=True)
+    
+    return "OK", 200
 
     try:
         for event in data.get('entry', []):
