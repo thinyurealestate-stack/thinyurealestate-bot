@@ -482,16 +482,16 @@ def webhook():
     # Debug: Log the token (first few chars only for security)
     token = os.environ.get('PAGE_ACCESS_TOKEN')
     print(f"Token exists: {bool(token)}", flush=True)
-    print(f"Token length: {len(token) if token else 0}", flush=True)  # ✅ Fixed this line too
+    print(f"Token length: {len(token) if token else 0}", flush=True)
     
     if request.method == 'GET':
-        verify_token = request.args.get('hub.verify_token')  # ✅ Indented
-        challenge = request.args.get('hub.challenge')        # ✅ Indented
-        if verify_token == VERIFY_TOKEN:                     # ✅ Indented
-            return challenge                                 # ✅ Indented (nested)
-        return "Invalid token", 403                          # ✅ Indented (but at if level)
+        verify_token = request.args.get('hub.verify_token')
+        challenge = request.args.get('hub.challenge')
+        if verify_token == VERIFY_TOKEN:
+            return challenge
+        return "Invalid token", 403
     
-    data = request.get_json()  # ✅ Now properly at function level
+    data = request.get_json()
     if not data:
         return "OK", 200
     
@@ -500,22 +500,6 @@ def webhook():
             for messaging_event in event.get('messaging', []):
                 sender_id = messaging_event.get('sender', {}).get('id')
                 
-                if not sender_id:
-                    continue
-                
-                # Your message handling code here
-                # ...
-                
-    except Exception as e:
-        print(f"Error: {e}", flush=True)
-    
-    return "OK", 200
-
-    try:
-        for event in data.get('entry', []):
-            for messaging_event in event.get('messaging', []):
-                sender_id = messaging_event.get('sender', {}).get('id')
-
                 if not sender_id:
                     continue
 
@@ -596,4 +580,3 @@ setup_get_started()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
-
