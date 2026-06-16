@@ -418,7 +418,7 @@ def send_welcome_with_buttons(recipient_id):
 # ========== SETUP GET STARTED BUTTON ==========
 def setup_get_started():
     """Register the Get Started button with Facebook"""
-    url = f"https://graph.facebook.com/v18.0/me/messenger_profile?access_token={thinyurealestate}"
+    url = f"https://graph.facebook.com/v18.0/me/messenger_profile?access_token={PAGE_ACCESS_TOKEN}"
     payload = {"get_started": {"payload": "GET_STARTED"}}
     try:
         response = requests.post(url, json=payload)
