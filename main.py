@@ -315,7 +315,7 @@ LISTINGS = {
 }
 # ========== SEND MESSAGE FUNCTION ==========
 def send_feedback_message(recipient_id, message_text, thinyurealestate):
-    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={thinyurealestate}"
+    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
     
     payload = {
         "recipient": {"id": recipient_id},
