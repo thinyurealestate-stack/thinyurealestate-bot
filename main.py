@@ -4,7 +4,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN")
+PAGE_ACCESS_TOKEN = os.environ.get("thinyurealestate")
 VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "thinyurealestate")
 
 # ========== YOUR LISTINGS DATA ==========
@@ -314,8 +314,8 @@ LISTINGS = {
     ]
 }
 # ========== SEND MESSAGE FUNCTION ==========
-def send_feedback_message(recipient_id, message_text, page_access_token):
-    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={page_access_token}"
+def send_feedback_message(recipient_id, message_text, thinyurealestate):
+    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={thinyurealestate}"
     
     payload = {
         "recipient": {"id": recipient_id},
@@ -371,7 +371,7 @@ def send_price_quick_replies(recipient_id):
             })
 
     if quick_replies:
-        url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+        url = f"https://graph.facebook.com/v18.0/me/messages?access_token={thinyurealestate}"
         payload = {
             "recipient": {"id": recipient_id},
             "message": {
@@ -384,7 +384,7 @@ def send_price_quick_replies(recipient_id):
 # ========== WELCOME WITH BUTTONS ==========
 def send_welcome_with_buttons(recipient_id):
     """Send welcome message with price quick replies"""
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={thinyurealestate}"
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
@@ -418,7 +418,7 @@ def send_welcome_with_buttons(recipient_id):
 # ========== SETUP GET STARTED BUTTON ==========
 def setup_get_started():
     """Register the Get Started button with Facebook"""
-    url = f"https://graph.facebook.com/v18.0/me/messenger_profile?access_token={PAGE_ACCESS_TOKEN}"
+    url = f"https://graph.facebook.com/v18.0/me/messenger_profile?access_token={thinyurealestate}"
     payload = {"get_started": {"payload": "GET_STARTED"}}
     try:
         response = requests.post(url, json=payload)
@@ -455,7 +455,7 @@ def send_listings_carousel(recipient_id, price_key):
             ]
         })
 
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={thinyurealestate}"
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
