@@ -313,6 +313,20 @@ LISTINGS = {
         }
     ]
 }
+# ========== CENTRALIZED ERROR LOGGING ==========
+def log_fb_error(fn_name, response):
+    """Log full Facebook API error details for any non-200 response."""
+    try:
+        error_data = response.json()
+    except Exception:
+        error_data = {}
+    error = error_data.get("error", {})
+    print(f"[FB ERROR] {fn_name} → HTTP {response.status_code}", flush=True)
+    print(f"[FB ERROR] code={error.get('code')} type={error.get('type')} subcode={error.get('error_subcode')}", flush=True)
+    print(f"[FB ERROR] message={error.get('message')}", flush=True)
+    print(f"[FB ERROR] fbtrace_id={error.get('fbtrace_id')}", flush=True)
+    print(f"[FB ERROR] full body={response.text}", flush=True)
+
 # ========== SEND MESSAGE FUNCTION ==========
 def send_feedback_message(recipient_id, message_text, page_access_token):
     url = f"https://graph.facebook.com/v21.0/me/messages?access_token={page_access_token}"
@@ -327,15 +341,33 @@ def send_feedback_message(recipient_id, message_text, page_access_token):
     
     response = requests.post(url, json=payload, headers=headers)
     
-    # THIS BLOCK SAVES YOU HOURS
     if response.status_code != 200:
-        error_data = response.json()
-        print(f"ERROR CODE: {error_data.get('error', {}).get('code')}")  # ← Note: {} not 0
-        print(f"ERROR MSG: {error_data.get('error', {}).get('message')}")
-        print(f"FULL ERROR: {response.text}")
-        return False  # ← 4 spaces before return
+        log_fb_error("send_feedback_message", response)
+        return False
     
-    return True  # ← 4 spaces before return (aligned with if)
+    return True
+
+def send_message(recipient_id, message_text):
+    """Convenience wrapper — sends a plain text message using the page token."""
+    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+
+    payload = {
+        "recipient": {"id": recipient_id},
+        "messaging_type": "RESPONSE",
+        "message": {"text": message_text}
+    }
+
+    headers = {"Content-Type": "application/json"}
+
+    try:
+        response = requests.post(url, json=payload, headers=headers)
+        if response.status_code != 200:
+            log_fb_error("send_message", response)
+            return False
+        return True
+    except Exception as e:
+        print(f"[EXCEPTION] send_message: {e}", flush=True)
+        return False
 # ========== PRICE QUICK REPLIES ==========
 def send_price_quick_replies(recipient_id):
     """Send price range quick replies"""
@@ -366,7 +398,7 @@ def send_price_quick_replies(recipient_id):
             })
 
     if quick_replies:
-        url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+        url = f"https://graph.facebook.com/v21.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
         payload = {
             "recipient": {"id": recipient_id},
             "message": {
@@ -374,12 +406,19 @@ def send_price_quick_replies(recipient_id):
                 "quick_replies": quick_replies
             }
         }
-        requests.post(url, json=payload)
+        try:
+            response = requests.post(url, json=payload)
+            if response.status_code != 200:
+                log_fb_error("send_price_quick_replies", response)
+            else:
+                print(f"Sent price quick replies: {response.status_code}", flush=True)
+        except Exception as e:
+            print(f"[EXCEPTION] send_price_quick_replies: {e}", flush=True)
 
 # ========== WELCOME WITH BUTTONS ==========
 def send_welcome_with_buttons(recipient_id):
     """Send welcome message with price quick replies"""
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
@@ -404,25 +443,29 @@ def send_welcome_with_buttons(recipient_id):
     }
     try:
         response = requests.post(url, json=payload)
-        print(f"Sent welcome: {response.status_code}")
+        if response.status_code != 200:
+            log_fb_error("send_welcome_with_buttons", response)
+            return None
+        print(f"Sent welcome: {response.status_code}", flush=True)
         return response
     except Exception as e:
-        print(f"Error sending welcome: {e}")
+        print(f"[EXCEPTION] send_welcome_with_buttons: {e}", flush=True)
         return None
 
 # ========== SETUP GET STARTED BUTTON ==========
 def setup_get_started():
     """Register the Get Started button with Facebook"""
-    url = f"https://graph.facebook.com/v18.0/me/messenger_profile?access_token={PAGE_ACCESS_TOKEN}"
+    url = f"https://graph.facebook.com/v21.0/me/messenger_profile?access_token={PAGE_ACCESS_TOKEN}"
     payload = {"get_started": {"payload": "GET_STARTED"}}
     try:
         response = requests.post(url, json=payload)
-        print(f"Get Started setup: {response.status_code}")
         if response.status_code != 200:
-            print(f"Error: {response.text}")
+            log_fb_error("setup_get_started", response)
+        else:
+            print(f"Get Started setup: {response.status_code}", flush=True)
         return response
     except Exception as e:
-        print(f"Error setting up Get Started: {e}")
+        print(f"[EXCEPTION] setup_get_started: {e}", flush=True)
         return None
 
 # ========== LISTINGS CAROUSEL ==========
@@ -450,7 +493,7 @@ def send_listings_carousel(recipient_id, price_key):
             ]
         })
 
-    url = f"https://graph.facebook.com/v18.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
+    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
     payload = {
         "recipient": {"id": recipient_id},
         "message": {
@@ -465,11 +508,14 @@ def send_listings_carousel(recipient_id, price_key):
     }
     try:
         response = requests.post(url, json=payload)
-        print(f"Sent carousel: {response.status_code}")
-        send_message(recipient_id, "နောက်ထပ် စျေးနှုန်း တွေကိုလည်း အောက်မှာဆွဲ၍ နှိပ်ကြည့်နိုင်ပါတယ်:")
-        send_price_quick_replies(recipient_id)
+        if response.status_code != 200:
+            log_fb_error("send_listings_carousel", response)
+        else:
+            print(f"Sent carousel: {response.status_code}", flush=True)
+            send_message(recipient_id, "နောက်ထပ် စျေးနှုန်း တွေကိုလည်း အောက်မှာဆွဲ၍ နှိပ်ကြည့်နိုင်ပါတယ်:")
+            send_price_quick_replies(recipient_id)
     except Exception as e:
-        print(f"Error sending carousel: {e}")
+        print(f"[EXCEPTION] send_listings_carousel: {e}", flush=True)
 
 # ========== WEBHOOK ==========
 @app.route('/webhook', methods=['GET', 'POST'])
@@ -505,7 +551,7 @@ def webhook():
 
                     elif 'text' in message:
                         message_text = message['text'].lower().strip()
-                        print(f"Received: {message_text}")
+                        print(f"Received: {message_text}", flush=True)
 
                         if message_text in ['hi', 'hello', 'start', 'help']:
                             send_welcome_with_buttons(sender_id)
@@ -526,36 +572,36 @@ def webhook():
                     added_labels = messaging_event['inbox_labels'].get('added_labels', [])
                     for label in added_labels:
                         label_name = label.get('page_label_name', label.get('label_name', ''))
-                        print(f"Label: {label_name}")
+                        print(f"Label: {label_name}", flush=True)
 
                         if label_name == 'Hot Lead':
                             send_message(user_id, "မင်္ဂလာပါ VIP ဖောက်သည်ကြီး ကြိုဆိုပါတယ်")
                         elif label_name == 'သတိထားရမည့်သူ':
                             send_message(user_id, "ကျေးဇူးပြု၍ အချိန်ယူ ပြီး စစ်ဆေးပါ။")
-                            print(f"⚠️ Warning: User {user_id} marked as 'သတိထားရမည့်သူ'")
+                            print(f"⚠️ Warning: User {user_id} marked as 'သတိထားရမည့်သူ'", flush=True)
                         elif label_name == 'လူလိမ်':
                             send_message(user_id, "သင့်အကောင့်အား စစ်ဆေး နေပါသည်။")
-                            print(f"🚨 ALERT: User {user_id} marked as 'လူလိမ်'")
+                            print(f"🚨 ALERT: User {user_id} marked as 'လူလိမ်'", flush=True)
                         elif label_name == 'မှတ်ထားရမည့်သူ':
                             send_message(user_id, "ကျေးဇူးပါ။ သင့်အကြောင်းကိုမှတ်သားထားပါမည်။")
-                            print(f"📝 Info: User {user_id} marked as 'မှတ်ထားရမည့်သူ'")
+                            print(f"📝 Info: User {user_id} marked as 'မှတ်ထားရမည့်သူ'", flush=True)
 
                 # Log other events
                 if 'delivery' in messaging_event:
-                    print("Message delivered")
+                    print("Message delivered", flush=True)
                 if 'read' in messaging_event:
-                    print("Message read")
+                    print("Message read", flush=True)
                 if 'reaction' in messaging_event:
-                    print("Reaction received")
+                    print("Reaction received", flush=True)
                 if 'referral' in messaging_event:
-                    print("Referral received")
+                    print("Referral received", flush=True)
                 if 'pass_thread_control' in messaging_event:
-                    print("Handover received")
+                    print("Handover received", flush=True)
                 if 'standby' in messaging_event:
-                    print("Standby event")
+                    print("Standby event", flush=True)
 
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error: {e}", flush=True)
 
     return "OK", 200
 
