@@ -322,9 +322,7 @@ def send_feedback_message(recipient_id, message_text, page_access_token):
         "messaging_type": "RESPONSE",
         "message": {"text": message_text}
     }
-    
     headers = {"Content-Type": "application/json"}
-    
     try:
     response = requests.post(url, json=payload)
     if response.status_code != 200:
