@@ -322,20 +322,20 @@ def send_feedback_message(recipient_id, message_text, page_access_token):
         "messaging_type": "RESPONSE",
         "message": {"text": message_text}
     }
+    
     headers = {"Content-Type": "application/json"}
     try:
-    response = requests.post(url, json=payload)
-    if response.status_code != 200:
-        error_data = response.json()
-        print(f"ERROR CODE: {error_data.get('error', {}).get('code')}", flush=True)
-        print(f"ERROR MSG: {error_data.get('error', {}).get('message')}", flush=True)
-        print(f"FULL ERROR: {response.text}", flush=True)
+        response = requests.post(url, json=payload)
+        if response.status_code != 200:
+            error_data = response.json()
+            print(f"ERROR CODE: {error_data.get('error', {}).get('code')}", flush=True)
+            print(f"ERROR MSG: {error_data.get('error', {}).get('message')}", flush=True)
+            print(f"FULL ERROR: {response.text}", flush=True)
+        print(f"Sent message: {response.status_code}", flush=True)
         return response
-    print(f"Sent welcome: {response.status_code}", flush=True)
-    return response
-except Exception as e:
-    print(f"Error sending welcome: {e}", flush=True)
-    return None
+    except Exception as e:
+        print(f"Error sending message: {e}", flush=True)
+        return None
 # ========== PRICE QUICK REPLIES ==========
 def send_price_quick_replies(recipient_id):
     """Send price range quick replies"""
