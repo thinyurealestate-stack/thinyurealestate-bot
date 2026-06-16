@@ -315,7 +315,7 @@ LISTINGS = {
 }
 # ========== SEND MESSAGE FUNCTION ==========
 def send_feedback_message(recipient_id, message_text, page_access_token):
-    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={page_access_token}"
+    url = f"https://graph.facebook.com/v21.0/me/messages?access_token={PAGE_ACCESS_TOKEN}"
     
     payload = {
         "recipient": {"id": recipient_id},
@@ -325,17 +325,19 @@ def send_feedback_message(recipient_id, message_text, page_access_token):
     
     headers = {"Content-Type": "application/json"}
     
-    response = requests.post(url, json=payload, headers=headers)
-    
-    # THIS BLOCK SAVES YOU HOURS
+    try:
+    response = requests.post(url, json=payload)
     if response.status_code != 200:
         error_data = response.json()
-        print(f"ERROR CODE: {error_data.get('error', {}).get('code')}")  # ← Note: {} not 0
-        print(f"ERROR MSG: {error_data.get('error', {}).get('message')}")
-        print(f"FULL ERROR: {response.text}")
-        return False  # ← 4 spaces before return
-    
-    return True  # ← 4 spaces before return (aligned with if)
+        print(f"ERROR CODE: {error_data.get('error', {}).get('code')}", flush=True)
+        print(f"ERROR MSG: {error_data.get('error', {}).get('message')}", flush=True)
+        print(f"FULL ERROR: {response.text}", flush=True)
+        return response
+    print(f"Sent welcome: {response.status_code}", flush=True)
+    return response
+except Exception as e:
+    print(f"Error sending welcome: {e}", flush=True)
+    return None
 # ========== PRICE QUICK REPLIES ==========
 def send_price_quick_replies(recipient_id):
     """Send price range quick replies"""
